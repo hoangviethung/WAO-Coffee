@@ -17,6 +17,37 @@ header {
 	.navigation-wrapper {
 		display: flex;
 	}
+	.infomation-header {
+		display: flex;
+		padding: 14px 0;
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				font-size: 1.4rem;
+				font-weight: 700;
+				color: var(--primary);
+				+ li {
+					position: relative;
+					margin-left: 24px;
+					padding-left: 24px;
+					&:after {
+						content: "";
+						left: 0;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						width: 2px;
+						height: 70%;
+						background: var(--primary);
+					}
+				}
+			}
+			&:last-child {
+				margin-left: auto;
+			}
+		}
+	}
 	nav {
 		display: flex;
 		margin-left: auto;
@@ -276,3 +307,24 @@ header {
 }
 
 // YOUR CSS HERE !!!
+
+.index-service {
+	padding: 100px 0;
+	.wrapper {
+		position: relative;
+		max-width: 1070px;
+		width: 100%;
+		margin: 0 auto;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background-image: url(/resources//images/index/index-service-background.png);
+			background-size: 100% 100%;
+			width: 850px;
+			height: 400px;
+		}
+	}
+}

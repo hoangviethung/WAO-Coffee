@@ -16,6 +16,37 @@ header .bottom-header {
 header .navigation-wrapper {
   display: flex;
 }
+header .infomation-header {
+  display: flex;
+  padding: 14px 0;
+}
+header .infomation-header ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .infomation-header ul li {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+header .infomation-header ul li + li {
+  position: relative;
+  margin-left: 24px;
+  padding-left: 24px;
+}
+header .infomation-header ul li + li:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 70%;
+  background: var(--primary);
+}
+header .infomation-header ul:last-child {
+  margin-left: auto;
+}
 header nav {
   display: flex;
   margin-left: auto;
@@ -245,4 +276,25 @@ header .cart-header .icon span {
   position: absolute;
   bottom: 60px;
   left: 0;
+}
+
+.index-service {
+  padding: 100px 0;
+}
+.index-service .wrapper {
+  position: relative;
+  max-width: 1070px;
+  width: 100%;
+  margin: 0 auto;
+}
+.index-service .wrapper:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(/resources//images/index/index-service-background.png);
+  background-size: 100% 100%;
+  width: 850px;
+  height: 400px;
 }
