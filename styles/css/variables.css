@@ -1,12 +1,12 @@
 :root {
-	--primary: #0f2346;
-	--primary-light: #283264;
-	--secondary: #ffc864;
-	--secondary-light: #facf64;
-	--light: #faf9fa;
-	--white: #ffffff;
-	--black: #000000;
-	--body: #2d2d2d;
-	--neutral-medium_sub: #858585;
-	--neutral-light_disable: #b8b8b8;
+  --primary: #0f2346;
+  --primary-light: #283264;
+  --secondary: #ffc864;
+  --secondary-light: #facf64;
+  --light: #faf9fa;
+  --white: #ffffff;
+  --black: #000000;
+  --body: #2d2d2d;
+  --neutral-medium_sub: #858585;
+  --neutral-light_disable: #b8b8b8;
 }

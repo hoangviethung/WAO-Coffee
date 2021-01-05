@@ -325,6 +325,102 @@ header {
 			background-size: 100% 100%;
 			width: 850px;
 			height: 400px;
+			pointer-events: none;
+			z-index: -1;
+		}
+	}
+	.item {
+		display: flex;
+		justify-content: center;
+		.text {
+			display: flex;
+		}
+		h2 {
+			margin-left: auto;
+			font-size: 3.2rem;
+			text-transform: uppercase;
+			writing-mode: vertical-rl;
+			transform: rotate(180deg);
+			width: 100%;
+			margin: 0;
+			float: left;
+			color: var(--white);
+			text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary),
+				-1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+		}
+	}
+}
+
+.index-about {
+	position: relative;
+	width: 100%;
+	padding-top: 85px;
+	background-image: var(--url-background-index-about);
+	background-size: 100% 100%;
+	.content-section {
+		margin-top: 30px;
+		p {
+			color: var(--primary);
+			+ p {
+				margin-top: 30px;
+			}
+		}
+	}
+	.img-bottom {
+		position: relative;
+		margin-top: -85px;
+		z-index: 10;
+	}
+	.cta-button {
+		margin-top: 30px;
+	}
+}
+
+.index-best-seller {
+	padding-top: 80px;
+	.title-section {
+		margin-bottom: 30px;
+	}
+	.item-fixed {
+		position: relative;
+		.logo {
+			position: absolute;
+			top: 10%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		p {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 70%;
+			color: var(--white);
+			text-align: center;
+			&:after,
+			&:before {
+				font-size: 24px;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 700;
+				position: absolute;
+				color: var(--secondary);
+			}
+			&:before {
+				content: "\f10d";
+				top: -8px;
+				right: 100%;
+			}
+			&:after {
+				content: "\f10e";
+				bottom: -8px;
+				left: 100%;
+			}
+		}
+		.cta-button {
+			position: absolute;
+			top: 80%;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 }
