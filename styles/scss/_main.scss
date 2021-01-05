@@ -4,5 +4,275 @@
 @import url("variables.css");
 
 // IMPORT CUSTOM FILE HERE !!!
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	height: 80px;
+	width: 100%;
+	.bottom-header {
+		background: var(--primary);
+	}
+	.navigation-wrapper {
+		display: flex;
+	}
+	nav {
+		display: flex;
+		margin-left: auto;
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				&.has-sub {
+					> a {
+						position: relative;
+						padding-right: 24px;
+						&:after {
+							content: "\f078";
+							font-family: "Font Awesome 5 Free";
+							font-weight: 700;
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							right: 0;
+							color: var(--white);
+						}
+					}
+				}
+			}
+			> li {
+				position: relative;
+				display: flex;
+				align-items: center;
+				a {
+					display: block;
+					width: 100%;
+					text-transform: uppercase;
+					color: var(--white);
+				}
+				+ li {
+					margin-left: 28px;
+				}
+				> ul {
+					position: absolute;
+					top: 100%;
+					flex-direction: column;
+					background: var(--white);
+					width: max-content;
+					// HIDDEN
+					opacity: 0;
+					visibility: hidden;
+					transition: 0.3s all ease-in-out;
+					> li {
+						padding: 0 24px;
+						border-bottom: 0;
+						ul {
+							left: calc(100%);
+							top: 0;
+							/*Vertical*/
+							background-image: linear-gradient(
+								#ebebeb 33%,
+								rgba(255, 255, 255, 0) 0%
+							);
+							background-position: left;
+							background-size: 2px 16px;
+							background-repeat: repeat-y;
+							li {
+								a {
+									&::after {
+										content: none;
+									}
+								}
+							}
+						}
+						&.has-sub {
+							a {
+								&:after {
+									transform: translateY(-50%) rotate(-90deg);
+									color: var(--primary);
+								}
+							}
+						}
+						a {
+							position: relative;
+							font-size: 1.6rem;
+							padding: 16px 24px;
+							color: var(--primary);
+							text-transform: unset;
+						}
+						+ li {
+							a {
+								border-top: 1px solid #ebebeb;
+							}
+							margin-left: 0;
+						}
+						&:after {
+							content: none;
+						}
+						@media (min-width: 1025px) {
+							&:hover {
+								a {
+									&:after {
+										transform: translateY(-50%)
+											rotate(-90deg);
+										color: var(--secondary);
+									}
+								}
+							}
+						}
+					}
+				}
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					width: 0;
+					left: 50%;
+					background: var(--secondary);
+					transform: translateX(-50%);
+					height: 5px;
+				}
+				@media (min-width: 1025px) {
+					> a,
+					a:after,
+					&:after {
+						transition: 0.3s all ease-in-out;
+					}
+					&:hover {
+						&:after {
+							width: 100%;
+						}
+						> ul {
+							opacity: 1;
+							visibility: visible;
+						}
+						> a,
+						a:after {
+							color: var(--secondary);
+						}
+					}
+				}
+			}
+		}
+	}
+	.logo {
+		display: inline-block;
+		background: var(--primary);
+		width: 80px;
+	}
+	.languages {
+		align-self: center;
+		margin-left: 56px;
+		ul {
+			position: relative;
+			display: flex;
+			&::before {
+				content: "-";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				color: var(--white);
+			}
+		}
+		li {
+			cursor: pointer;
+			user-select: none;
+			color: var(--white);
+			+ li {
+				margin-left: 16px;
+			}
+		}
+	}
+	.seach-header {
+		align-self: center;
+		margin-left: 34px;
+		.icon {
+			color: var(--white);
+			font-size: 20px;
+		}
+	}
+	.cart-header {
+		align-self: center;
+		margin-left: 34px;
+		.icon {
+			position: relative;
+			color: var(--white);
+			font-size: 20px;
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				top: -8px;
+				right: -12px;
+				font-size: 12px;
+				font-weight: 700;
+				width: 22px;
+				height: 22px;
+				color: var(--primary);
+				background: var(--white);
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.hero-banner {
+	.group-images {
+		display: flex;
+		flex-wrap: wrap;
+		img {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+	.main-item {
+		position: absolute;
+		left: 52%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		img {
+			width: 70%;
+			@media (min-width: 1400px) {
+				width: 100%;
+			}
+		}
+	}
+	.content {
+		position: absolute;
+		left: 0;
+		top: 40%;
+		transform: translateY(-50%);
+		width: 100%;
+		h2 {
+			color: var(--primary);
+			font-size: 7rem;
+			font-weight: 900;
+			line-height: 1.2;
+			span {
+				color: var(--white);
+				text-shadow: -1px -1px 0 var(--primary),
+					1px -1px 0 var(--primary), -1px 1px 0 var(--primary),
+					1px 1px 0 var(--primary);
+			}
+		}
+		p {
+			color: var(--primary);
+			font-size: 1.5rem;
+			max-width: 400px;
+			margin-top: 24px;
+		}
+	}
+	.cta-button {
+		width: 100%;
+		position: absolute;
+		bottom: 60px;
+		left: 0;
+	}
+}
 
 // YOUR CSS HERE !!!
