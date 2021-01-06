@@ -351,6 +351,38 @@ header .cart-header .icon span {
 .index-best-seller .title-section {
   margin-bottom: 30px;
 }
+.index-best-seller .item {
+  min-height: 505px;
+  border: 1px solid #d3d3d3;
+  border-left: 0;
+  padding: 24px;
+}
+.index-best-seller .item .img {
+  width: auto;
+  min-height: 260px;
+  max-height: 260px;
+  overflow: hidden;
+}
+.index-best-seller .item .img img {
+  display: block;
+  margin: 0 auto;
+}
+.index-best-seller .item .description {
+  margin-top: 44px;
+}
+.index-best-seller .item h3 {
+  margin-bottom: 8px;
+}
+.index-best-seller .item h3,
+.index-best-seller .item h4 {
+  text-transform: uppercase;
+  color: var(--primary);
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+}
+.index-best-seller .item p {
+  color: var(--primary);
+}
 .index-best-seller .item-fixed {
   position: relative;
 }
@@ -361,6 +393,7 @@ header .cart-header .icon span {
   transform: translateX(-50%);
 }
 .index-best-seller .item-fixed p {
+  font-style: italic;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -379,7 +412,7 @@ header .cart-header .icon span {
 .index-best-seller .item-fixed p:before {
   content: "";
   top: -8px;
-  right: 100%;
+  right: 103%;
 }
 .index-best-seller .item-fixed p:after {
   content: "";
@@ -391,4 +424,13 @@ header .cart-header .icon span {
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
+}
+.index-best-seller .group-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+.index-best-seller .slider-index-best-seller {
+  position: relative;
 }
