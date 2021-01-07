@@ -25,7 +25,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--body);
-  background-color: var(--white);
+  background: var(--neutral-light);
   overflow-x: hidden;
 }
 

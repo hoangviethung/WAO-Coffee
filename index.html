@@ -8,9 +8,11 @@
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<!-- Library -->
-		<link rel="stylesheet" href="vendors/css/bootstrap-grid.css" />
-		<link rel="stylesheet" href="vendors/css/swiper-bundle.css" />
+		<link rel="stylesheet" href="vendors/css/grid.css" />
+		<link rel="stylesheet" href="vendors/css/swiper.css" />
+		<link rel="stylesheet" href="vendors/css/fancybox.css" />
 		<link rel="stylesheet" href="vendors/css/fontawesome.css" />
+		<link rel="stylesheet" href="vendors/css/animate.css" />
 		<!-- Fonts -->
 		<link rel="stylesheet" href="styles/css/fonts.css" />
 		<!-- My CSS -->
@@ -45,6 +47,11 @@
 						</a>
 						<!-- NAVIGATION -->
 						<nav>
+							<div class="button-close-wrapper">
+								<div class="close-menu-mobile">
+									<i class="fal fa-times"></i>
+								</div>
+							</div>
 							<ul>
 								<li><a href="#">trang chủ</a></li>
 								<li><a href="#">về chúng tôi</a></li>
@@ -52,11 +59,11 @@
 									<a href="#">đào tạo</a>
 								</li>
 								<!-- CLASS "HAS-SUB" CHỈ ĐỂ THÊM ICON -->
-								<li class="has-sub">
+								<li>
 									<a href="#">sản phẩm</a>
 									<ul>
 										<!-- CLASS "HAS-SUB" CHỈ ĐỂ THÊM ICON -->
-										<li class="has-sub">
+										<li>
 											<a href="#">Trà lá</a>
 											<ul>
 												<li>
@@ -93,117 +100,138 @@
 						<!-- LANGUAGES -->
 						<div class="languages">
 							<ul>
-								<li>VN</li>
+								<li class="active">VN</li>
 								<li>EN</li>
 							</ul>
 						</div>
 						<!-- SEARCH -->
 						<div class="seach-header">
 							<div class="icon">
-								<i class="fas fa-search"></i>
+								<i class="fal fa-search"></i>
 							</div>
 						</div>
 						<!-- CART -->
 						<div class="cart-header">
 							<div class="icon">
-								<i class="fas fa-shopping-cart"></i>
+								<i class="fal fa-shopping-bag"></i>
 								<span>05</span>
 							</div>
 						</div>
+						<!-- BUTTON TOGGLE -->
+						<div class="toggle-menu-mobile"></div>
 					</div>
 				</div>
 			</div>
 		</header>
-		<!-- SECTION HERO BANNER -->
-		<section class="hero-banner">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<!-- 2 IMAGE BACKGROUND -->
-						<div class="group-images">
-							<img
-								src="./resources/images/hero-banner/item-01-layer-01.png"
-								alt=""
-							/>
-							<img
-								src="./resources/images/hero-banner/item-01-layer-02.png"
-								alt=""
-							/>
-						</div>
-						<!-- MAIN PRODUCT -->
-						<div class="main-item">
-							<img
-								src="./resources/images/hero-banner/item-01-layer-03.png"
-								alt=""
-							/>
-						</div>
-						<!-- CONTENT -->
-						<div class="content">
-							<div class="container">
-								<h2>
-									ĐẬM ĐÀ <br />
-									<span>HƯƠNG VỊ</span> <br />TRÀ VIỆT
-								</h2>
-								<p>
-									Lorem Ipsum has been the industry’s standard
-									but also dummy text ever since the 1500s,
-									when an unknown printer took a galley of
-									type and scrambled it to make a type
-									specimen book.
-								</p>
+		<!-- MAIN -->
+		<main>
+			<!-- SECTION HERO BANNER -->
+			<section class="hero-banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<!-- 2 IMAGE BACKGROUND -->
+							<div class="group-images">
+								<img
+									class="object-cover"
+									src="./resources/images/hero-banner/item-01-layer-01.png"
+									alt=""
+								/>
+								<img
+									class="object-cover"
+									src="./resources/images/hero-banner/item-01-layer-02.png"
+									alt=""
+								/>
 							</div>
-						</div>
-						<!-- CTA BUTTON -->
-						<div class="cta-button">
-							<div class="container">
-								<a class="btn" href="#"
-									>XEM SẢN PHẨM
-									<i class="fas fa-arrow-circle-right"></i>
-								</a>
+							<!-- MAIN PRODUCT -->
+							<div class="main-item">
+								<img
+									src="./resources/images/hero-banner/item-01-layer-03.png"
+									alt=""
+								/>
+							</div>
+							<!-- CONTENT -->
+							<div class="content">
+								<div class="container">
+									<h2>
+										ĐẬM ĐÀ <br />
+										<span>HƯƠNG VỊ</span> <br />TRÀ VIỆT
+									</h2>
+									<p class="lcl lcl-4">
+										Lorem Ipsum has been the industry’s
+										standard but also dummy text ever since
+										the 1500s, when an unknown printer took
+										a galley of type and scrambled it to
+										make a type specimen book.
+									</p>
+								</div>
+							</div>
+							<!-- CTA BUTTON -->
+							<div class="cta-button">
+								<div class="container">
+									<a class="btn" href="#"
+										>XEM SẢN PHẨM
+										<i
+											class="fas fa-arrow-circle-right"
+										></i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- MAIN -->
-		<main>
+			</section>
 			<!-- SECTION INDEX SERVICE -->
 			<section class="index-service">
 				<div class="container">
 					<div class="wrapper">
 						<div class="row">
-							<div class="col-lg-4">
-								<div class="item">
+							<div class="col-md-4">
+								<div
+									class="item wow fadeInLeft"
+									data-wow-delay=".2s"
+								>
 									<div class="text">
 										<h2>đào tạo</h2>
 									</div>
-									<img
-										src="/resources/images/index/index-service-01.png"
-										alt=""
-									/>
+									<div class="img">
+										<img
+											src="./resources/images/index/index-service-01.png"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-4">
-								<div class="item">
+							<div class="col-md-4">
+								<div
+									class="item wow fadeInLeft"
+									data-wow-delay=".4s"
+								>
 									<div class="text">
 										<h2>đào tạo</h2>
 									</div>
-									<img
-										src="/resources/images/index/index-service-01.png"
-										alt=""
-									/>
+									<div class="img">
+										<img
+											src="./resources/images/index/index-service-01.png"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-4">
-								<div class="item">
+							<div class="col-md-4">
+								<div
+									class="item wow fadeInLeft"
+									data-wow-delay=".6s"
+								>
 									<div class="text">
 										<h2>đào tạo</h2>
 									</div>
-									<img
-										src="/resources/images/index/index-service-01.png"
-										alt=""
-									/>
+									<div class="img">
+										<img
+											src="./resources/images/index/index-service-01.png"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -214,23 +242,30 @@
 			<section
 				class="index-about"
 				style="
-					--url-background-index-about: url(/resources/images/index/index-about-backgroud.png);
+					--url-background-index-about: url(../../resources/images/index/index-about-backgroud.png);
 				"
 			>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
 							<img
-								src="/resources//images/index/index-about-main-item.png"
+								class="wow fadeInLeft"
+								data-wow-delay=".4s"
+								src="./resources//images/index/index-about-main-item.png"
 								alt=""
 							/>
 						</div>
 						<div class="col-md-6">
 							<div class="title-section">
-								<h2>về chúng tôi</h2>
-								<p>W.A.O CHẤT LƯỢNG TẠO NÊN THƯƠNG HIỆU</p>
+								<h2 class="wow fadeInDown">về chúng tôi</h2>
+								<p class="wow fadeInDown" data-wow-delay=".2s">
+									W.A.O CHẤT LƯỢNG TẠO NÊN THƯƠNG HIỆU
+								</p>
 							</div>
-							<div class="content-section">
+							<div
+								class="content-section wow fadeInDown"
+								data-wow-delay=".4s"
+							>
 								<p>
 									Chúng tôi luôn đi theo tiêu chi kinh doanh:
 									“Chất lượng tạo nên thương hiệu’’ chính yếu
@@ -255,7 +290,11 @@
 								</p>
 							</div>
 							<!-- CTA BUTTON -->
-							<div iv class="cta-button">
+							<div
+								iv
+								class="cta-button wow fadeInDown"
+								data-wow-delay=".6s"
+							>
 								<a class="btn bg-primary" href="#"
 									>XEM SẢN PHẨM
 									<i class="fas fa-arrow-circle-right"></i>
@@ -276,7 +315,7 @@
 				<!-- TITLE -->
 				<div class="container">
 					<div class="title-section">
-						<h2>sản phẩm bán chạy</h2>
+						<h2 class="wow fadeInUp">sản phẩm bán chạy</h2>
 					</div>
 				</div>
 				<!-- BLOCK SECTION SLIDER -->
@@ -563,20 +602,23 @@
 			<section
 				class="index-educate"
 				style="
-					--url-background-index-edicate: url(/resources//images/index/index-educate-background.png);
+					--url-background-index-edicate: url(../../resources//images/index/index-educate-background.png);
 				"
 			>
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-md-6">
 							<div class="title-section">
-								<h2>đào tạo</h2>
-								<p>
+								<h2 class="wow fadeInLeft">đào tạo</h2>
+								<p class="wow fadeInLeft" data-wow-delay=".2s">
 									W.A.O CÔNG TY CUNG CẤP GIẢI PHÁP TOÀN DIỆN
 									VỀ TRÀ VÀ CÀ PHÊ
 								</p>
 							</div>
-							<div class="content">
+							<div
+								class="content wow fadeInLeft"
+								data-wow-delay=".4s"
+							>
 								<p>
 									"WE ARE ONE’’ là một trong những công ty
 									cung cấp giải pháp toàn diện về trà và cà
@@ -602,7 +644,10 @@
 								</p>
 							</div>
 							<!-- CTA BUTTON -->
-							<div class="cta-button">
+							<div
+								class="cta-button wow fadeInLeft"
+								data-wow-delay=".6s"
+							>
 								<a class="btn bg-primary" href="#"
 									>XEM SẢN PHẨM
 									<i class="fas fa-arrow-circle-right"></i>
@@ -610,12 +655,19 @@
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div class="thumbnail-video">
+							<div
+								class="thumbnail-video wow fadeInUp"
+								data-wow-delay=".6s"
+							>
 								<img
 									src="./resources/images/index/index-educate-thumbnail-video.png"
 									alt=""
 								/>
-								<div class="btn-play pos-center-center">
+								<div
+									data-fancybox
+									href="https://www.youtube.com/watch?v=An6LvWQuj_8"
+									class="btn-play pos-center-center"
+								>
 									<i class="fal fa-play"></i>
 								</div>
 							</div>
@@ -627,7 +679,7 @@
 			<section class="index-setup">
 				<div class="container">
 					<div class="title-section">
-						<h2>setup quán</h2>
+						<h2 class="wow fadeInUp">setup quán</h2>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
@@ -769,23 +821,43 @@
 			<section
 				class="index-recipe"
 				style="
-					--url-background-index-recipe: url(/resources//images/index/index-recipe-background.png);
+					--url-background-index-recipe: url(../../resources//images/index/index-recipe-background.png);
 				"
 			>
 				<div class="container">
 					<div class="header-recipe">
 						<div class="title-section color-white">
-							<h2>đào tạo</h2>
-							<p>
+							<h2 class="wow fadeInUp">công thức</h2>
+							<p class="wow fadeInUp" data-wow-delay=".2s">
 								CHÚNG TÔI NỔ LỰC MANG ĐẾN NHỮNG ĐIỀU THÚ VỊ
 								TRONG PHA CHẾ
 							</p>
 						</div>
 						<ul class="list-tab">
-							<li class="item-tab active">trà sữa</li>
-							<li class="item-tab">trà trái cây</li>
-							<li class="item-tab">topping</li>
-							<li class="item-tab">thức uống sáng tạo</li>
+							<li
+								class="item-tab wow fadeInUp active"
+								data-wow-delay=".2s"
+							>
+								trà sữa
+							</li>
+							<li
+								class="item-tab wow fadeInUp"
+								data-wow-delay=".4s"
+							>
+								trà trái cây
+							</li>
+							<li
+								class="item-tab wow fadeInUp"
+								data-wow-delay=".6s"
+							>
+								topping
+							</li>
+							<li
+								class="item-tab wow fadeInUp"
+								data-wow-delay=".8s"
+							>
+								thức uống sáng tạo
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -804,12 +876,14 @@
 											/>
 										</div>
 										<div class="description">
-											<h3>
+											<h3 class="lcl lcl-2">
 												NGHỆ THUẬT PHA TRÀ SỮA Ủ TỦ LẠNH
 												WAO TEA COFFEE
 											</h3>
 										</div>
 										<div
+											data-fancybox
+											href="https://www.youtube.com/watch?v=An6LvWQuj_8"
 											class="btn-play pos-center-center size-small bg-white"
 										>
 											<i class="fal fa-play"></i>
@@ -826,12 +900,14 @@
 											/>
 										</div>
 										<div class="description">
-											<h3>
+											<h3 class="lcl lcl-2">
 												NGHỆ THUẬT PHA TRÀ SỮA Ủ TỦ LẠNH
 												WAO TEA COFFEE
 											</h3>
 										</div>
 										<div
+											data-fancybox
+											href="https://www.youtube.com/watch?v=An6LvWQuj_8"
 											class="btn-play pos-center-center size-small bg-white"
 										>
 											<i class="fal fa-play"></i>
@@ -848,12 +924,14 @@
 											/>
 										</div>
 										<div class="description">
-											<h3>
+											<h3 class="lcl lcl-2">
 												NGHỆ THUẬT PHA TRÀ SỮA Ủ TỦ LẠNH
 												WAO TEA COFFEE
 											</h3>
 										</div>
 										<div
+											data-fancybox
+											href="https://www.youtube.com/watch?v=An6LvWQuj_8"
 											class="btn-play pos-center-center size-small bg-white"
 										>
 											<i class="fal fa-play"></i>
@@ -870,12 +948,14 @@
 											/>
 										</div>
 										<div class="description">
-											<h3>
+											<h3 class="lcl lcl-2">
 												NGHỆ THUẬT PHA TRÀ SỮA Ủ TỦ LẠNH
 												WAO TEA COFFEE
 											</h3>
 										</div>
 										<div
+											data-fancybox
+											href="https://www.youtube.com/watch?v=An6LvWQuj_8"
 											class="btn-play pos-center-center size-small bg-white"
 										>
 											<i class="fal fa-play"></i>
@@ -896,26 +976,415 @@
 				</div>
 			</section>
 			<!-- SECTION KHÁCH HÀNG & ĐỐI TÁC -->
-			<section class="customer-clients">
+			<section class="customers-clients">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="title-section">
-								<h2>khách hàng & đối tác</h2>
-								<p>
-									WAO HÂN HẠNH ĐỒNG HÀNH CÙNG QUÝ KHÁCH HÀNG VÀ ĐỐI
-									TÁC MANG THỨC UỐNG TRÀ VIỆT CHẤT LƯỢNG CAO ĐẾN NGƯỜI
+								<h2 class="wow fadeInLeft">
+									khách hàng & đối tác
+								</h2>
+								<p class="wow fadeInLeft" data-wow-delay=".2s">
+									WAO HÂN HẠNH ĐỒNG HÀNH CÙNG QUÝ KHÁCH HÀNG
+									VÀ ĐỐI TÁC MANG THỨC
+									<br />UỐNG TRÀ VIỆT CHẤT LƯỢNG CAO ĐẾN NGƯỜI
 									TIÊU DÙNG
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="slider-index-customer">
+					<div class="container">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<img
+											src="./resources/images/index/index-customer-01.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<img
+											src="./resources/images/index/index-customer-02.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<img
+											src="./resources/images/index/index-customer-03.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<img
+											src="./resources/images/index/index-customer-04.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<img
+											src="./resources/images/index/index-customer-05.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<img
+											src="./resources/images/index/index-customer-01.png"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- BUTTON PREV SLIDER -->
+					<div class="button-navigation-slider prev center-50px">
+						<i class="fas fa-long-arrow-alt-left"></i>
+					</div>
+					<!-- BUTTON NEXT SLIDER -->
+					<div class="button-navigation-slider next center-50px">
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</div>
+				</div>
+			</section>
+			<!-- SECTION TIN TỨC -->
+			<section
+				class="index-news"
+				style="
+					--url-background-index-news: url(../../resources//images/index/index-news-background.png);
+				"
+			>
+				<div class="container">
+					<div class="title-section">
+						<h2 class="wow fadeInLeft">khách hàng & đối tác</h2>
+					</div>
+				</div>
+				<div class="slider-index-news">
+					<div class="container">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="img overflow-hidden">
+											<img
+												class="object-cover"
+												src="./resources/images/index/index-news-01.png"
+												alt=""
+											/>
+										</div>
+										<div class="description">
+											<div class="d-flex">
+												<span>tin tức</span>
+												<span> thứ 2, 22/11/2020</span>
+											</div>
+											<h3>
+												Mở quán cafe cần chuẩn bị những
+												gì? Cập nhật 2020
+											</h3>
+											<p class="lcl lcl-3">
+												Lorem Ipsum has been the
+												industry’s an standard dummy
+												text ever since the 1500s, when
+												unknown printer took a galley of
+												type & scrambled it make
+											</p>
+										</div>
+										<!-- CTA BUTTON -->
+										<div class="cta-button">
+											<a
+												class="btn size-small bg-primary"
+												href="#"
+												>XEM CHI TIẾT
+												<i
+													class="fas fa-arrow-circle-right"
+												></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="img overflow-hidden">
+											<img
+												class="object-cover"
+												src="./resources/images/index/index-news-02.png"
+												alt=""
+											/>
+										</div>
+										<div class="description">
+											<div class="d-flex">
+												<span>tin tức</span>
+												<span> thứ 2, 22/11/2020</span>
+											</div>
+											<h3>
+												Mở quán cafe cần chuẩn bị những
+												gì? Cập nhật 2020
+											</h3>
+											<p class="lcl lcl-3">
+												Lorem Ipsum has been the
+												industry’s an standard dummy
+												text ever since the 1500s, when
+												unknown printer took a galley of
+												type & scrambled it make
+											</p>
+										</div>
+										<!-- CTA BUTTON -->
+										<div class="cta-button">
+											<a
+												class="btn size-small bg-primary"
+												href="#"
+												>XEM CHI TIẾT
+												<i
+													class="fas fa-arrow-circle-right"
+												></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="img overflow-hidden">
+											<img
+												class="object-cover"
+												src="./resources/images/index/index-news-03.png"
+												alt=""
+											/>
+										</div>
+										<div class="description">
+											<div class="d-flex">
+												<span>tin tức</span>
+												<span> thứ 2, 22/11/2020</span>
+											</div>
+											<h3>
+												Mở quán cafe cần chuẩn bị những
+												gì? Cập nhật 2020
+											</h3>
+											<p class="lcl lcl-3">
+												Lorem Ipsum has been the
+												industry’s an standard dummy
+												text ever since the 1500s, when
+												unknown printer took a galley of
+												type & scrambled it make
+											</p>
+										</div>
+										<!-- CTA BUTTON -->
+										<div class="cta-button">
+											<a
+												class="btn size-small bg-primary"
+												href="#"
+												>XEM CHI TIẾT
+												<i
+													class="fas fa-arrow-circle-right"
+												></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="img overflow-hidden">
+											<img
+												class="object-cover"
+												src="./resources/images/index/index-news-01.png"
+												alt=""
+											/>
+										</div>
+										<div class="description">
+											<div class="d-flex">
+												<span>tin tức</span>
+												<span> thứ 2, 22/11/2020</span>
+											</div>
+											<h3>
+												Mở quán cafe cần chuẩn bị những
+												gì? Cập nhật 2020
+											</h3>
+											<p class="lcl lcl-3">
+												Lorem Ipsum has been the
+												industry’s an standard dummy
+												text ever since the 1500s, when
+												unknown printer took a galley of
+												type & scrambled it make
+											</p>
+										</div>
+										<!-- CTA BUTTON -->
+										<div class="cta-button">
+											<a
+												class="btn size-small bg-primary"
+												href="#"
+												>XEM CHI TIẾT
+												<i
+													class="fas fa-arrow-circle-right"
+												></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- BUTTON PREV SLIDER -->
+					<div class="button-navigation-slider prev center-50px">
+						<i class="fas fa-long-arrow-alt-left"></i>
+					</div>
+					<!-- BUTTON NEXT SLIDER -->
+					<div class="button-navigation-slider next center-50px">
+						<i class="fas fa-long-arrow-alt-right"></i>
+					</div>
+				</div>
 			</section>
 		</main>
+		<!-- FOOTER -->
+		<footer>
+			<div class="container">
+				<div class="d-flex align-items-end">
+					<div>
+						<h3>ĐĂNG KÝ NHẬN BẢN TIN</h3>
+						<span
+							>Theo dõi bản tin của chúng tôi để được
+							biết...</span
+						>
+					</div>
+					<ul class="socials">
+						<li class="item-social">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="item-social">
+							<a href="#"> <i class="fab fa-youtube"></i></a>
+						</li>
+						<li class="item-social">
+							<a href="#"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="item-social">
+							<a href="#"><i class="fab fa-instagram"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="wrapper">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="block-form">
+								<form action="#">
+									<div class="form-group">
+										<input
+											class="no-bg-bb"
+											type="text"
+											placeholder="Họ và Tên"
+										/>
+									</div>
+									<div class="form-group">
+										<input
+											class="no-bg-bb"
+											type="text"
+											placeholder="Họ và Tên"
+										/>
+									</div>
+									<div class="form-group">
+										<input
+											class="no-bg-bb"
+											type="text"
+											placeholder="Họ và Tên"
+										/>
+									</div>
+									<button class="btn only-icon bg-secondary">
+										<i
+											class="far fa-long-arrow-alt-right"
+										></i>
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<h3>Total Tea & Coffee Solutions - W.A.O</h3>
+							<ul class="list-informations">
+								<li>info@waoteacoffee.vn</li>
+								<li>0287 3003 683 - 093 148 0145</li>
+								<li>
+									71/30 Cộng Hoà, Phường 4, Quận Tân Bình,
+									TP.Hồ Chí Minh.
+								</li>
+							</ul>
+							<a class="btn-map" href="#">xem chỉ đường</a>
+						</div>
+						<div class="col-md-4">
+							<div class="d-flex">
+								<ul class="list-nav">
+									<li>
+										<a href="#">VỀ CHÚNG TÔI</a>
+									</li>
+									<li>
+										<a href="#">ĐÀO TẠO</a>
+									</li>
+									<li>
+										<a href="#">TRÀ LÁ</a>
+									</li>
+									<li>
+										<a href="#">TRÀ TÚI LỌC</a>
+									</li>
+									<li>
+										<a href="#">BỘ PHA CHẾ - BỘT SỮA</a>
+									</li>
+									<li>
+										<a href="#">TOPPING</a>
+									</li>
+									<li>
+										<a href="#">CÀ PHÊ</a>
+									</li>
+								</ul>
+								<ul class="list-nav">
+									<li>
+										<a href="#">VỀ CHÚNG TÔI</a>
+									</li>
+									<li>
+										<a href="#">ĐÀO TẠO</a>
+									</li>
+									<li>
+										<a href="#">TRÀ LÁ</a>
+									</li>
+									<li>
+										<a href="#">TRÀ TÚI LỌC</a>
+									</li>
+									<li>
+										<a href="#">BỘ PHA CHẾ - BỘT SỮA</a>
+									</li>
+									<li>
+										<a href="#">TOPPING</a>
+									</li>
+									<li>
+										<a href="#">CÀ PHÊ</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copy-right">
+					<p>COPYRIGHT 2020 © CTY TNHH TMDV WE ARE ONE</p>
+					<p>
+						Made with <i class="far fa-heart"></i> by Inner-gy
+						Studio
+					</p>
+				</div>
+			</div>
+		</footer>
 		<!-- Library -->
-		<script src="vendors/js/swiper-bundle.js"></script>
-		<script src="vendors/js/fontawesome.js"></script>
+		<script src="vendors/js/jquery.js"></script>
+		<script src="vendors/js/swiper.js"></script>
+		<!-- MỞ COMMENT NẾU MUỐN RENDER FONT ICON THÀNH SVG -->
+		<!-- <script src="vendors/js/fontawesome.js"></script> -->
+		<script src="vendors/js/fancybox.js"></script>
+		<script src="vendors/js/wow.js"></script>
 		<!-- My JS -->
 		<script src="scripts/app.js"></script>
 	</body>

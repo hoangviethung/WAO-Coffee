@@ -7,6 +7,9 @@
 [hidden] {
 	display: none !important;
 }
+.d-flex {
+	display: flex;
+}
 .fw-300 {
 	font-weight: 300;
 }
@@ -98,6 +101,28 @@
 	@extend .padding-left-0;
 	@extend .padding-right-0;
 }
+.lcl {
+	overflow: hidden;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+
+	&-1 {
+		-webkit-line-clamp: 1;
+	}
+
+	&-2 {
+		-webkit-line-clamp: 2;
+	}
+
+	&-3 {
+		-webkit-line-clamp: 3;
+	}
+
+	&-4 {
+		-webkit-line-clamp: 4;
+	}
+}
 .blur-up {
 	-webkit-filter: blur(5px);
 	filter: blur(5px);
@@ -106,28 +131,6 @@
 		-webkit-filter: blur(0);
 		filter: blur(0);
 	}
-}
-.pt-section {
-	padding-top: 30px;
-	@media (min-width: 768px) {
-		padding-top: 55px;
-	}
-	@media (min-width: 1200px) {
-		padding-top: 80px;
-	}
-}
-.pb-section {
-	padding-bottom: 30px;
-	@media (min-width: 768px) {
-		padding-bottom: 55px;
-	}
-	@media (min-width: 1200px) {
-		padding-bottom: 80px;
-	}
-}
-.pd-section {
-	@extend .pt-section;
-	@extend .pb-section;
 }
 .pos-center-center {
 	position: absolute;
@@ -161,16 +164,24 @@
 		color: var(--primary);
 		border: 0;
 	}
+
 	&.size-small {
 		font-size: 1.4rem;
 		padding: 8px 16px;
+	}
+	&.only-icon {
+		padding: 8px 32px;
+		font-size: 2.4rem;
+		border-radius: 30px;
+		i {
+			margin-left: 0;
+		}
 	}
 	svg,
 	i {
 		margin-left: 14px;
 	}
 }
-
 .btn-play {
 	cursor: pointer;
 	font-size: 3rem;
@@ -214,18 +225,18 @@
 		border-radius: 50%;
 	}
 }
-
 .title-section {
 	h2,
 	p {
+		font-family: "SFU TradeGothic";
 		color: var(--primary);
 	}
 	h2 {
 		font-size: 4rem;
-		font-weight: 700;
 		text-transform: uppercase;
 	}
 	p {
+		font-style: italic;
 		position: relative;
 		font-size: 2.2rem;
 		padding-left: 44px;
@@ -233,8 +244,7 @@
 			content: "";
 			position: absolute;
 			left: 0;
-			top: 50%;
-			transform: translateY(-50%);
+			top: 18px;
 			height: 1px;
 			width: 32px;
 			background: var(--primary);
@@ -252,7 +262,6 @@
 		}
 	}
 }
-
 .button-navigation-slider {
 	position: absolute;
 	cursor: pointer;
@@ -274,6 +283,27 @@
 		}
 		&.next {
 			right: 50px;
+		}
+	}
+}
+.form-group {
+	input {
+		color: var(--white);
+		font-size: 1.5rem;
+		line-height: 32px;
+		width: 100%;
+		&::placeholder {
+			color: var(--neutral-gray);
+		}
+		&.no-background {
+			background: none;
+		}
+		&.border-bottom {
+			border-bottom: 1px solid #203458;
+		}
+		&.no-bg-bb {
+			@extend.no-background;
+			@extend.border-bottom;
 		}
 	}
 }

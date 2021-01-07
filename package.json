@@ -20,8 +20,10 @@
 	},
 	"homepage": "https://github.com/hoangviethung/Basic-Source-Front-End#readme",
 	"dependencies": {
+		"@fancyapps/fancybox": "^3.5.7",
 		"@fortawesome/fontawesome-free": "^5.15.1",
-		"swiper": "^6.4.5"
+		"swiper": "^6.4.5",
+		"wow.js": "^1.2.2"
 	},
 	"devDependencies": {
 		"bootstrap": "^4.5.0",
