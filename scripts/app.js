@@ -18,6 +18,7 @@ const initIndexBestSeller = () => {
 const initIndexRecipe = () => {
 	let indexRecipe = new Swiper(".slider-index-recipe .swiper-container", {
 		slidesPerView: 3,
+		spaceBetween: 35,
 		navigation: {
 			nextEl: ".slider-index-recipe .button-navigation-slider.next",
 			prevEl: ".slider-index-recipe .button-navigation-slider.prev",

@@ -190,14 +190,14 @@
 	&.size-small {
 		width: 100px;
 		height: 100px;
-		opacity: 0.5;
 		&:after {
 			width: 80px;
 			height: 80px;
 		}
 	}
 	&.bg-white {
-		background: var(--white);
+		font-size: 2rem;
+		color: var(--primary);
 		&:after {
 			background: var(--white);
 		}

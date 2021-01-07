@@ -223,14 +223,14 @@
 .btn-play.size-small {
   width: 100px;
   height: 100px;
-  opacity: 0.5;
 }
 .btn-play.size-small:after {
   width: 80px;
   height: 80px;
 }
 .btn-play.bg-white {
-  background: var(--white);
+  font-size: 2rem;
+  color: var(--primary);
 }
 .btn-play.bg-white:after {
   background: var(--white);
