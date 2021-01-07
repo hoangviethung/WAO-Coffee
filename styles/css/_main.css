@@ -7,18 +7,22 @@ header {
   top: 0;
   left: 0;
   z-index: 500;
-  height: 80px;
   width: 100%;
+}
+header .top-header {
+  padding: 0 35px;
 }
 header .bottom-header {
   background: var(--primary);
+  padding: 0 35px;
 }
 header .navigation-wrapper {
   display: flex;
 }
 header .infomation-header {
   display: flex;
-  padding: 14px 0;
+  align-items: center;
+  height: 50px;
 }
 header .infomation-header ul {
   display: flex;
@@ -61,7 +65,7 @@ header nav ul li.has-sub > a {
 }
 header nav ul li.has-sub > a:after {
   content: "";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
   font-weight: 700;
   position: absolute;
   top: 50%;
@@ -346,7 +350,7 @@ header .cart-header .icon span {
 }
 
 .index-best-seller {
-  padding-top: 80px;
+  padding: 80px 0;
 }
 .index-best-seller .title-section {
   margin-bottom: 30px;
@@ -404,7 +408,7 @@ header .cart-header .icon span {
 }
 .index-best-seller .item-fixed p:after, .index-best-seller .item-fixed p:before {
   font-size: 24px;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
   font-weight: 700;
   position: absolute;
   color: var(--secondary);
@@ -433,4 +437,147 @@ header .cart-header .icon span {
 }
 .index-best-seller .slider-index-best-seller {
   position: relative;
+}
+
+.index-educate {
+  background-image: var(--url-background-index-edicate);
+  background-size: 100% 100%;
+  padding: 80px 0;
+}
+.index-educate .content {
+  margin-top: 30px;
+}
+.index-educate .content p {
+  color: var(--primary);
+}
+.index-educate .content p + p {
+  margin-top: 24px;
+}
+.index-educate .cta-button {
+  margin-top: 44px;
+}
+.index-educate .thumbnail-video {
+  position: relative;
+}
+
+.index-setup {
+  padding: 100px 0;
+}
+.index-setup .title-section {
+  margin-bottom: 35px;
+}
+.index-setup .description h3,
+.index-setup .description p {
+  color: var(--primary);
+}
+.index-setup .description h3 {
+  font-size: 2rem;
+}
+.index-setup .description p {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+.index-setup .big-item {
+  position: relative;
+}
+.index-setup .big-item .img {
+  height: 600px;
+}
+.index-setup .big-item .description {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+}
+.index-setup .big-item .description h3 {
+  color: var(--white);
+  font-size: 2.2rem;
+}
+.index-setup .big-item .description p {
+  color: var(--white);
+}
+.index-setup .big-item .description .cta-button {
+  margin-top: 20px;
+}
+@media (min-width: 1200px) {
+  .index-setup [class*=col-]:last-child {
+    padding-left: 45px;
+  }
+}
+.index-setup .item {
+  display: flex;
+  align-items: center;
+}
+.index-setup .item .img {
+  -ms-flex: 0 0 180px;
+  flex: 0 0 180px;
+  max-width: 180px;
+  height: 180px;
+}
+.index-setup .item .description {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 30px;
+}
+.index-setup .item .cta-button {
+  margin-top: 8px;
+}
+.index-setup .item + .item {
+  margin-top: 30px;
+}
+
+.index-recipe {
+  position: relative;
+  padding: 80px 0;
+  background-image: var(--url-background-index-recipe);
+  background-size: cover;
+}
+.index-recipe .header-recipe {
+  display: flex;
+  align-items: flex-end;
+}
+.index-recipe .list-tab {
+  display: flex;
+  margin-left: auto;
+}
+.index-recipe .list-tab .item-tab {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.index-recipe .list-tab .item-tab + .item-tab {
+  margin-left: 20px;
+}
+.index-recipe .list-tab .item-tab.active {
+  color: var(--secondary);
+}
+@media (min-width: 1025px) {
+  .index-recipe .list-tab .item-tab {
+    transition: 0.3s all ease-in-out;
+  }
+  .index-recipe .list-tab .item-tab:hover {
+    color: var(--secondary);
+  }
+}
+.index-recipe .slider-index-recipe {
+  position: relative;
+  margin-top: 35px;
+}
+.index-recipe .slider-index-recipe .item {
+  position: relative;
+}
+.index-recipe .slider-index-recipe .item .description {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+}
+.index-recipe .slider-index-recipe .item .description h3 {
+  color: var(--white);
+  font-size: 2.2rem;
 }

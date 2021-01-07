@@ -15,8 +15,18 @@ const initIndexBestSeller = () => {
 		}
 	);
 };
+const initIndexRecipe = () => {
+	let indexRecipe = new Swiper(".slider-index-recipe .swiper-container", {
+		slidesPerView: 3,
+		navigation: {
+			nextEl: ".slider-index-recipe .button-navigation-slider.next",
+			prevEl: ".slider-index-recipe .button-navigation-slider.prev",
+		},
+	});
+};
 
 document.addEventListener("DOMContentLoaded", () => {
 	initHeroBanner();
 	initIndexBestSeller();
+	initIndexRecipe();
 });
