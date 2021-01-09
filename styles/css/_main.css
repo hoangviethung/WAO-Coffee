@@ -515,11 +515,34 @@ footer .copy-right p:last-child {
   }
 }
 .hero-banner .main-item {
+  animation-name: productAnimae;
+  animation-duration: 4s;
+  /* or: Xms */
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+  /* or: normal */
+  animation-timing-function: ease-out;
+  /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards;
+  /* or: backwards, both, none */
+  animation-delay: 2s;
+  /* or: Xms */
   position: absolute;
   left: 52%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+@keyframes productAnimae {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 .hero-banner .main-item img {
   width: 80%;
