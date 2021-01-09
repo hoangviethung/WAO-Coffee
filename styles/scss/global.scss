@@ -150,6 +150,7 @@
 	color: var(--white);
 	border: 2px solid var(--white);
 	border-radius: 4px;
+	background: none;
 	&.bg-primary {
 		background: var(--primary);
 		border: 0;
@@ -159,12 +160,15 @@
 		background: var(--white);
 		border: 0;
 	}
+	&.bg-none {
+		color: var(--primary);
+		border: 0;
+	}
 	&.bg-secondary {
 		background: var(--secondary);
 		color: var(--primary);
 		border: 0;
 	}
-
 	&.size-small {
 		font-size: 1.4rem;
 		padding: 8px 16px;
@@ -181,6 +185,20 @@
 	i {
 		margin-left: 14px;
 	}
+	@media (min-width: 1025px) {
+		transition: 0.3s all ease-in-out;
+		&:hover {
+			background: var(--primary);
+			color: var(--secondary);
+			&.bg-none {
+				background: none;
+			}
+			&.bg-white {
+				color: var(--primary);
+				background: var(--secondary);
+			}
+		}
+	}
 }
 .btn-play {
 	cursor: pointer;
@@ -192,7 +210,7 @@
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba($color: #ffffff, $alpha: 0.5);
 	i,
 	svg {
 		position: relative;
@@ -223,6 +241,20 @@
 		transform: translate(-50%, -50%);
 		background: var(--primary);
 		border-radius: 50%;
+	}
+	@media (min-width: 1025px) {
+		transition: 0.3s all ease-in-out;
+		&:after {
+			transition: 0.3s all ease-in-out;
+		}
+		&:hover {
+			color: var(--primary);
+			transform: translate(-50%, -50%) scale(1.1);
+			background: rgba($color: #ffc864, $alpha: 0.3);
+			&:after {
+				background: var(--secondary);
+			}
+		}
 	}
 }
 .title-section {
@@ -275,6 +307,7 @@
 	overflow: hidden;
 	background: var(--primary);
 	border-radius: 5px;
+	z-index: 50;
 	&.center-50px {
 		top: 50%;
 		transform: translateY(-50%);
@@ -283,6 +316,13 @@
 		}
 		&.next {
 			right: 50px;
+		}
+	}
+	@media (min-width: 1025px) {
+		transition: 0.3s all ease-in-out;
+		&:hover {
+			color: var(--primary);
+			background: var(--secondary);
 		}
 	}
 }
