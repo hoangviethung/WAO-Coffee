@@ -38,12 +38,21 @@ const initIndexBestSeller = () => {
 	let indexBestSeller = new Swiper(
 		".slider-index-best-seller .swiper-container",
 		{
-			slidesPerView: 3,
+			slidesPerView: 1,
+			speed: 1000,
 			navigation: {
 				nextEl:
 					".slider-index-best-seller .button-navigation-slider.next",
 				prevEl:
 					".slider-index-best-seller .button-navigation-slider.prev",
+			},
+			breakpoints: {
+				990: {
+					slidesPerView: 2,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
 			},
 		}
 	);
