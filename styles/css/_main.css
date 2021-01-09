@@ -41,8 +41,16 @@ header .infomation-header ul {
 }
 header .infomation-header ul li {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary);
+}
+header .infomation-header ul li a {
+  transition: 0.3s all ease-in-out;
+}
+@media (min-width: 1025px) {
+  header .infomation-header ul li a:hover {
+    color: var(--secondary);
+  }
 }
 header .infomation-header ul li + li {
   position: relative;
@@ -235,9 +243,13 @@ header nav .button-close-wrapper .close-menu-mobile {
   }
 }
 header .logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
   background: var(--primary);
-  width: 80px;
+  overflow: hidden;
+  width: 128px;
+  height: 80px;
 }
 header .languages {
   align-self: center;

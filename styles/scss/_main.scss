@@ -13,8 +13,6 @@ header {
 	.top-header {
 		padding: 0 35px;
 		transition: opacity 0.3s, transform 0.6s;
-		@media (max-width: 1199.98px) {
-		}
 		@media (max-width: 1024.98px) {
 			display: none;
 		}
@@ -38,8 +36,16 @@ header {
 			flex-wrap: wrap;
 			li {
 				font-size: 1.4rem;
-				font-weight: 700;
+				font-weight: 600;
 				color: var(--primary);
+				a {
+					transition: 0.3s all ease-in-out;
+					@media (min-width: 1025px) {
+						&:hover {
+							color: var(--secondary);
+						}
+					}
+				}
 				+ li {
 					position: relative;
 					margin-left: 24px;
@@ -257,9 +263,13 @@ header {
 		}
 	}
 	.logo {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
 		background: var(--primary);
-		width: 80px;
+		overflow: hidden;
+		width: 128px;
+		height: 80px;
 	}
 	.languages {
 		align-self: center;
