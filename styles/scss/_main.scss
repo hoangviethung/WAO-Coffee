@@ -604,15 +604,16 @@ main {
 	.main-item {
 		position: absolute;
 		left: 52%;
-		top: 50%;
+		top: 55%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 		img {
-			width: 80%;
+			width: 75%;
 		}
 		@media (max-width: 1024.98px) {
 			width: 50%;
 			left: 80%;
+			top: 50%;
 		}
 	}
 	.content {
