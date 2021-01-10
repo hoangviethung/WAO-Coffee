@@ -4,12 +4,14 @@
 
 -   Email: hoangviet.hung.009@gmail.com
 
+-   LinkedIn: https://www.linkedin.com/in/hoangviethung009/
+
 -   Phone: 0969.912.404
 
--   Website: https://hoangviethung.com/
+-   Skype: 0969.912.404 or hoangviet.hung.009@gmail.com
 
--   Skype: hoangviet.hung.009
+-   Github: https://github.com/hoangviethung
 
-## What is this Project ?
+-   Behance https://www.behance.net/hoangviethung009
 
--   Sử dụng HTML, LESS, JQ, JS
+## I'm Front-end Developer & Product Designer (UX/UI)
