@@ -1,0 +1,210 @@
+.hero-banner {
+  position: relative;
+}
+.hero-banner .group-images {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 130px);
+  align-items: flex-end;
+}
+.hero-banner .group-images img {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.hero-banner .group-images img:nth-child(2) {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+@media (max-width: 1024.98px) {
+  .hero-banner .group-images img {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    object-position: bottom;
+  }
+  .hero-banner .group-images img:first-child {
+    display: none;
+  }
+  .hero-banner .group-images img:nth-child(2) {
+    display: block;
+  }
+  .hero-banner .group-images img:last-child {
+    display: none;
+  }
+}
+@media (max-width: 1024.98px) {
+  .hero-banner .group-images {
+    height: 50vh;
+  }
+}
+.hero-banner .main-item {
+  position: absolute;
+  left: 52%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-banner .main-item img {
+  width: 75%;
+}
+@media (max-width: 1024.98px) {
+  .hero-banner .main-item {
+    width: 50%;
+    left: 80%;
+    top: 50%;
+  }
+}
+.hero-banner .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.hero-banner .content h2 {
+  color: var(--primary);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1.2;
+  max-width: 40%;
+}
+@media (max-width: 767.98px) {
+  .hero-banner .content h2 {
+    max-width: 100%;
+  }
+}
+.hero-banner .content h2 span {
+  color: var(--white);
+  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+}
+@media (max-width: 1199.98px) {
+  .hero-banner .content h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-banner .content h2 {
+    font-size: 4rem;
+  }
+}
+.hero-banner .content p {
+  color: var(--primary);
+  max-width: 40%;
+  margin-top: 24px;
+}
+@media (max-width: 1024.98px) {
+  .hero-banner .content p {
+    max-width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-banner .content p {
+    display: none;
+  }
+}
+@media (max-width: 1699.98px) {
+  .hero-banner .content {
+    top: 50%;
+  }
+}
+.hero-banner .cta-button {
+  width: 100%;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+}
+@media (max-width: 1024.98px) {
+  .hero-banner .cta-button {
+    bottom: 5%;
+  }
+  .hero-banner .cta-button .btn {
+    background: var(--primary);
+    border: 0;
+  }
+}
+.hero-banner .swiper-slide .content {
+  opacity: 0;
+  transform: translateY(-50%) translateX(-5%);
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+.hero-banner .swiper-slide .main-item {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+.hero-banner .swiper-slide.swiper-slide-active .content {
+  opacity: 1;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+  transform: translateY(-50%) translateX(0);
+}
+.hero-banner .swiper-slide.swiper-slide-active .main-item {
+  opacity: 1;
+  transition: opacity 3s ease-in-out;
+  animation-name: productAnimae;
+  animation-duration: 4s;
+  /* or: Xms */
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+  /* or: normal */
+  animation-timing-function: ease-out;
+  /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+  animation-fill-mode: forwards;
+  /* or: backwards, both, none */
+  animation-delay: 1s;
+}
+@keyframes productAnimae {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.hero-banner .swiper-pagination {
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1024.98px) {
+  .hero-banner .swiper-pagination {
+    bottom: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero-banner .swiper-pagination {
+    right: 16px;
+    bottom: 16px;
+    transform: unset;
+    left: unset;
+  }
+}
+.hero-banner .swiper-pagination-bullet {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  background: var(--white);
+}
+.hero-banner .swiper-pagination-bullet:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--black);
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
+.hero-banner .swiper-pagination-bullet + .swiper-pagination-bullet {
+  margin-left: 14px;
+}
+.hero-banner .swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+  opacity: 1;
+}

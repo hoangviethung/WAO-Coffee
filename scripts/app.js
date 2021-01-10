@@ -38,7 +38,6 @@ const initHeroBanner = () => {
 		autoplay: {
 			delay: 3000,
 		},
-		effect: "fade",
 		pagination: {
 			el: ".hero-banner .swiper-pagination",
 			type: "bullets",
