@@ -70,6 +70,10 @@ const initHeroBanner = () => {
 			type: "bullets",
 			clickable: true,
 		},
+		navigation: {
+			nextEl: ".hero-banner .button-navigation-slider.next",
+			prevEl: ".hero-banner .button-navigation-slider.prev",
+		},
 	});
 };
 const initIndexBestSeller = () => {

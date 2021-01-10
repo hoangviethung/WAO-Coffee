@@ -44,6 +44,7 @@
 }
 .page-banner .group-infomation h1 span {
   display: block;
+  margin-bottom: 16px;
   font-size: 1.5rem;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
