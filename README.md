@@ -2,7 +2,7 @@
 
 > I'm Front-end Developer & Product Designer (UX/UI)
 
-## Contact Information Below
+### Contact Information
 
 -   Email: hoangviet.hung.009@gmail.com
 
