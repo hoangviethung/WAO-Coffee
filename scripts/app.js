@@ -19,16 +19,43 @@ const showMenuMobile = () => {
 	const btn = document.querySelector(".toggle-menu-mobile");
 	const close = document.querySelector(".close-menu-mobile");
 	const navigation = document.querySelector("nav");
+	const overlay = document.querySelector(".overlay");
+	const body = document.querySelector("body");
 	// CHECK BUTTON
 	if (btn) {
 		btn.addEventListener("click", () => {
 			navigation.classList.add("active");
+			overlay.classList.add("active");
+			body.classList.add("no-scroll");
 		});
 	}
 	if (close) {
 		close.addEventListener("click", () => {
 			navigation.classList.remove("active");
+			overlay.classList.remove("active");
+			body.classList.remove("no-scroll");
 		});
+	}
+	if (overlay) {
+		overlay.addEventListener("click", () => {
+			navigation.classList.remove("active");
+			overlay.classList.remove("active");
+			body.classList.remove("no-scroll");
+		});
+	}
+};
+const moveNavOutHeader = (responsive) => {
+	const nav = document.querySelector("nav");
+	const body = document.querySelector("body");
+	const header = document.querySelector("header .nav-config-mobile");
+	if (window.innerWidth < responsive) {
+		if (nav && body) {
+			body.append(nav);
+		}
+	} else {
+		if (nav && header) {
+			header.appendChild(nav);
+		}
 	}
 };
 const initHeroBanner = () => {
@@ -152,8 +179,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	initIndexCustomer();
 	initIndexNews();
 	initializeWowJs();
+	moveNavOutHeader(1300);
 });
 
 window.addEventListener("scroll", () => {
 	fixedHeaderWhenScroll();
+});
+
+window.addEventListener("resize", () => {
+	moveNavOutHeader(1300);
 });

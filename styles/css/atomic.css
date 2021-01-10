@@ -1,0 +1,146 @@
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.d-none,
+[hidden] {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-last-center {
+  text-align-last: center;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-no-underline {
+  text-decoration: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.fullsize, .object-contain, .object-cover {
+  width: 100%;
+  height: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.padding-left-0, .padding-x-0 {
+  padding-left: 0 !important;
+}
+
+.padding-right-0, .padding-x-0 {
+  padding-right: 0 !important;
+}
+
+.lcl {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.lcl-1 {
+  -webkit-line-clamp: 1;
+}
+.lcl-2 {
+  -webkit-line-clamp: 2;
+}
+.lcl-3 {
+  -webkit-line-clamp: 3;
+}
+.lcl-4 {
+  -webkit-line-clamp: 4;
+}

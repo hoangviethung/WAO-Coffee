@@ -32,6 +32,11 @@ footer {
 				border-radius: 4px;
 				background: var(--secondary);
 				color: var(--primary);
+				&:hover {
+					text-decoration: none;
+					color: var(--primary) !important;
+					background: var(--white);
+				}
 			}
 			+ .item-social {
 				margin-left: 10px;

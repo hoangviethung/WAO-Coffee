@@ -34,6 +34,11 @@ footer .socials .item-social a {
   background: var(--secondary);
   color: var(--primary);
 }
+footer .socials .item-social a:hover {
+  text-decoration: none;
+  color: var(--primary) !important;
+  background: var(--white);
+}
 footer .socials .item-social + .item-social {
   margin-left: 10px;
 }

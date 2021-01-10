@@ -4,12 +4,6 @@
 	box-sizing: border-box;
 }
 
-main {
-	@media (max-width: 1024.98px) {
-		padding-top: 80px;
-	}
-}
-
 html {
 	font-size: 52.5%;
 	@media (min-width: 768px) {
@@ -29,6 +23,9 @@ body {
 	color: var(--body);
 	background: var(--neutral-light);
 	overflow-x: hidden;
+	&.no-scroll {
+		overflow-y: hidden;
+	}
 }
 
 article,
