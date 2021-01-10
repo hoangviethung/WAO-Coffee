@@ -1,3 +1,7 @@
+@charset "UTF-8";
+main {
+  padding-top: 130px;
+}
 @media (max-width: 1024.98px) {
   main {
     padding-top: 80px;
@@ -274,18 +278,54 @@
   }
 }
 
-.form-group input {
+.block-form input {
   color: var(--white);
   font-size: 1.5rem;
   line-height: 32px;
   width: 100%;
+  background: none;
+  border-bottom: 1px solid var(--primary-light);
 }
-.form-group input::placeholder {
+.block-form input::placeholder {
   color: var(--neutral-gray);
 }
-.form-group input.no-background, .form-group input.no-bg-bb {
-  background: none;
+.block-form textarea {
+  color: var(--primary);
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid var(--primary-light);
 }
-.form-group input.border-bottom, .form-group input.no-bg-bb {
-  border-bottom: 1px solid #203458;
+
+.breadcrumb {
+  display: flex;
+}
+.breadcrumb a {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+@media (min-width: 1025px) {
+  .breadcrumb a {
+    transition: 0.3s all ease-in-out;
+  }
+  .breadcrumb a:hover {
+    color: var(--secondary);
+  }
+}
+.breadcrumb li + li a {
+  position: relative;
+  padding-left: 18px;
+  margin-left: 18px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.breadcrumb li + li a:after {
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  position: absolute;
+  font-size: 1.3rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

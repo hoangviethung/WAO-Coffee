@@ -63,7 +63,7 @@ const initHeroBanner = () => {
 		speed: 1500,
 		autoplay: true,
 		autoplay: {
-			delay: 3000,
+			delay: 7000,
 		},
 		pagination: {
 			el: ".hero-banner .swiper-pagination",
