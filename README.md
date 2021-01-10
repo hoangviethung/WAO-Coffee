@@ -1,8 +1,8 @@
 # Hoàng Việt Hùng
 
-### I'm Front-end Developer & Product Designer (UX/UI)
+> I'm Front-end Developer & Product Designer (UX/UI)
 
--   Birthday: 9 - 9 - 1999
+## Contact Information Below
 
 -   Email: hoangviet.hung.009@gmail.com
 
