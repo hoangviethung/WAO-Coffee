@@ -1,36 +1,36 @@
-.Contact {
+.Contact-information {
   padding-top: 90px;
 }
 @media (max-width: 1024.98px) {
-  .Contact .group-item {
+  .Contact-information .group-item {
     display: flex;
     flex-wrap: wrap;
   }
-  .Contact .group-item .item-info {
+  .Contact-information .group-item .item-info {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
-  .Contact .group-item .item-info {
+  .Contact-information .group-item .item-info {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
-.Contact .item-info {
+.Contact-information .item-info {
   padding: 24px 24px 24px 50px;
   border-radius: 8px;
 }
-.Contact .item-info h2 {
+.Contact-information .item-info h2 {
   position: relative;
   font-family: "SFU TradeGothic";
   color: var(--primary);
   font-size: 5.5rem;
   text-transform: uppercase;
 }
-.Contact .item-info h2:after {
+.Contact-information .item-info h2:after {
   content: "";
   position: absolute;
   background: var(--secondary);
@@ -40,72 +40,69 @@
   height: 2px;
   transform: translateY(-50%);
 }
-.Contact .item-info p {
+.Contact-information .item-info p {
   color: var(--primary);
 }
-.Contact .item-info ul.socials {
+.Contact-information .item-info ul.socials {
   margin-top: 8px;
 }
-.Contact .item-info ul.socials a {
+.Contact-information .item-info ul.socials a {
   display: inline-flex;
   align-items: center;
   font-size: 1.8rem;
   font-weight: 600;
 }
-.Contact .item-info ul.socials i {
+.Contact-information .item-info ul.socials i {
   margin-right: 4px;
 }
-.Contact .item-info ul li {
+.Contact-information .item-info ul li {
   display: flex;
   flex-direction: column;
   color: var(--primary);
 }
-.Contact .item-info ul li + li {
+.Contact-information .item-info ul li + li {
   margin-top: 8px;
 }
 @media (min-width: 1025px) {
-  .Contact .item-info a {
+  .Contact-information .item-info a {
     transition: 0.3s all ease-in-out;
   }
-  .Contact .item-info a:hover {
+  .Contact-information .item-info a:hover {
     color: var(--secondary) !important;
   }
 }
 @media (min-width: 1025px) {
-  .Contact .item-info {
+  .Contact-information .item-info {
     transition: 0.3s all ease-in-out;
   }
-  .Contact .item-info:hover {
+  .Contact-information .item-info:hover {
     background: var(--primary);
   }
-  .Contact .item-info:hover h2,
-.Contact .item-info:hover li,
-.Contact .item-info:hover a,
-.Contact .item-info:hover p {
+  .Contact-information .item-info:hover h2,
+.Contact-information .item-info:hover li,
+.Contact-information .item-info:hover a,
+.Contact-information .item-info:hover p {
     color: var(--white);
   }
 }
 @media (max-width: 1024.98px) {
-  .Contact .item-info {
+  .Contact-information .item-info {
     padding: 0 0 0 50px;
     margin-top: 30px;
   }
 }
-.Contact .google-map-wrapper {
-  height: 650px;
-  margin-top: 80px;
-}
 @media (max-width: 1024.98px) {
-  .Contact .google-map-wrapper {
-    height: 450px;
+  .Contact-information {
+    padding-top: 20px;
   }
 }
-.Contact .contact-form {
+
+.Contact-form {
   position: relative;
   margin-top: -150px;
   padding-bottom: 250px;
 }
-.Contact .contact-form h3 {
+.Contact-form h3 {
   font-family: "SFU TradeGothic";
   font-size: 5.5rem;
   text-transform: uppercase;
@@ -113,12 +110,12 @@
   color: var(--primary);
 }
 @media (max-width: 575.98px) {
-  .Contact .contact-form h3 {
+  .Contact-form h3 {
     font-size: 4.4rem;
     margin-bottom: 24px;
   }
 }
-.Contact .contact-form .block-form {
+.Contact-form .block-form {
   position: relative;
   max-width: 1000px;
   width: 100%;
@@ -127,24 +124,24 @@
   background: var(--white);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
-.Contact .contact-form .block-form div + div {
+.Contact-form .block-form div + div {
   margin-top: 44px;
 }
-.Contact .contact-form .block-form div:last-child {
+.Contact-form .block-form div:last-child {
   margin-top: 30px;
   text-align: right;
 }
-.Contact .contact-form .block-form input,
-.Contact .contact-form .block-form textarea {
+.Contact-form .block-form input,
+.Contact-form .block-form textarea {
   color: var(--primary);
   border-bottom: 1px solid var(--neutral-gray);
   transition: 0.3s all ease-in-out;
 }
-.Contact .contact-form .block-form input:focus,
-.Contact .contact-form .block-form textarea:focus {
+.Contact-form .block-form input:focus,
+.Contact-form .block-form textarea:focus {
   border-bottom: 1px solid var(--primary);
 }
-.Contact .contact-form .block-form:after {
+.Contact-form .block-form:after {
   content: "";
   position: absolute;
   width: 500px;
@@ -157,32 +154,37 @@
   border-radius: 50%;
 }
 @media (max-width: 767.98px) {
-  .Contact .contact-form .block-form:after {
+  .Contact-form .block-form:after {
     content: none;
   }
 }
 @media (max-width: 575.98px) {
-  .Contact .contact-form .block-form {
+  .Contact-form .block-form {
     padding: 24px;
   }
 }
 @media (max-width: 1024.98px) {
-  .Contact .contact-form {
+  .Contact-form {
     margin-top: 0;
   }
 }
 @media (max-width: 767.98px) {
-  .Contact .contact-form {
+  .Contact-form {
     padding-bottom: 50px;
   }
 }
 @media (max-width: 575.98px) {
-  .Contact .contact-form {
+  .Contact-form {
     padding-bottom: 35px;
   }
 }
+
+.Contact-map .google-map-wrapper {
+  height: 650px;
+  margin-top: 80px;
+}
 @media (max-width: 1024.98px) {
-  .Contact {
-    padding-top: 20px;
+  .Contact-map .google-map-wrapper {
+    height: 450px;
   }
 }
