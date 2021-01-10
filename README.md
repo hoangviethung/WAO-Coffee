@@ -1,5 +1,7 @@
 # Hoàng Việt Hùng
 
+### I'm Front-end Developer & Product Designer (UX/UI)
+
 -   Birthday: 9 - 9 - 1999
 
 -   Email: hoangviet.hung.009@gmail.com
@@ -13,5 +15,3 @@
 -   Github: https://github.com/hoangviethung
 
 -   Behance https://www.behance.net/hoangviethung009
-
-## I'm Front-end Developer & Product Designer (UX/UI)
