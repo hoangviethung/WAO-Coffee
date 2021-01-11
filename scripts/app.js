@@ -156,6 +156,23 @@ const initIndexNews = () => {
 		},
 	});
 };
+const initAboutHistory = () => {
+	let aboutHistory = new Swiper(".slider-about-history .swiper-container", {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: ".slider-about-history .button-navigation-slider.next",
+			prevEl: ".slider-about-history .button-navigation-slider.prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+};
 const initializeWowJs = () => {
 	var wow = new WOW({
 		boxClass: "wow", // animated element css class (default is wow)
@@ -182,6 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	initIndexRecipe();
 	initIndexCustomer();
 	initIndexNews();
+	initAboutHistory();
 	initializeWowJs();
 	moveNavOutHeader(1300);
 });

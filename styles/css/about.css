@@ -1,0 +1,145 @@
+.About-story {
+  position: relative;
+  height: 550px;
+}
+.About-story [class*=col-] {
+  align-self: center;
+}
+.About-story .container,
+.About-story .row {
+  height: 100%;
+}
+.About-story .content {
+  margin-top: 24px;
+}
+.About-story .content p {
+  color: var(--primary);
+}
+.About-story .content p + p {
+  margin-top: 28px;
+}
+.About-story .content,
+.About-story .title-section {
+  padding-right: 80px;
+}
+.About-story .img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.About-story.img-left .content,
+.About-story.img-left .title-section {
+  padding-right: 0;
+  padding-left: 80px;
+}
+.About-story.img-left .img {
+  right: unset;
+  left: 0;
+}
+
+.About-business-areas {
+  padding-top: 80px;
+}
+.About-business-areas .img {
+  position: relative;
+  margin-bottom: 24px;
+}
+.About-business-areas h3 {
+  font-size: 2rem;
+  color: var(--white);
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+.About-business-areas p {
+  color: var(--primary);
+}
+
+.About-history {
+  padding: 80px 0;
+}
+
+.slider-about-history {
+  position: relative;
+  margin-top: 44px;
+}
+.slider-about-history .swiper-container {
+  padding: 0 30px;
+}
+.slider-about-history h3,
+.slider-about-history h4,
+.slider-about-history p {
+  text-align: right;
+  color: var(--primary);
+}
+.slider-about-history h3 {
+  font-family: "SFU TradeGothic";
+  font-size: 5.5rem;
+}
+.slider-about-history h4 {
+  margin-top: 4px;
+}
+.slider-about-history p {
+  margin-top: 30px;
+}
+.slider-about-history .img {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.slider-about-history .img .line {
+  height: 5px;
+  background: var(--secondary);
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-right: 50px;
+}
+.slider-about-history .img img {
+  display: block;
+  margin-left: auto;
+}
+
+.About-image-galleries {
+  position: relative;
+  padding: 80px 0;
+  background-image: var(--url-background-about-gallery);
+  background-size: 100% 100%;
+}
+.About-image-galleries .content-wrapper {
+  padding-left: 310px;
+}
+.About-image-galleries .content {
+  margin-top: 32px;
+}
+.About-image-galleries .content p {
+  color: var(--primary);
+}
+.About-image-galleries .content p + p {
+  margin-top: 30px;
+}
+.About-image-galleries .images {
+  margin-top: 44px;
+}
+.About-image-galleries .images .item {
+  cursor: pointer;
+  position: relative;
+}
+.About-image-galleries .container {
+  position: relative;
+  z-index: 2;
+}
+.About-image-galleries .img-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+}
