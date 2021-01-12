@@ -242,60 +242,8 @@ const initSetupFeedback = () => {
         },
     });
 };
-const initSetupInfo = () => {
-    let indexRecipe = new Swiper(".slider-setup-info .swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 35,
-        navigation: {
-            nextEl: ".slider-setup-info .button-navigation-slider.next",
-            prevEl: ".slider-setup-info .button-navigation-slider.prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1200: {
-                slidesPerView: 3,
-            },
-        },
-    });
-};
-const initSetupProject = () => {
-    let indexRecipe = new Swiper(".slider-setup-project .swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 35,
-        navigation: {
-            nextEl: ".slider-setup-project .button-navigation-slider.next",
-            prevEl: ".slider-setup-project .button-navigation-slider.prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1200: {
-                slidesPerView: 3,
-            },
-        },
-    });
-};
-const initSetupFeedback = () => {
-    let indexRecipe = new Swiper(".slider-setup-feedback .swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 35,
-        navigation: {
-            nextEl: ".slider-setup-feedback .button-navigation-slider.next",
-            prevEl: ".slider-setup-feedback .button-navigation-slider.prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1200: {
-                slidesPerView: 3,
-            },
-        },
-    });
-};
+
+
 document.addEventListener("DOMContentLoaded", () => {
     fixedHeaderWhenScroll();
     showMenuMobile();
