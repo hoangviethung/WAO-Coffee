@@ -237,6 +237,20 @@ main {
   border-radius: 5px;
   z-index: 50;
 }
+.button-navigation-slider.bg-primary {
+  background: var(--primary);
+}
+.button-navigation-slider.bg-white {
+  color: var(--primary);
+  background: var(--white);
+}
+.button-navigation-slider.bg-none {
+  color: var(--primary);
+}
+.button-navigation-slider.bg-secondary {
+  background: var(--secondary);
+  color: var(--primary);
+}
 .button-navigation-slider.center-50px {
   top: 50%;
   transform: translateY(-50%);
