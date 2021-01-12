@@ -143,3 +143,45 @@
   z-index: 1;
   width: 100%;
 }
+
+.About-vistion-misstion {
+  padding: 80px 0;
+}
+.About-vistion-misstion .col-lg-4 {
+  margin-top: 50px;
+}
+.About-vistion-misstion .col-lg-4 h3 {
+  font-size: 45px;
+  font-family: "SFU TradeGothic";
+  color: var(--primary);
+  padding-left: 17px;
+  position: relative;
+  line-height: 1;
+}
+.About-vistion-misstion .col-lg-4 h3::before {
+  position: absolute;
+  width: 4px;
+  height: 80%;
+  left: 0;
+  bottom: 0;
+  background: var(--secondary);
+  content: "";
+}
+.About-vistion-misstion .col-lg-4 ul {
+  margin-top: 35px;
+}
+.About-vistion-misstion .col-lg-4 li {
+  margin-bottom: 35px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.About-vistion-misstion .col-lg-4 li:last-child {
+  margin-bottom: 0;
+}
+.About-vistion-misstion .col-lg-4 li span {
+  color: var(--secondary);
+  font-weight: bold;
+}
+.About-vistion-misstion .col-lg-4 li b {
+  color: var(--primary);
+}

@@ -1,148 +1,189 @@
 .About-story {
-	position: relative;
-	height: 550px;
-	[class*="col-"] {
-		align-self: center;
-	}
-	.container,
-	.row {
-		height: 100%;
-	}
-	.content {
-		margin-top: 24px;
-		p {
-			color: var(--primary);
-			+ p {
-				margin-top: 28px;
-			}
-		}
-	}
-	.content,
-	.title-section {
-		padding-right: 80px;
-	}
-	.img {
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 50%;
-		height: 100%;
-	}
-	&.img-left {
-		.content,
-		.title-section {
-			padding-right: 0;
-			padding-left: 80px;
-		}
-		.img {
-			right: unset;
-			left: 0;
-		}
-	}
+    position: relative;
+    height: 550px;
+    [class*="col-"] {
+        align-self: center;
+    }
+    .container,
+    .row {
+        height: 100%;
+    }
+    .content {
+        margin-top: 24px;
+        p {
+            color: var(--primary);
+            +p {
+                margin-top: 28px;
+            }
+        }
+    }
+    .content,
+    .title-section {
+        padding-right: 80px;
+    }
+    .img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+    }
+    &.img-left {
+        .content,
+        .title-section {
+            padding-right: 0;
+            padding-left: 80px;
+        }
+        .img {
+            right: unset;
+            left: 0;
+        }
+    }
 }
 
 .About-business-areas {
-	padding-top: 80px;
-	.img {
-		position: relative;
-		margin-bottom: 24px;
-	}
-	h3 {
-		font-size: 2rem;
-		color: var(--white);
-		position: absolute;
-		bottom: 30px;
-		left: 30px;
-		right: 30px;
-		text-align: center;
-		font-weight: 600;
-	}
-	p {
-		color: var(--primary);
-	}
+    padding-top: 80px;
+    .img {
+        position: relative;
+        margin-bottom: 24px;
+    }
+    h3 {
+        font-size: 2rem;
+        color: var(--white);
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        text-align: center;
+        font-weight: 600;
+    }
+    p {
+        color: var(--primary);
+    }
 }
 
 .About-history {
-	padding: 80px 0;
+    padding: 80px 0;
 }
 
 .slider-about-history {
-	position: relative;
-	margin-top: 44px;
-	.swiper-container {
-		padding: 0 30px;
-	}
-	h3,
-	h4,
-	p {
-		text-align: right;
-		color: var(--primary);
-	}
-	h3 {
-		font-family: "SFU TradeGothic";
-		font-size: 5.5rem;
-	}
-	h4 {
-		margin-top: 4px;
-	}
-	p {
-		margin-top: 30px;
-	}
-
-	.img {
-		display: flex;
-		align-items: center;
-		margin-top: 16px;
-		.line {
-			height: 5px;
-			background: var(--secondary);
-			-ms-flex-preferred-size: 0;
-			flex-basis: 0;
-			-ms-flex-positive: 1;
-			flex-grow: 1;
-			max-width: 100%;
-			margin-right: 50px;
-		}
-		img {
-			display: block;
-			margin-left: auto;
-		}
-	}
+    position: relative;
+    margin-top: 44px;
+    .swiper-container {
+        padding: 0 30px;
+    }
+    h3,
+    h4,
+    p {
+        text-align: right;
+        color: var(--primary);
+    }
+    h3 {
+        font-family: "SFU TradeGothic";
+        font-size: 5.5rem;
+    }
+    h4 {
+        margin-top: 4px;
+    }
+    p {
+        margin-top: 30px;
+    }
+    .img {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        .line {
+            height: 5px;
+            background: var(--secondary);
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+            margin-right: 50px;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    }
 }
 
 .About-image-galleries {
-	position: relative;
-	padding: 80px 0;
-	background-image: var(--url-background-about-gallery);
-	background-size: 100% 100%;
-	.content-wrapper {
-		padding-left: 310px;
-	}
-	.content {
-		margin-top: 32px;
-		p {
-			color: var(--primary);
-			+ p {
-				margin-top: 30px;
-			}
-		}
-	}
-	.images {
-		margin-top: 44px;
-		.item {
-			cursor: pointer;
-			position: relative;
-		}
-	}
-	.container {
-		position: relative;
-		z-index: 2;
-	}
-	.img-bottom {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		z-index: 1;
-		width: 100%;
-	}
+    position: relative;
+    padding: 80px 0;
+    background-image: var(--url-background-about-gallery);
+    background-size: 100% 100%;
+    .content-wrapper {
+        padding-left: 310px;
+    }
+    .content {
+        margin-top: 32px;
+        p {
+            color: var(--primary);
+            +p {
+                margin-top: 30px;
+            }
+        }
+    }
+    .images {
+        margin-top: 44px;
+        .item {
+            cursor: pointer;
+            position: relative;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    .img-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+    }
+}
+
+.About-vistion-misstion {
+    padding: 80px 0;
+    .col-lg-4 {
+        margin-top: 50px;
+        h3 {
+            font-size: 45px;
+            font-family: "SFU TradeGothic";
+            color: var(--primary);
+            padding-left: 17px;
+            position: relative;
+            line-height: 1;
+            &::before {
+                position: absolute;
+                width: 4px;
+                height: 80%;
+                left: 0;
+                bottom: 0;
+                background: var(--secondary);
+                content: '';
+            }
+        }
+        ul {
+            margin-top: 35px;
+        }
+        li {
+            margin-bottom: 35px;
+            font-size: 16px;
+            line-height: 22px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                color: var(--secondary);
+                font-weight: bold;
+            }
+            b {
+                color: var(--primary);
+            }
+        }
+    }
 }
