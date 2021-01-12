@@ -185,3 +185,14 @@
 .About-vistion-misstion .col-lg-4 li b {
   color: var(--primary);
 }
+
+.customers-clients.bg {
+  background: url(../../resources/images/setup/setup-client-bg.png);
+}
+.customers-clients.bg h2,
+.customers-clients.bg p {
+  color: var(--white);
+}
+.customers-clients.bg p::after {
+  background: white;
+}

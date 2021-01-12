@@ -187,3 +187,18 @@
         }
     }
 }
+
+.customers-clients {
+    &.bg {
+        background: url(../../resources/images/setup/setup-client-bg.png);
+        h2,
+        p {
+            color: var(--white);
+        }
+        p {
+            &::after {
+                background: white;
+            }
+        }
+    }
+}

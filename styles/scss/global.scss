@@ -332,3 +332,26 @@ main {
         }
     }
 }
+
+.slider-index-customer {
+    position: relative;
+    margin-top: 38px;
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        width: auto;
+        border: 1px solid #d3d3d3;
+    }
+}
+
+.customers-clients {
+    padding: 80px 0;
+    @media (max-width: 1024.98px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 35px 0;
+    }
+}
