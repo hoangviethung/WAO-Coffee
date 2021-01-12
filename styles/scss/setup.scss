@@ -45,6 +45,108 @@
     }
 }
 
+.Setup-option {
+    padding-bottom: 100px;
+    .tab-menu {
+        background: #F5F5F5;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.104);
+        margin-bottom: 60px;
+        .col-lg-4 {
+            background: #F5F5F5;
+            padding: 30px 0;
+            &.active {
+                position: relative;
+                background: var(--secondary-light);
+                &::before {
+                    position: absolute;
+                    content: '';
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-top: 15px solid var(--secondary-light);
+                    left: calc(50% - 55px);
+                    width: 0;
+                    height: 0;
+                    bottom: -15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        h4 {
+            text-align: center;
+        }
+    }
+    .content-tab {
+        .container {
+            padding: 0 200px;
+            @media (max-width: 1439.98px) {
+                padding: 0 100px;
+            }
+        }
+        h5 {
+            font-size: 22px;
+            color: var(--primary);
+            font-family: "SFU TradeGothic";
+            margin-bottom: 25px;
+        }
+        p {
+            color: var(--primary);
+            margin-bottom: 35px;
+        }
+        table {
+            width: 100%;
+            position: relative;
+            thead {
+                position: relative;
+                background: var(--primary);
+                th {
+                    padding: 27px;
+                    &:first-child {
+                        text-align: center;
+                        width: 30%;
+                    }
+                    &:last-child {
+                        border-left: 1px solid #7F899C;
+                    }
+                    color: var(--white);
+                    font-family: "SFU TradeGothic";
+                    font-size: 17px;
+                }
+            }
+            td {
+                padding: 27px;
+                background: #f8f8f8;
+                color: var(--primary);
+                &:first-child {
+                    display: inline-block;
+                    padding: 20px;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                }
+                &:last-child {
+                    border-left: 1px solid #F5F5F5;
+                }
+                li {
+                    position: relative;
+                    padding-left: 20px;
+                    &::before {
+                        left: 0;
+                        position: absolute;
+                        content: '\f14a';
+                        font-size: 16px;
+                        color: var(--primary);
+                        font-family: "Font Awesome 5 Pro";
+                    }
+                    margin-bottom: 20px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .Setup-info {
     position: relative;
     padding: 80px 0;
@@ -228,19 +330,70 @@
 
 .Setup-form {
     padding: 100px 0;
-    h3 {
-        font-size: 35px;
-        color: var(--white);
-    }
     .block-form {
         padding: 50px;
         background: var(--primary);
+        height: 100%;
+        h3 {
+            font-size: 35px;
+            color: var(--white);
+            margin-bottom: 30px;
+        }
         input {
             font-size: 16px;
             margin-bottom: 20px;
         }
+        .bg-secondary {
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px solid white;
+            }
+        }
+        div {
+            &:last-child {
+                text-align: end;
+            }
+        }
         button {
-            justify-self: flex-end;
+            text-align: center;
+        }
+    }
+    .col-lg-8 {
+        padding-left: 50px;
+        position: relative;
+        .img {
+            position: relative;
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: '';
+                background: url(../../resources/images/setup/setup-pattern.png) no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 18%;
+            }
+        }
+        .desc {
+            position: absolute;
+            top: 20%;
+            left: calc(5% + 50px);
+            p {
+                font-weight: bold;
+                &:first-child {
+                    color: var(--white);
+                }
+                &.contact {
+                    margin-top: 15px;
+                    color: var(--secondary);
+                }
+            }
+            h3 {
+                margin-top: 35px;
+                font-family: "SFU TradeGothic";
+                font-size: 35px;
+                color: var(--white);
+            }
         }
     }
 }
