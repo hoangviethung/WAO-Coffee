@@ -25,9 +25,6 @@
   right: 0;
   top: 0;
 }
-.Setup-introduce .content {
-  margin-top: 30px;
-}
 .Setup-introduce .content p {
   color: var(--white);
   margin-bottom: 35px;
@@ -36,28 +33,130 @@
   margin-bottom: 0;
 }
 
-.Setup-info {
+.Setup-option {
+  padding-bottom: 100px;
+}
+.Setup-option .tab-menu {
+  background: #f5f5f5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.104);
+  margin-bottom: 60px;
+}
+.Setup-option .tab-menu .col-lg-4 {
+  background: #f5f5f5;
+  padding: 30px 0;
+}
+.Setup-option .tab-menu .col-lg-4.active {
+  position: relative;
+  background: var(--secondary-light);
+}
+.Setup-option .tab-menu .col-lg-4.active::before {
+  position: absolute;
+  content: "";
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--secondary-light);
+  left: calc(50% - 55px);
+  width: 0;
+  height: 0;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Setup-option .tab-menu h4 {
+  text-align: center;
+}
+.Setup-option .content-tab .container {
+  padding: 0 200px;
+}
+@media (max-width: 1439.98px) {
+  .Setup-option .content-tab .container {
+    padding: 0 100px;
+  }
+}
+.Setup-option .content-tab h5 {
+  font-size: 22px;
+  color: var(--primary);
+  font-family: "SFU TradeGothic";
+  margin-bottom: 25px;
+}
+.Setup-option .content-tab p {
+  color: var(--primary);
+  margin-bottom: 35px;
+}
+.Setup-option .content-tab table {
+  width: 100%;
+  position: relative;
+}
+.Setup-option .content-tab table thead {
+  position: relative;
+  background: var(--primary);
+}
+.Setup-option .content-tab table thead th {
+  padding: 27px;
+  color: var(--white);
+  font-family: "SFU TradeGothic";
+  font-size: 17px;
+}
+.Setup-option .content-tab table thead th:first-child {
+  text-align: center;
+  width: 30%;
+}
+.Setup-option .content-tab table thead th:last-child {
+  border-left: 1px solid #7f899c;
+}
+.Setup-option .content-tab table td {
+  padding: 27px;
+  background: #f8f8f8;
+  color: var(--primary);
+}
+.Setup-option .content-tab table td:first-child {
+  display: inline-block;
+  padding: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.Setup-option .content-tab table td:last-child {
+  border-left: 1px solid #f5f5f5;
+}
+.Setup-option .content-tab table td li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.Setup-option .content-tab table td li::before {
+  left: 0;
+  position: absolute;
+  content: "";
+  font-size: 16px;
+  color: var(--primary);
+  font-family: "Font Awesome 5 Pro";
+}
+.Setup-option .content-tab table td li:last-child {
+  margin-bottom: 0;
+}
+
+.Setup-experts {
   position: relative;
   padding: 80px 0;
   background: url(../../resources/images/setup/setup-info-bg.png);
 }
-.Setup-info h2 {
+.Setup-experts h2 {
   font-size: 55px;
   font-family: "SFU TradeGothic";
   color: var(--white);
   text-align: center;
   margin-bottom: 40px;
 }
-.Setup-info .slider-setup-info {
+.Setup-experts .slider-setup-info {
   position: relative;
 }
-.Setup-info .slider-setup-info .description {
+.Setup-experts .slider-setup-info .description {
   padding-left: 105px;
   position: relative;
   margin-top: 20px;
   text-align: center;
 }
-.Setup-info .slider-setup-info .description::before {
+.Setup-experts .slider-setup-info .description::before {
   position: absolute;
   content: "";
   width: 52px;
@@ -67,19 +166,19 @@
   top: 0;
   left: 0;
 }
-.Setup-info .slider-setup-info .description h4 {
+.Setup-experts .slider-setup-info .description h4 {
   font-size: 25px;
   font-weight: normal;
   color: var(--white);
 }
-.Setup-info .slider-setup-info .description p {
+.Setup-experts .slider-setup-info .description p {
   font-size: 17px;
   color: var(--white);
 }
-.Setup-info .slider-setup-info .img {
+.Setup-experts .slider-setup-info .img {
   position: relative;
 }
-.Setup-info .slider-setup-info .img .plus {
+.Setup-experts .slider-setup-info .img .plus {
   position: absolute;
   z-index: 1;
   width: 60px;
@@ -91,7 +190,7 @@
   opacity: 1;
   transition: all 0.3s ease;
 }
-.Setup-info .slider-setup-info .img .plus::before {
+.Setup-experts .slider-setup-info .img .plus::before {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -103,12 +202,12 @@
   content: "";
 }
 @media (min-width: 1025px) {
-  .Setup-info .slider-setup-info .img .plus:hover {
+  .Setup-experts .slider-setup-info .img .plus:hover {
     opacity: 0.9;
     transition: all 0.3s ease;
   }
 }
-.Setup-info .slider-setup-info .img .plus i {
+.Setup-experts .slider-setup-info .img .plus i {
   color: var(--white);
   font-size: 20px;
   padding: 10px;
@@ -218,18 +317,67 @@
 .Setup-form {
   padding: 100px 0;
 }
-.Setup-form h3 {
-  font-size: 35px;
-  color: var(--white);
-}
 .Setup-form .block-form {
   padding: 50px;
   background: var(--primary);
+  height: 100%;
+}
+.Setup-form .block-form h3 {
+  font-size: 35px;
+  color: var(--white);
+  margin-bottom: 30px;
 }
 .Setup-form .block-form input {
   font-size: 16px;
   margin-bottom: 20px;
 }
+.Setup-form .block-form .bg-secondary {
+  border: 1px solid transparent;
+}
+.Setup-form .block-form .bg-secondary:hover {
+  border: 1px solid white;
+}
+.Setup-form .block-form div:last-child {
+  text-align: end;
+}
 .Setup-form .block-form button {
-  justify-self: flex-end;
+  text-align: center;
+}
+.Setup-form .col-lg-8 {
+  padding-left: 50px;
+  position: relative;
+}
+.Setup-form .col-lg-8 .img {
+  position: relative;
+}
+.Setup-form .col-lg-8 .img::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: url(../../resources/images/setup/setup-pattern.png) no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 18%;
+}
+.Setup-form .col-lg-8 .desc {
+  position: absolute;
+  top: 20%;
+  left: calc(5% + 50px);
+}
+.Setup-form .col-lg-8 .desc p {
+  font-weight: bold;
+}
+.Setup-form .col-lg-8 .desc p:first-child {
+  color: var(--white);
+}
+.Setup-form .col-lg-8 .desc p.contact {
+  margin-top: 15px;
+  color: var(--secondary);
+}
+.Setup-form .col-lg-8 .desc h3 {
+  margin-top: 35px;
+  font-family: "SFU TradeGothic";
+  font-size: 35px;
+  color: var(--white);
 }
