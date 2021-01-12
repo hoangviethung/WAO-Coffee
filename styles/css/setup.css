@@ -1,0 +1,239 @@
+@charset "UTF-8";
+.Setup-introduce {
+  position: relative;
+}
+.Setup-introduce::before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: url(../../resources/images/setup/setup-intro-2.png) no-repeat;
+  background-size: cover;
+  content: "";
+  top: 0;
+  left: 0;
+}
+.Setup-introduce .col-lg-6 {
+  padding: 95px 0;
+}
+.Setup-introduce .col-lg-6:first-child {
+  padding-right: 85px;
+}
+.Setup-introduce .img {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.Setup-introduce .title-section h2,
+.Setup-introduce .title-section p {
+  color: var(--white);
+}
+.Setup-introduce .title-section p::after {
+  background: var(--white);
+}
+.Setup-introduce .content p {
+  color: var(--white);
+  margin-bottom: 35px;
+}
+.Setup-introduce .content p:last-child {
+  margin-bottom: 0;
+}
+
+.Setup-info {
+  position: relative;
+  padding: 80px 0;
+  background: url(../../resources/images/setup/setup-info-bg.png);
+}
+.Setup-info h2 {
+  font-size: 55px;
+  font-family: "SFU TradeGothic";
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Setup-info .slider-setup-info {
+  position: relative;
+}
+.Setup-info .slider-setup-info .description {
+  padding-left: 105px;
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+.Setup-info .slider-setup-info .description::before {
+  position: absolute;
+  content: "";
+  width: 52px;
+  height: 57px;
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  top: 0;
+  left: 0;
+}
+.Setup-info .slider-setup-info .description h4 {
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--white);
+}
+.Setup-info .slider-setup-info .description p {
+  font-size: 17px;
+  color: var(--white);
+}
+.Setup-info .slider-setup-info .img {
+  position: relative;
+}
+.Setup-info .slider-setup-info .img .plus {
+  position: absolute;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.Setup-info .slider-setup-info .img .plus::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-left: 60px solid transparent;
+  border-bottom: 60px solid var(--primary-light);
+  border-right: none;
+  width: 0;
+  height: 0;
+  content: "";
+}
+@media (min-width: 1025px) {
+  .Setup-info .slider-setup-info .img .plus:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+}
+.Setup-info .slider-setup-info .img .plus i {
+  color: var(--white);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.Setup-project {
+  position: relative;
+  padding: 80px 0;
+}
+.Setup-project h2 {
+  font-size: 55px;
+  font-family: "SFU TradeGothic";
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Setup-project .container-fluid {
+  position: relative;
+  padding: 0 60px;
+}
+.Setup-project .container-fluid .item {
+  display: block;
+  position: relative;
+}
+.Setup-project .container-fluid .item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Pro";
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--white);
+  opacity: 0;
+  bottom: -100%;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 1025px) {
+  .Setup-project .container-fluid .item:hover::before {
+    opacity: 1;
+    bottom: unset;
+    transition: all 0.3s ease-in-out;
+  }
+  .Setup-project .container-fluid .item:hover .description {
+    opacity: 1;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.Setup-project .container-fluid .description {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  font-size: 25px;
+  font-weight: normal;
+  color: var(--white);
+  z-index: 1;
+  opacity: 0;
+  bottom: -100%;
+  transition: all 0.3s ease-in-out;
+}
+.Setup-project .container-fluid .description::before {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  content: "";
+  background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+  background-blend-mode: multiply;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.Setup-feedback {
+  padding: 100px 0;
+  background: var(--primary);
+  position: relative;
+}
+.Setup-feedback .slider-setup-feedback {
+  position: relative;
+}
+.Setup-feedback h2 {
+  font-size: 55px;
+  font-family: "SFU TradeGothic";
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.Setup-feedback .item {
+  display: block;
+  position: relative;
+}
+.Setup-feedback .item h5 {
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.Setup-form {
+  padding: 100px 0;
+}
+.Setup-form h3 {
+  font-size: 35px;
+  color: var(--white);
+}
+.Setup-form .block-form {
+  padding: 50px;
+  background: var(--primary);
+}
+.Setup-form .block-form input {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.Setup-form .block-form button {
+  justify-self: flex-end;
+}
