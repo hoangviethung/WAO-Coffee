@@ -6,8 +6,8 @@
   position: absolute;
   width: 50%;
   height: 100%;
-  background: url(../../resources/images/setup/setup-intro-2.png) no-repeat;
-  background-size: cover;
+  background-image: url(../../resources/images/setup/setup-intro-2.png);
+  background-color: var(--primary);
   content: "";
   top: 0;
   left: 0;
@@ -25,12 +25,8 @@
   right: 0;
   top: 0;
 }
-.Setup-introduce .title-section h2,
-.Setup-introduce .title-section p {
-  color: var(--white);
-}
-.Setup-introduce .title-section p::after {
-  background: var(--white);
+.Setup-introduce .content {
+  margin-top: 30px;
 }
 .Setup-introduce .content p {
   color: var(--white);
