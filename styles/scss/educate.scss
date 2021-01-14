@@ -1,0 +1,88 @@
+.desc-shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    h4 {
+        font-size: 2.5rem;
+        font-weight: normal;
+        color: var(--white);
+        @media (max-width: 1439.98px) {
+            font-size: 1.8rem;
+        }
+    }
+    p {
+        color: var(--white);
+        margin-top: 10px;
+    }
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    &::before {
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        content: "";
+        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+        background-blend-mode: multiply;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.Educate-value {
+    padding: 100px 0;
+    .educate-value-wrap {
+        margin-top: 50px;
+        [class*="col-"] {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .icon {
+            margin: 0 auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                font-size: 6rem;
+                color: var(--primary);
+            }
+        }
+        .desc {
+            margin-top: 25px;
+            h3 {
+                font-size: 2.5rem;
+                font-family: "SFU TradeGothic";
+                color: var(--primary);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.Educate-images {
+    position: relative;
+    padding: 50px 0;
+    .slider-educate-images {
+        position: relative;
+        padding: 0 30px;
+        margin-top: 30px;
+        .item {
+            cursor: pointer;
+            position: relative;
+        }
+    }
+}
+
+.Educate-info {
+    position: relative;
+    .slider-educate-info {
+        position: relative;
+        padding: 50px 0;
+    }
+}

@@ -242,6 +242,42 @@ const initSetupFeedback = () => {
         },
     });
 };
+const initEducateImages = () => {
+    let indexRecipe = new Swiper(".slider-educate-images .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 35,
+        navigation: {
+            nextEl: ".slider-educate-images .button-navigation-slider.next",
+            prevEl: ".slider-educate-images .button-navigation-slider.prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        },
+    });
+};
+const initEducateInfo = () => {
+    let indexRecipe = new Swiper(".slider-educate-info .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 35,
+        navigation: {
+            nextEl: ".slider-educate-info .button-navigation-slider.next",
+            prevEl: ".slider-educate-info .button-navigation-slider.prev",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+        },
+    });
+};
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -258,6 +294,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initSetupInfo();
     initSetupProject();
     initSetupFeedback();
+    initEducateImages();
+    initEducateInfo();
     moveNavOutHeader(1300);
 });
 

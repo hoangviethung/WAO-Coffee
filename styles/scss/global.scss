@@ -204,6 +204,11 @@ main {
             background: var(--primary);
         }
     }
+    &.center {
+        h2 {
+            text-align: center;
+        }
+    }
     &.color-white {
         h2,
         p {

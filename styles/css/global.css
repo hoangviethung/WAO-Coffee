@@ -214,6 +214,9 @@ main {
   width: 32px;
   background: var(--primary);
 }
+.title-section.center h2 {
+  text-align: center;
+}
 .title-section.color-white h2,
 .title-section.color-white p {
   color: var(--white);
