@@ -194,10 +194,23 @@ main {
 .title-section p {
   font-family: "SFU TradeGothic";
   color: var(--primary);
+  user-select: none;
 }
 .title-section h2 {
+  display: inline-block;
+  position: relative;
   font-size: 4rem;
   text-transform: uppercase;
+}
+.title-section h2:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--secondary);
 }
 .title-section p {
   font-style: italic;
@@ -220,6 +233,22 @@ main {
 }
 .title-section.color-white p:after {
   background: var(--white);
+}
+@media (min-width: 1025px) {
+  .title-section h2,
+.title-section p {
+    transition: 0.3s all ease-in-out;
+  }
+  .title-section h2:after {
+    transition: 0.3s all ease-in-out;
+  }
+  .title-section:hover h2:after {
+    width: 100%;
+  }
+  .title-section:hover h2,
+.title-section:hover p {
+    color: var(--secondary);
+  }
 }
 
 .button-navigation-slider {
