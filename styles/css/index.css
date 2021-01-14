@@ -92,6 +92,7 @@
   }
   .Index-service .item:hover h2 {
     color: var(--primary);
+    text-shadow: unset;
   }
 }
 @media (max-width: 1024.98px) {
@@ -330,24 +331,24 @@
   .slider-index-best-seller .item .img .item-hover {
     transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
   }
+  .slider-index-best-seller .item .img:hover .item-hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateX(-50%);
+  }
   .slider-index-best-seller .item h3 {
     transition: 0.3s all ease-in-out;
   }
   .slider-index-best-seller .item h3:after {
     transition: 0.5s all ease-in-out;
   }
-  .slider-index-best-seller .item:hover .img .item-hover {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
-    transform: translateX(-50%);
-  }
-  .slider-index-best-seller .item:hover h3 {
+  .slider-index-best-seller .item h3:hover {
     color: var(--secondary);
   }
-  .slider-index-best-seller .item:hover h3:after {
+  .slider-index-best-seller .item h3:hover:after {
     width: 100%;
   }
-  .slider-index-best-seller .item:hover .btn {
+  .slider-index-best-seller .item .btn:hover {
     background: var(--secondary);
     color: var(--primary);
   }
@@ -480,19 +481,15 @@
   .Index-setup .big-item .description h3 {
     transition: 0.3s all ease-in-out;
   }
-  .Index-setup .big-item .img img {
-    transition: transform 0.5s ease-in-out;
-  }
-  .Index-setup .big-item:hover .img img {
-    transform: scale(1.1);
-  }
-  .Index-setup .big-item:hover .description h3 {
+  .Index-setup .big-item .description h3:hover {
     color: var(--secondary);
     text-decoration: underline;
   }
-  .Index-setup .big-item:hover .btn {
-    color: var(--primary);
-    background: var(--secondary);
+  .Index-setup .big-item .img img {
+    transition: transform 0.5s ease-in-out;
+  }
+  .Index-setup .big-item .img img:hover {
+    transform: scale(1.1);
   }
 }
 @media (min-width: 1336px) {
@@ -573,19 +570,17 @@
   .Index-setup .item .img img {
     transition: transform 0.3s ease-in-out;
   }
-  .Index-setup .item .description h3 {
-    transition: 0.3s all ease-in-out;
-  }
-  .Index-setup .item:hover .img:after {
+  .Index-setup .item .img:hover:after {
     opacity: 1;
   }
-  .Index-setup .item:hover .img img {
+  .Index-setup .item .img:hover img {
     transform: scale(1.05);
   }
-  .Index-setup .item:hover .description h3 {
-    color: var(--secondary);
+  .Index-setup .item h3 {
+    transition: 0.3s all ease-in-out;
   }
-  .Index-setup .item:hover .description .btn {
+  .Index-setup .item h3:hover {
+    text-decoration: underline;
     color: var(--secondary);
   }
 }
@@ -767,6 +762,8 @@
   color: var(--primary);
 }
 .slider-index-news .description h3 {
+  display: inline-block;
+  position: relative;
   font-size: 2.2rem;
   font-weight: 400;
   margin-top: 16px;
@@ -780,8 +777,20 @@
   }
 }
 .slider-index-news .img {
+  position: relative;
   height: 300px;
   width: auto;
+}
+.slider-index-news .img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
 }
 @media (max-width: 575.98px) {
   .slider-index-news .img {
@@ -795,16 +804,23 @@
   .slider-index-news .item .img img {
     transition: 0.3s all ease-in-out;
   }
+  .slider-index-news .item .img:after {
+    transition: 0.3s all ease-in-out;
+  }
+  .slider-index-news .item .img:hover img {
+    transform: scale(1.1);
+  }
+  .slider-index-news .item .img:hover:after {
+    opacity: 1;
+  }
   .slider-index-news .item .description h3 {
     transition: 0.3s all ease-in-out;
   }
-  .slider-index-news .item:hover .img img {
-    transform: scale(1.1);
-  }
-  .slider-index-news .item:hover .description h3 {
+  .slider-index-news .item .description h3:hover {
+    text-decoration: underline;
     color: var(--secondary);
   }
-  .slider-index-news .item:hover .btn {
-    color: var(--secondary);
+  .slider-index-news .item .description h3:hover:after {
+    width: 100%;
   }
 }

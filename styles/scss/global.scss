@@ -184,10 +184,23 @@ main {
     p {
         font-family: "SFU TradeGothic";
         color: var(--primary);
+        user-select: none;
     }
     h2 {
+        display: inline-block;
+        position: relative;
         font-size: 4rem;
         text-transform: uppercase;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: var(--secondary);
+        }
     }
     p {
         font-style: italic;
@@ -204,11 +217,6 @@ main {
             background: var(--primary);
         }
     }
-    &.center {
-        h2 {
-            text-align: center;
-        }
-    }
     &.color-white {
         h2,
         p {
@@ -217,6 +225,28 @@ main {
         p {
             &:after {
                 background: var(--white);
+            }
+        }
+    }
+    @media (min-width: 1025px) {
+        h2,
+        p {
+            transition: 0.3s all ease-in-out;
+        }
+        h2 {
+            &:after {
+                transition: 0.3s all ease-in-out;
+            }
+        }
+        &:hover {
+            h2 {
+                &:after {
+                    width: 100%;
+                }
+            }
+            h2,
+            p {
+                color: var(--secondary);
             }
         }
     }

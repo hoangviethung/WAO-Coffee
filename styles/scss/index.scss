@@ -87,6 +87,7 @@
 			&:hover {
 				h2 {
 					color: var(--primary);
+					text-shadow: unset;
 				}
 			}
 		}
@@ -309,15 +310,7 @@
 					transition: opacity 0.3s ease-in-out,
 						transform 0.5s ease-in-out;
 				}
-			}
-			h3 {
-				transition: 0.3s all ease-in-out;
-				&:after {
-					transition: 0.5s all ease-in-out;
-				}
-			}
-			&:hover {
-				.img {
+				&:hover {
 					.item-hover {
 						opacity: 1;
 						transition: opacity 0.3s ease-in-out,
@@ -325,13 +318,21 @@
 						transform: translateX(-50%);
 					}
 				}
-				h3 {
+			}
+			h3 {
+				transition: 0.3s all ease-in-out;
+				&:after {
+					transition: 0.5s all ease-in-out;
+				}
+				&:hover {
 					color: var(--secondary);
 					&:after {
 						width: 100%;
 					}
 				}
-				.btn {
+			}
+			.btn {
+				&:hover {
 					background: var(--secondary);
 					color: var(--primary);
 				}
@@ -455,28 +456,18 @@
 			.description {
 				h3 {
 					transition: 0.3s all ease-in-out;
+					&:hover {
+						color: var(--secondary);
+						text-decoration: underline;
+					}
 				}
 			}
 			.img {
 				img {
 					transition: transform 0.5s ease-in-out;
-				}
-			}
-			&:hover {
-				.img {
-					img {
+					&:hover {
 						transform: scale(1.1);
 					}
-				}
-				.description {
-					h3 {
-						color: var(--secondary);
-						text-decoration: underline;
-					}
-				}
-				.btn {
-					color: var(--primary);
-					background: var(--secondary);
 				}
 			}
 		}
@@ -553,14 +544,7 @@
 				img {
 					transition: transform 0.3s ease-in-out;
 				}
-			}
-			.description {
-				h3 {
-					transition: 0.3s all ease-in-out;
-				}
-			}
-			&:hover {
-				.img {
+				&:hover {
 					&:after {
 						opacity: 1;
 					}
@@ -568,13 +552,12 @@
 						transform: scale(1.05);
 					}
 				}
-				.description {
-					h3 {
-						color: var(--secondary);
-					}
-					.btn {
-						color: var(--secondary);
-					}
+			}
+			h3 {
+				transition: 0.3s all ease-in-out;
+				&:hover {
+					text-decoration: underline;
+					color: var(--secondary);
 				}
 			}
 		}
@@ -746,6 +729,8 @@
 			color: var(--primary);
 		}
 		h3 {
+			display: inline-block;
+			position: relative;
 			font-size: 2.2rem;
 			font-weight: 400;
 			margin-top: 16px;
@@ -758,8 +743,20 @@
 		}
 	}
 	.img {
+		position: relative;
 		height: 300px;
 		width: auto;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba($color: #000000, $alpha: 0.5);
+			pointer-events: none;
+			opacity: 0;
+		}
 		@media (max-width: 575.98px) {
 			height: 250px;
 		}
@@ -773,25 +770,28 @@
 				img {
 					transition: 0.3s all ease-in-out;
 				}
+				&:after {
+					transition: 0.3s all ease-in-out;
+				}
+				&:hover {
+					img {
+						transform: scale(1.1);
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
 			}
 			.description {
 				h3 {
 					transition: 0.3s all ease-in-out;
-				}
-			}
-			&:hover {
-				.img {
-					img {
-						transform: scale(1.1);
-					}
-				}
-				.description {
-					h3 {
+					&:hover {
+						text-decoration: underline;
 						color: var(--secondary);
+						&:after {
+							width: 100%;
+						}
 					}
-				}
-				.btn {
-					color: var(--secondary);
 				}
 			}
 		}
