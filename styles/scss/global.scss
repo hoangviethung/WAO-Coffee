@@ -231,6 +231,48 @@ main {
             }
         }
     }
+    &.color-secondary {
+        h2,
+        p {
+            user-select: all;
+        }
+        h2 {
+            color: var(--primary);
+        }
+        p {
+            color: var(--secondary);
+            font-style: normal;
+        }
+        p {
+            &:after {
+                background: var(--secondary);
+            }
+        }
+        @media (min-width: 1025px) {
+            h2,
+            p {
+                transition: 0.3s all ease-in-out;
+            }
+            h2 {
+                &:after {
+                    transition: 0.3s all ease-in-out;
+                }
+            }
+            &:hover {
+                h2 {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+                h2 {
+                    color: var(--secondary);
+                }
+                p {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
     @media (min-width: 1025px) {
         h2,
         p {

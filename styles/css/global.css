@@ -237,6 +237,38 @@ main {
 .title-section.color-white p:after {
   background: var(--white);
 }
+.title-section.color-secondary h2,
+.title-section.color-secondary p {
+  user-select: all;
+}
+.title-section.color-secondary h2 {
+  color: var(--primary);
+}
+.title-section.color-secondary p {
+  color: var(--secondary);
+  font-style: normal;
+}
+.title-section.color-secondary p:after {
+  background: var(--secondary);
+}
+@media (min-width: 1025px) {
+  .title-section.color-secondary h2,
+.title-section.color-secondary p {
+    transition: 0.3s all ease-in-out;
+  }
+  .title-section.color-secondary h2:after {
+    transition: 0.3s all ease-in-out;
+  }
+  .title-section.color-secondary:hover h2:after {
+    width: 100%;
+  }
+  .title-section.color-secondary:hover h2 {
+    color: var(--secondary);
+  }
+  .title-section.color-secondary:hover p {
+    color: var(--primary);
+  }
+}
 @media (min-width: 1025px) {
   .title-section h2,
 .title-section p {

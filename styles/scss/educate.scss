@@ -257,6 +257,10 @@
                 justify-content: center;
                 background: #ebebeb;
                 font-weight: bold;
+                @media (max-width: 575.98px) {
+                    width: 20px;
+                    height: 20px;
+                }
             }
             &.active {
                 a {
@@ -298,8 +302,20 @@
 .Educate-gallery-view {
     position: relative;
     padding: 100px 0;
+    @media (max-width: 1439.98px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 1024.98px) {
+        padding: 30px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 20px 0;
+    }
     .title-section {
-        margin-bottom: 35pxs;
+        margin-bottom: 35px;
+        @media (max-width: 1024.98px) {
+            margin-bottom: 20px;
+        }
     }
     .list-img {
         position: relative;
@@ -308,15 +324,361 @@
             display: flex;
             flex-wrap: wrap;
             margin: 0 -7.5px;
+            @media (max-width: 767.98px) {
+                margin: 0 -5px;
+            }
             li {
                 flex: 0 0 20%;
                 padding: 0 7.5px;
                 margin-bottom: 15px;
+                @media (max-width: 1439.98px) {
+                    flex: 0 0 25%;
+                }
+                @media (max-width: 767.98px) {
+                    flex: 0 0 calc(100% / 3);
+                    padding: 0 5px;
+                }
+                @media (max-width: 575.98px) {
+                    flex: 0 0 50%;
+                }
             }
         }
     }
     .load-more {
         position: relative;
         text-align: center;
+        margin-top: 45px;
+    }
+    .list-share {
+        position: relative;
+        margin-top: 60px;
+        padding-top: 30px;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            background: url(../../resources/images/educate/line.png);
+            content: '';
+        }
+        ul {
+            display: flex;
+            li {
+                margin-right: 15px;
+                &:last-child {
+                    margin-left: auto;
+                }
+            }
+            @media (max-width: 575.98px) {
+                flex-wrap: wrap;
+                li {
+                    &:last-child {
+                        flex: 0 0 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Educate-teacher {
+    position: relative;
+    padding: 80px 0;
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 20px 0;
+    }
+    [class*="col-"] {
+        margin-bottom: 40px;
+        @media (max-width: 1024.98px) {
+            flex: 0 0 50%;
+        }
+        @media (max-width: 575.98px) {
+            flex: 0 0 100%;
+        }
+    }
+    h2 {
+        font-size: 5.5rem;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .item {
+        @media (min-width: 1024.98px) {
+            &:hover {
+                h4 {
+                    color: var(--secondary);
+                    text-decoration: underline;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    .description {
+        padding-left: 105px;
+        position: relative;
+        margin-top: 20px;
+        text-align: center;
+        @media (max-width: 1024.98px) {
+            padding-left: 80px;
+        }
+        @media (max-width: 767.98px) {
+            padding-left: 40px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 52px;
+            height: 57px;
+            border-left: 2px solid var(--primary);
+            border-bottom: 2px solid var(--primary);
+            bottom: 0;
+            left: 0;
+            @media (max-width: 768.98px) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        h4 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            color: var(--primary);
+            transition: all .3s ease;
+        }
+        p {
+            font-size: 1.7rem;
+            color: var(--primary);
+            @media (max-width: 1439.98px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .img {
+        position: relative;
+        height: 425px;
+        @media (max-width: 1439.98px) {
+            height: 400px;
+        }
+        @media (max-width: 767.98px) {
+            height: 300px;
+        }
+        @media (max-width: 575.98px) {
+            height: 400px;
+        }
+        @media (max-width:320.98px) {
+            height: 300px;
+        }
+        .plus {
+            position: absolute;
+            z-index: 1;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            opacity: 1;
+            transition: all 0.3s ease;
+            &::before {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-left: 60px solid transparent;
+                border-bottom: 60px solid var(--primary-light);
+                border-right: none;
+                width: 0;
+                height: 0;
+                content: "";
+            }
+            @media (min-width: 1025px) {
+                &:hover {
+                    opacity: 0.9;
+                    transition: all 0.3s ease;
+                    background: var(--secondary);
+                }
+            }
+            i {
+                color: var(--primary);
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.Educate-teacher-view {
+    padding: 95px 0;
+    @media (max-width: 1439.98px) {
+        padding: 40px 0;
+    }
+    h2 {
+        font-size: 5.5rem;
+    }
+    [class*="col-"] {
+        &:first-child {
+            padding-right: 80px;
+            @media (max-width: 1439.98px) {
+                padding-right: 40px;
+            }
+            @media (max-width: 1024.98px) {
+                padding-right: 20px;
+            }
+            @media (max-width: 767.98px) {
+                padding-right: unset;
+            }
+            p {
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.option {
+                    display: inline-block;
+                }
+            }
+            ul {
+                display: inline-block;
+            }
+        }
+        @media (max-width: 767.98px) {
+            flex: 0 0 100%;
+        }
+    }
+    .title-section {
+        margin-bottom: 25px;
+        @media (max-width: 1439.98px) {
+            margin-bottom: 20px;
+        }
+    }
+    b {
+        color: var(--primary);
+    }
+    .content {
+        p {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    ul {
+        padding: 15px 0;
+        li {
+            margin-left: 20px;
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &::before {
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                background: var(--secondary);
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                content: '';
+            }
+        }
+    }
+    .img {
+        margin-bottom: 25px;
+        img {
+            max-width: 600px;
+            min-height: 600px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.Educate-teacher-view-more {
+    position: relative;
+    padding: 80px 0;
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 20px 0;
+    }
+    h2 {
+        font-size: 5.5rem;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .educate-teacher-more {
+        position: relative;
+        .description {
+            padding-left: 105px;
+            position: relative;
+            margin-top: 20px;
+            text-align: center;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 52px;
+                height: 57px;
+                border-left: 2px solid var(--primary);
+                border-bottom: 2px solid var(--primary);
+                bottom: 0;
+                left: 0;
+            }
+            h4 {
+                font-size: 2.5rem;
+                font-weight: normal;
+                color: var(--primary);
+            }
+            p {
+                font-size: 1.7rem;
+                color: var(--primary);
+                @media (max-width: 1439.98px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .img {
+            position: relative;
+            height: 425px;
+            @media (max-width: 1439.98px) {
+                height: 400px;
+            }
+            .plus {
+                position: absolute;
+                z-index: 1;
+                width: 60px;
+                height: 60px;
+                background: var(--primary);
+                right: 0;
+                bottom: 0;
+                cursor: pointer;
+                opacity: 1;
+                transition: all 0.3s ease;
+                &::before {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    border-left: 60px solid transparent;
+                    border-bottom: 60px solid var(--neutral-light);
+                    border-right: none;
+                    width: 0;
+                    height: 0;
+                    content: "";
+                }
+                @media (min-width: 1025px) {
+                    &:hover {
+                        opacity: 0.9;
+                        transition: all 0.3s ease;
+                    }
+                }
+                i {
+                    color: var(--white);
+                    font-size: 2rem;
+                    padding: 10px;
+                }
+            }
+        }
     }
 }
