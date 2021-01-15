@@ -98,15 +98,22 @@
     margin-bottom: 30px;
   }
 }
-.Setup-option .tab-menu [class*=col-] {
+.Setup-option .tab-menu ul {
+  display: flex;
+}
+.Setup-option .tab-menu li {
+  width: calc(100% / 3);
   background: #f5f5f5;
   padding: 30px 0;
+  text-align: center;
+  user-select: none;
+  font-weight: bold;
 }
-.Setup-option .tab-menu [class*=col-].active {
+.Setup-option .tab-menu li.active {
   position: relative;
   background: var(--secondary-light);
 }
-.Setup-option .tab-menu [class*=col-].active::before {
+.Setup-option .tab-menu li.active::before {
   position: absolute;
   content: "";
   border-left: 15px solid transparent;
@@ -119,84 +126,80 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.Setup-option .tab-menu h4 {
-  text-align: center;
-  user-select: none;
-}
-.Setup-option .content-tab .container {
+.Setup-option .tab-content {
   padding: 0 200px;
 }
 @media (max-width: 1439.98px) {
-  .Setup-option .content-tab .container {
+  .Setup-option .tab-content {
     padding: 0 100px;
   }
 }
 @media (max-width: 1024.98px) {
-  .Setup-option .content-tab .container {
+  .Setup-option .tab-content {
     padding: 0 10px;
   }
 }
-.Setup-option .content-tab h5 {
+.Setup-option .tab-content h5 {
   font-size: 2.2rem;
   color: var(--primary);
   font-family: "SFU TradeGothic";
   margin-bottom: 25px;
 }
-.Setup-option .content-tab p {
+.Setup-option .tab-content p {
   color: var(--primary);
   margin-bottom: 35px;
 }
 @media (max-width: 1024.98px) {
-  .Setup-option .content-tab p {
+  .Setup-option .tab-content p {
     margin-bottom: 20px;
   }
 }
-.Setup-option .content-tab table {
+.Setup-option .tab-content table {
   width: 100%;
   position: relative;
 }
-.Setup-option .content-tab table thead {
+.Setup-option .tab-content table thead {
   position: relative;
   background: var(--primary);
 }
-.Setup-option .content-tab table thead th {
+.Setup-option .tab-content table thead th {
   padding: 27px;
   color: var(--white);
   font-family: "SFU TradeGothic";
   font-size: 17px;
 }
-.Setup-option .content-tab table thead th:first-child {
+.Setup-option .tab-content table thead th:first-child {
   text-align: center;
   width: 30%;
 }
-.Setup-option .content-tab table thead th:last-child {
+.Setup-option .tab-content table thead th:last-child {
   border-left: 1px solid #7f899c;
 }
-.Setup-option .content-tab table tr:nth-child(odd) td {
+.Setup-option .tab-content table tr:nth-child(odd) td {
   background: #f8f8f8;
 }
-.Setup-option .content-tab table tr:nth-child(even) td {
+.Setup-option .tab-content table tr:nth-child(even) td {
   background: #ffffff;
 }
-.Setup-option .content-tab table td {
+.Setup-option .tab-content table td {
   padding: 27px;
   color: var(--primary);
   border: 1px solid #7f899c;
 }
-.Setup-option .content-tab table td:first-child {
+.Setup-option .tab-content table td:first-child {
   vertical-align: top;
   font-size: 25px;
   text-transform: uppercase;
 }
-.Setup-option .content-tab table td:last-child {
+.Setup-option .tab-content table td:last-child {
   border-left: 1px solid #f5f5f5;
 }
-.Setup-option .content-tab table td li {
+.Setup-option .tab-content table td li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 20px;
 }
-.Setup-option .content-tab table td li::before {
+.Setup-option .tab-content table td li::before {
   left: 0;
   position: absolute;
   content: "";
@@ -205,11 +208,11 @@
   font-family: "Font Awesome 5 Pro";
 }
 @media (max-width: 1024.98px) {
-  .Setup-option .content-tab table td li {
+  .Setup-option .tab-content table td li {
     margin-bottom: 10px;
   }
 }
-.Setup-option .content-tab table td li:last-child {
+.Setup-option .tab-content table td li:last-child {
   margin-bottom: 0;
 }
 

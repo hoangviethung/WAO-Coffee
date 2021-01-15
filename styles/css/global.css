@@ -227,7 +227,7 @@ main {
   width: 32px;
   background: var(--primary);
 }
-.title-section.center h2 {
+.title-section.center {
   text-align: center;
 }
 .title-section.color-white h2,

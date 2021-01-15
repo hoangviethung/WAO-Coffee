@@ -217,6 +217,9 @@ main {
             background: var(--primary);
         }
     }
+    &.center {
+        text-align: center;
+    }
     &.color-white {
         h2,
         p {
