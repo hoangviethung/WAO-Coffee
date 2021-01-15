@@ -282,6 +282,22 @@
              },
          },
      });
+     let educateTeacherMore = new Swiper(".educate-teacher-more .swiper-container", {
+         slidesPerView: 1,
+         spaceBetween: 35,
+         navigation: {
+             nextEl: ".educate-teacher-more .button-navigation-slider.next",
+             prevEl: ".educate-teacher-more .button-navigation-slider.prev",
+         },
+         breakpoints: {
+             768: {
+                 slidesPerView: 2,
+             },
+             1200: {
+                 slidesPerView: 3,
+             },
+         },
+     });
  };
  const initSetupProject = () => {
      let indexRecipe = new Swiper(".slider-setup-project .swiper-container", {
