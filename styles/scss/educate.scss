@@ -1,598 +1,598 @@
 .desc-shadow {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 20px;
-    h4 {
-        font-size: 2.5rem;
-        font-weight: normal;
-        color: var(--white);
-        @media (max-width: 1439.98px) {
-            font-size: 1.8rem;
-        }
-    }
-    p {
-        color: var(--white);
-        margin-top: 10px;
-    }
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
-    &::before {
-        position: absolute;
-        width: 100%;
-        height: 200%;
-        content: "";
-        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
-        background-blend-mode: multiply;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	h4 {
+		font-size: 2.5rem;
+		font-weight: normal;
+		color: var(--white);
+		@media (max-width: 1439.98px) {
+			font-size: 1.8rem;
+		}
+	}
+	p {
+		color: var(--white);
+		margin-top: 10px;
+	}
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+	&::before {
+		position: absolute;
+		width: 100%;
+		height: 200%;
+		content: "";
+		background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+		background-blend-mode: multiply;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
 }
 
 .Educate-value {
-    padding: 100px 0;
-    .educate-value-wrap {
-        margin-top: 50px;
-        [class*="col-"] {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .icon {
-            margin: 0 auto;
-            width: 120px;
-            height: 120px;
-            border-radius: 100%;
-            background: var(--secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            i {
-                font-size: 6rem;
-                color: var(--primary);
-            }
-        }
-        .desc {
-            margin-top: 25px;
-            h3 {
-                font-size: 2.5rem;
-                font-family: "SFU TradeGothic";
-                color: var(--primary);
-                margin-bottom: 20px;
-            }
-        }
-    }
+	padding: 100px 0;
+	.educate-value-wrap {
+		margin-top: 50px;
+		[class*="col-"] {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.icon {
+			margin: 0 auto;
+			width: 120px;
+			height: 120px;
+			border-radius: 100%;
+			background: var(--secondary);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			i {
+				font-size: 6rem;
+				color: var(--primary);
+			}
+		}
+		.desc {
+			margin-top: 25px;
+			h3 {
+				font-size: 2.5rem;
+				font-family: "SFU TradeGothic";
+				color: var(--primary);
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
 .Educate-images {
-    position: relative;
-    padding: 50px 0;
-    .slider-educate-images {
-        position: relative;
-        padding: 0 30px;
-        margin-top: 30px;
-        .item {
-            cursor: pointer;
-            position: relative;
-        }
-    }
+	position: relative;
+	padding: 50px 0;
+	.slider-educate-images {
+		position: relative;
+		padding: 0 30px;
+		margin-top: 30px;
+		.item {
+			cursor: pointer;
+			position: relative;
+		}
+	}
 }
 
 .Educate-info {
-    position: relative;
-    .slider-educate-info {
-        position: relative;
-        padding: 50px 0;
-    }
+	position: relative;
+	.slider-educate-info {
+		position: relative;
+		padding: 50px 0;
+	}
 }
 
 .Educate-feedback {
-    padding: 100px 0;
-    @media (max-width: 1024.98px) {
-        padding: 40px 0;
-    }
-    @media (max-width: 575.98px) {
-        padding: 30px 0;
-    }
-    background: var(--primary);
-    background-image: var(--url-background-educate-news);
-    position: relative;
-    .slider-educate-feedback {
-        position: relative;
-    }
-    h2 {
-        font-size: 5.5rem;
-        font-family: "SFU TradeGothic";
-        color: var(--white);
-        text-align: center;
-        margin-bottom: 40px;
-        text-transform: uppercase;
-    }
-    .item {
-        display: block;
-        position: relative;
-        h5 {
-            position: relative;
-            text-align: center;
-            font-size: 2.2rem;
-            letter-spacing: -0.01em;
-            color: var(--white);
-            font-weight: 400;
-            margin-top: 30px;
-        }
-    }
+	padding: 100px 0;
+	@media (max-width: 1024.98px) {
+		padding: 40px 0;
+	}
+	@media (max-width: 575.98px) {
+		padding: 30px 0;
+	}
+	background: var(--primary);
+	background-image: var(--url-background-educate-news);
+	position: relative;
+	.slider-educate-feedback {
+		position: relative;
+	}
+	h2 {
+		font-size: 5.5rem;
+		font-family: "SFU TradeGothic";
+		color: var(--white);
+		text-align: center;
+		margin-bottom: 40px;
+		text-transform: uppercase;
+	}
+	.item {
+		display: block;
+		position: relative;
+		h5 {
+			position: relative;
+			text-align: center;
+			font-size: 2.2rem;
+			letter-spacing: -0.01em;
+			color: var(--white);
+			font-weight: 400;
+			margin-top: 30px;
+		}
+	}
 }
 
 .Educate-news {
-    padding: 80px 0;
-    background-image: var(--url-background-index-news);
-    background-size: 100% 100%;
-    @media (max-width: 1024.98px) {
-        padding: 50px 0;
-    }
-    @media (max-width: 575.98px) {
-        padding: 35px 0;
-    }
+	padding: 80px 0;
+	background-image: var(--url-background-index-news);
+	background-size: 100% 100%;
+	@media (max-width: 1024.98px) {
+		padding: 50px 0;
+	}
+	@media (max-width: 575.98px) {
+		padding: 35px 0;
+	}
 }
 
 .slider-educate-news {
-    position: relative;
-    margin-top: 38px;
-    .header-description {
-        display: flex;
-    }
-    .description {
-        background: var(--white);
-        padding: 30px;
-        span {
-            text-transform: uppercase;
-            font-size: 1.3rem;
-            &:first-child {
-                color: var(--secondary);
-                font-weight: 900;
-            }
-            &:last-child {
-                margin-left: auto;
-                color: var(--primary);
-                font-weight: 500;
-            }
-        }
-        h3,
-        p {
-            color: var(--primary);
-        }
-        h3 {
-            display: inline-block;
-            position: relative;
-            font-size: 2.2rem;
-            font-weight: 400;
-            margin-top: 16px;
-        }
-        p {
-            margin-top: 8px;
-        }
-        @media (max-width: 767.98px) {
-            padding: 16px;
-        }
-    }
-    .img {
-        position: relative;
-        height: 300px;
-        width: auto;
-        &:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: rgba($color: #000000, $alpha: 0.5);
-            pointer-events: none;
-            opacity: 0;
-        }
-        @media (max-width: 575.98px) {
-            height: 250px;
-        }
-    }
-    .cta-button {
-        margin-top: 20px;
-    }
-    .item {
-        @media (min-width: 1025px) {
-            .img {
-                img {
-                    transition: 0.3s all ease-in-out;
-                }
-                &:after {
-                    transition: 0.3s all ease-in-out;
-                }
-                &:hover {
-                    img {
-                        transform: scale(1.1);
-                    }
-                    &:after {
-                        opacity: 1;
-                    }
-                }
-            }
-            .description {
-                h3 {
-                    transition: 0.3s all ease-in-out;
-                    &:hover {
-                        text-decoration: underline;
-                        color: var(--secondary);
-                        &:after {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
+	position: relative;
+	margin-top: 38px;
+	.header-description {
+		display: flex;
+	}
+	.description {
+		background: var(--white);
+		padding: 30px;
+		span {
+			text-transform: uppercase;
+			font-size: 1.3rem;
+			&:first-child {
+				color: var(--secondary);
+				font-weight: 900;
+			}
+			&:last-child {
+				margin-left: auto;
+				color: var(--primary);
+				font-weight: 500;
+			}
+		}
+		h3,
+		p {
+			color: var(--primary);
+		}
+		h3 {
+			display: inline-block;
+			position: relative;
+			font-size: 2.2rem;
+			font-weight: 400;
+			margin-top: 16px;
+		}
+		p {
+			margin-top: 8px;
+		}
+		@media (max-width: 767.98px) {
+			padding: 16px;
+		}
+	}
+	.img {
+		position: relative;
+		height: 300px;
+		width: auto;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba($color: #000000, $alpha: 0.5);
+			pointer-events: none;
+			opacity: 0;
+		}
+		@media (max-width: 575.98px) {
+			height: 250px;
+		}
+	}
+	.cta-button {
+		margin-top: 20px;
+	}
+	.item {
+		@media (min-width: 1025px) {
+			.img {
+				img {
+					transition: 0.3s all ease-in-out;
+				}
+				&:after {
+					transition: 0.3s all ease-in-out;
+				}
+				&:hover {
+					img {
+						transform: scale(1.1);
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			.description {
+				h3 {
+					transition: 0.3s all ease-in-out;
+					&:hover {
+						text-decoration: underline;
+						color: var(--secondary);
+						&:after {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .Educate-gallery {
-    position: relative;
-    padding: 100px 0;
-    [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .item {
-        display: block;
-        position: relative;
-    }
+	position: relative;
+	padding: 100px 0;
+	[class*="col-"] {
+		margin-bottom: 30px;
+	}
+	.item {
+		display: block;
+		position: relative;
+	}
 }
 
 .block-pagination {
-    ul {
-        display: flex;
-        li {
-            margin-right: 10px;
-            a {
-                width: 45px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #ebebeb;
-                font-weight: bold;
-                @media (max-width: 575.98px) {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-            &.active {
-                a {
-                    background: var(--secondary);
-                }
-            }
-            &:last-child {
-                margin-right: unset;
-            }
-            @media (min-width: 1025px) {
-                &:hover {
-                    a {
-                        background: var(--secondary-light);
-                    }
-                }
-            }
-        }
-    }
-    display: block;
-    position: relative;
-    width: 100%;
-    &.box-right {
-        ul {
-            justify-content: flex-end;
-        }
-    }
-    &.box-left {
-        ul {
-            justify-content: flex-start;
-        }
-    }
-    &.box-center {
-        ul {
-            justify-content: center;
-        }
-    }
+	ul {
+		display: flex;
+		li {
+			margin-right: 10px;
+			a {
+				width: 45px;
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #ebebeb;
+				font-weight: bold;
+				@media (max-width: 575.98px) {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			&.active {
+				a {
+					background: var(--secondary);
+				}
+			}
+			&:last-child {
+				margin-right: unset;
+			}
+			@media (min-width: 1025px) {
+				&:hover {
+					a {
+						background: var(--secondary-light);
+					}
+				}
+			}
+		}
+	}
+	display: block;
+	position: relative;
+	width: 100%;
+	&.box-right {
+		ul {
+			justify-content: flex-end;
+		}
+	}
+	&.box-left {
+		ul {
+			justify-content: flex-start;
+		}
+	}
+	&.box-center {
+		ul {
+			justify-content: center;
+		}
+	}
 }
 
 .Educate-gallery-view {
-    position: relative;
-    padding: 100px 0;
-    @media (max-width: 1439.98px) {
-        padding: 60px 0;
-    }
-    @media (max-width: 1024.98px) {
-        padding: 30px 0;
-    }
-    @media (max-width: 575.98px) {
-        padding: 20px 0;
-    }
-    .title-section {
-        margin-bottom: 35px;
-        @media (max-width: 1024.98px) {
-            margin-bottom: 20px;
-        }
-    }
-    .list-img {
-        position: relative;
-        margin-top: 40px;
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -7.5px;
-            @media (max-width: 767.98px) {
-                margin: 0 -5px;
-            }
-            li {
-                flex: 0 0 20%;
-                padding: 0 7.5px;
-                margin-bottom: 15px;
-                @media (max-width: 1439.98px) {
-                    flex: 0 0 25%;
-                }
-                @media (max-width: 767.98px) {
-                    flex: 0 0 calc(100% / 3);
-                    padding: 0 5px;
-                }
-                @media (max-width: 575.98px) {
-                    flex: 0 0 50%;
-                }
-            }
-        }
-    }
-    .load-more {
-        position: relative;
-        text-align: center;
-        margin-top: 45px;
-    }
-    .list-share {
-        position: relative;
-        margin-top: 60px;
-        padding-top: 30px;
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 7px;
-            background: url(../../resources/images/educate/line.png);
-            content: '';
-        }
-        ul {
-            display: flex;
-            li {
-                margin-right: 15px;
-                &:last-child {
-                    margin-left: auto;
-                }
-            }
-            @media (max-width: 575.98px) {
-                flex-wrap: wrap;
-                li {
-                    &:last-child {
-                        flex: 0 0 100%;
-                    }
-                }
-            }
-        }
-    }
+	position: relative;
+	padding: 100px 0;
+	@media (max-width: 1439.98px) {
+		padding: 60px 0;
+	}
+	@media (max-width: 1024.98px) {
+		padding: 30px 0;
+	}
+	@media (max-width: 575.98px) {
+		padding: 20px 0;
+	}
+	.title-section {
+		margin-bottom: 35px;
+		@media (max-width: 1024.98px) {
+			margin-bottom: 20px;
+		}
+	}
+	.list-img {
+		position: relative;
+		margin-top: 40px;
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -7.5px;
+			@media (max-width: 767.98px) {
+				margin: 0 -5px;
+			}
+			li {
+				flex: 0 0 20%;
+				padding: 0 7.5px;
+				margin-bottom: 15px;
+				@media (max-width: 1439.98px) {
+					flex: 0 0 25%;
+				}
+				@media (max-width: 767.98px) {
+					flex: 0 0 calc(100% / 3);
+					padding: 0 5px;
+				}
+				@media (max-width: 575.98px) {
+					flex: 0 0 50%;
+				}
+			}
+		}
+	}
+	.load-more {
+		position: relative;
+		text-align: center;
+		margin-top: 45px;
+	}
+	.list-share {
+		position: relative;
+		margin-top: 60px;
+		padding-top: 30px;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 7px;
+			background: url(../../resources/images/educate/line.png);
+			content: "";
+		}
+		ul {
+			display: flex;
+			li {
+				margin-right: 15px;
+				&:last-child {
+					margin-left: auto;
+				}
+			}
+			@media (max-width: 575.98px) {
+				flex-wrap: wrap;
+				li {
+					&:last-child {
+						flex: 0 0 100%;
+					}
+				}
+			}
+		}
+	}
 }
 
 .Educate-teacher {
-    position: relative;
-    padding: 80px 0;
-    @media (max-width: 1024.98px) {
-        padding: 40px 0;
-    }
-    @media (max-width: 575.98px) {
-        padding: 20px 0;
-    }
-    [class*="col-"] {
-        margin-bottom: 40px;
-        @media (max-width: 1024.98px) {
-            flex: 0 0 50%;
-        }
-        @media (max-width: 575.98px) {
-            flex: 0 0 100%;
-        }
-    }
-    h2 {
-        font-size: 5.5rem;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    .item {
-        @media (min-width: 1024.98px) {
-            &:hover {
-                h4 {
-                    color: var(--secondary);
-                    text-decoration: underline;
-                    transition: all .3s ease;
-                }
-            }
-        }
-    }
-    .description {
-        padding-left: 105px;
-        position: relative;
-        margin-top: 20px;
-        text-align: center;
-        @media (max-width: 1024.98px) {
-            padding-left: 80px;
-        }
-        @media (max-width: 767.98px) {
-            padding-left: 40px;
-        }
-        &::before {
-            position: absolute;
-            content: "";
-            width: 52px;
-            height: 57px;
-            border-left: 2px solid var(--primary);
-            border-bottom: 2px solid var(--primary);
-            bottom: 0;
-            left: 0;
-            @media (max-width: 768.98px) {
-                width: 40px;
-                height: 40px;
-            }
-        }
-        h4 {
-            font-size: 2.5rem;
-            font-weight: normal;
-            color: var(--primary);
-            transition: all .3s ease;
-        }
-        p {
-            font-size: 1.7rem;
-            color: var(--primary);
-            @media (max-width: 1439.98px) {
-                font-size: 1.5rem;
-            }
-        }
-    }
-    .img {
-        position: relative;
-        height: 425px;
-        @media (max-width: 1439.98px) {
-            height: 400px;
-        }
-        @media (max-width: 767.98px) {
-            height: 300px;
-        }
-        @media (max-width: 575.98px) {
-            height: 400px;
-        }
-        @media (max-width:320.98px) {
-            height: 300px;
-        }
-        .plus {
-            position: absolute;
-            z-index: 1;
-            width: 60px;
-            height: 60px;
-            background: var(--primary);
-            right: 0;
-            bottom: 0;
-            cursor: pointer;
-            opacity: 1;
-            transition: all 0.3s ease;
-            &::before {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                border-left: 60px solid transparent;
-                border-bottom: 60px solid var(--primary-light);
-                border-right: none;
-                width: 0;
-                height: 0;
-                content: "";
-            }
-            @media (min-width: 1025px) {
-                &:hover {
-                    opacity: 0.9;
-                    transition: all 0.3s ease;
-                    background: var(--secondary);
-                }
-            }
-            i {
-                color: var(--primary);
-                font-size: 2rem;
-                padding: 10px;
-            }
-        }
-    }
+	position: relative;
+	padding: 80px 0;
+	@media (max-width: 1024.98px) {
+		padding: 40px 0;
+	}
+	@media (max-width: 575.98px) {
+		padding: 20px 0;
+	}
+	[class*="col-"] {
+		margin-bottom: 40px;
+		@media (max-width: 1024.98px) {
+			flex: 0 0 50%;
+		}
+		@media (max-width: 575.98px) {
+			flex: 0 0 100%;
+		}
+	}
+	h2 {
+		font-size: 5.5rem;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.item {
+		@media (min-width: 1024.98px) {
+			&:hover {
+				h4 {
+					color: var(--secondary);
+					text-decoration: underline;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+	}
+	.description {
+		padding-left: 105px;
+		position: relative;
+		margin-top: 20px;
+		text-align: center;
+		@media (max-width: 1024.98px) {
+			padding-left: 80px;
+		}
+		@media (max-width: 767.98px) {
+			padding-left: 40px;
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			width: 52px;
+			height: 57px;
+			border-left: 2px solid var(--primary);
+			border-bottom: 2px solid var(--primary);
+			bottom: 0;
+			left: 0;
+			@media (max-width: 768.98px) {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		h4 {
+			font-size: 2.5rem;
+			font-weight: normal;
+			color: var(--primary);
+			transition: all 0.3s ease;
+		}
+		p {
+			font-size: 1.7rem;
+			color: var(--primary);
+			@media (max-width: 1439.98px) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	.img {
+		position: relative;
+		height: 425px;
+		@media (max-width: 1439.98px) {
+			height: 400px;
+		}
+		@media (max-width: 767.98px) {
+			height: 300px;
+		}
+		@media (max-width: 575.98px) {
+			height: 400px;
+		}
+		@media (max-width: 320.98px) {
+			height: 300px;
+		}
+		.plus {
+			position: absolute;
+			z-index: 1;
+			width: 60px;
+			height: 60px;
+			background: var(--primary);
+			right: 0;
+			bottom: 0;
+			cursor: pointer;
+			opacity: 1;
+			transition: all 0.3s ease;
+			&::before {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				border-left: 60px solid transparent;
+				border-bottom: 60px solid var(--primary-light);
+				border-right: none;
+				width: 0;
+				height: 0;
+				content: "";
+			}
+			@media (min-width: 1025px) {
+				&:hover {
+					opacity: 0.9;
+					transition: all 0.3s ease;
+					background: var(--secondary);
+				}
+			}
+			i {
+				color: var(--primary);
+				font-size: 2rem;
+				padding: 10px;
+			}
+		}
+	}
 }
 
 .Educate-teacher-view {
-    padding: 95px 0;
-    @media (max-width: 1439.98px) {
-        padding: 40px 0;
-    }
-    h2 {
-        font-size: 5.5rem;
-    }
-    [class*="col-"] {
-        &:first-child {
-            padding-right: 80px;
-            @media (max-width: 1439.98px) {
-                padding-right: 40px;
-            }
-            @media (max-width: 1024.98px) {
-                padding-right: 20px;
-            }
-            @media (max-width: 767.98px) {
-                padding-right: unset;
-            }
-            p {
-                margin-bottom: 15px;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-                &.option {
-                    display: inline-block;
-                }
-            }
-            ul {
-                display: inline-block;
-            }
-        }
-        @media (max-width: 767.98px) {
-            flex: 0 0 100%;
-        }
-    }
-    .title-section {
-        margin-bottom: 25px;
-        @media (max-width: 1439.98px) {
-            margin-bottom: 20px;
-        }
-    }
-    b {
-        color: var(--primary);
-    }
-    .content {
-        p {
-            margin-bottom: 25px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-    ul {
-        padding: 15px 0;
-        li {
-            margin-left: 20px;
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 15px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            &::before {
-                position: absolute;
-                width: 6px;
-                height: 6px;
-                background: var(--secondary);
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                content: '';
-            }
-        }
-    }
-    .img {
-        margin-bottom: 25px;
-        img {
-            max-width: 600px;
-            min-height: 600px;
-            width: 100%;
-            height: 100%;
-        }
-    }
+	padding: 95px 0;
+	@media (max-width: 1439.98px) {
+		padding: 40px 0;
+	}
+	h2 {
+		font-size: 5.5rem;
+	}
+	[class*="col-"] {
+		&:first-child {
+			padding-right: 80px;
+			@media (max-width: 1439.98px) {
+				padding-right: 40px;
+			}
+			@media (max-width: 1024.98px) {
+				padding-right: 20px;
+			}
+			@media (max-width: 767.98px) {
+				padding-right: unset;
+			}
+			p {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&.option {
+					display: inline-block;
+				}
+			}
+			ul {
+				display: inline-block;
+			}
+		}
+		@media (max-width: 767.98px) {
+			flex: 0 0 100%;
+		}
+	}
+	.title-section {
+		margin-bottom: 25px;
+		@media (max-width: 1439.98px) {
+			margin-bottom: 20px;
+		}
+	}
+	b {
+		color: var(--primary);
+	}
+	.content {
+		p {
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	ul {
+		padding: 15px 0;
+		li {
+			margin-left: 20px;
+			padding-left: 20px;
+			position: relative;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&::before {
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				background: var(--secondary);
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				content: "";
+			}
+		}
+	}
+	.img {
+		margin-bottom: 25px;
+		img {
+			max-width: 600px;
+			min-height: 600px;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
 .Educate-teacher-view-more {
