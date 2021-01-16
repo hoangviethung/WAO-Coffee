@@ -2,11 +2,6 @@
   position: relative;
   height: 550px;
 }
-@media (max-width: 1001.98px) {
-  .About-story {
-    height: 100%;
-  }
-}
 .About-story [class*=col-] {
   align-self: center;
 }
@@ -105,6 +100,11 @@
     max-width: 100%;
     margin: 0 auto;
     height: 300px;
+  }
+}
+@media (max-width: 1001.98px) {
+  .About-story {
+    height: 100%;
   }
 }
 
