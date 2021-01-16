@@ -1,16 +1,12 @@
 .About-story {
     position: relative;
     height: 550px;
-    @media (max-width: 1001.98px) {
+    @media (max-width: 1024.98px) {
         height: 100%;
     }
     [class*="col-"] {
         align-self: center;
-        @media (max-width: 1001.98px) {
-            padding: 20px;
-            flex: 0 0 50%;
-        }
-        @media (max-width: 767.98px) {
+        @media (max-width: 1024.98px) {
             -ms-flex: 0 0 100%;
             flex: 0 0 100%;
             max-width: 100%;
@@ -19,19 +15,20 @@
     .container,
     .row {
         height: 100%;
-        @media (max-width: 1001.98px) {
-            width: 100%;
-            max-width: 100%;
+        @media (max-width: 1024.98px) {
             height: unset;
         }
     }
     .content {
         margin-top: 24px;
+        @media (max-width: 1024.98px) {
+            margin-top: 20px;
+        }
         p {
             color: var(--primary);
             +p {
                 margin-top: 28px;
-                @media (max-width: 1000.98px) {
+                @media (max-width: 1024.98px) {
                     margin-bottom: 15px;
                 }
             }
@@ -40,8 +37,11 @@
     .content,
     .title-section {
         padding-right: 80px;
-        @media (max-width: 1001.98px) {
-            padding-right: 0
+        @media (max-width: 1439.98px) {
+            padding-right: 40px;
+        }
+        @media (max-width: 1024.98px) {
+            padding-right: unset;
         }
     }
     .img {
@@ -50,7 +50,7 @@
         top: 0;
         width: 50%;
         height: 100%;
-        @media (max-width: 767.98px) {
+        @media (max-width: 1024.98px) {
             position: relative;
             -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -61,17 +61,15 @@
         }
     }
     &.img-left {
-        [class*="col-"] {
-            @media (max-width: 1001.98px) {
-                padding: 35px;
-            }
-        }
         .content,
         .title-section {
             padding-right: 0;
             padding-left: 80px;
-            @media (max-width: 1001.98px) {
-                padding-left: 0;
+            @media (max-width: 1439.98px) {
+                padding-left: 40px;
+            }
+            @media (max-width: 1024.98px) {
+                padding-left: unset;
             }
         }
         .img {
@@ -101,19 +99,8 @@
         position: relative;
         margin-bottom: 24px;
     }
-    .container,
-    .row {
-        @media (max-width: 1001.98px) {
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-    }
     [class*="col-"] {
-        @media (max-width: 1001.98px) {
-            padding: 0 8px;
-        }
-        @media (max-width: 767.98px) {
+        @media (max-width: 1024.98px) {
             -ms-flex: 0 0 50%;
             flex: 0 0 50%;
             max-width: 50%;
@@ -164,12 +151,19 @@
     margin-top: 44px;
     .swiper-container {
         padding: 0 30px;
+        @media (max-width: 1024.98px) {
+            padding: unset;
+        }
     }
     h3,
     h4,
     p {
         text-align: right;
         color: var(--primary);
+        @media (max-width: 1024.98px) {
+            text-align: center;
+            padding: 0 10px;
+        }
     }
     h3 {
         font-family: "SFU TradeGothic";
@@ -194,10 +188,16 @@
             flex-grow: 1;
             max-width: 100%;
             margin-right: 50px;
+            @media (max-width: 1024.98px) {
+                display: none;
+            }
         }
         img {
             display: block;
             margin-left: auto;
+            @media (max-width: 1024.98px) {
+                margin: auto;
+            }
         }
     }
 }
@@ -224,16 +224,10 @@
     }
     .content {
         margin-top: 32px;
-        @media (max-width: 1000.98px) {
-            margin-top: 25px;
-        }
         p {
             color: var(--primary);
             +p {
                 margin-top: 30px;
-                @media (max-width: 1000.98px) {
-                    margin-top: 20px;
-                }
             }
         }
     }
@@ -252,13 +246,6 @@
                 max-width: 25%;
                 padding: 0 5px;
             }
-        }
-    }
-    .container,
-    .row {
-        @media (max-width: 1001.98px) {
-            width: 100%;
-            max-width: 100%;
         }
     }
     .container {

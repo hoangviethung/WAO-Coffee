@@ -682,3 +682,115 @@
         }
     }
 }
+
+.Educate-information-wrap {
+    position: relative;
+    height: 550px;
+    @media (max-width: 1024.98px) {
+        height: 100%;
+    }
+    [class*="col-"] {
+        align-self: center;
+        @media (max-width: 1024.98px) {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .container,
+    .row {
+        height: 100%;
+        @media (max-width: 1024.98px) {
+            height: unset;
+        }
+    }
+    .content {
+        margin-top: 24px;
+        @media (max-width: 1024.98px) {
+            margin-top: 20px;
+        }
+        p {
+            color: var(--primary);
+            +p {
+                margin-top: 28px;
+                @media (max-width: 1024.98px) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        ul {
+            li {
+                padding: 10px;
+                background: var(--white);
+                margin-bottom: 10px;
+                @media (min-width: 1025px) {
+                    &:hover {
+                        background: var(--primary);
+                        a {
+                            color: var(--white);
+                        }
+                    }
+                }
+                a {
+                    color: var(--primary);
+                    font-weight: bold;
+                    i {
+                        padding-right: 10px;
+                    }
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .content,
+    .title-section {
+        padding-right: 80px;
+        @media (max-width: 1439.98px) {
+            padding-right: 40px;
+        }
+        @media (max-width: 1024.98px) {
+            padding-right: unset;
+        }
+    }
+    .img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        @media (max-width: 1024.98px) {
+            position: relative;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            height: 300px;
+            width: 100%;
+        }
+    }
+    &.img-left {
+        .content,
+        .title-section {
+            padding-right: 0;
+            padding-left: 80px;
+            @media (max-width: 1439.98px) {
+                padding-left: 40px;
+            }
+            @media (max-width: 1024.98px) {
+                padding-left: unset;
+            }
+        }
+        .img {
+            right: unset;
+            left: 0;
+            @media (max-width: 767.98px) {
+                position: relative;
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                height: 300px;
+            }
+        }
+    }
+}
