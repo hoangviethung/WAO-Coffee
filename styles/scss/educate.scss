@@ -718,7 +718,17 @@
                 }
             }
         }
+        .title-section {
+            padding-left: unset !important;
+        }
+        &.list {
+            max-height: 370px;
+            overflow-y: auto;
+            padding-right: 40px;
+        }
         ul {
+            margin-top: 20px;
+            margin-right: 40px;
             li {
                 padding: 10px;
                 background: var(--white);
@@ -769,6 +779,9 @@
         }
     }
     &.img-left {
+        background: var(--url-background-information-wrap);
+        background-size: 50% 100%;
+        background-origin: right;
         .content,
         .title-section {
             padding-right: 0;

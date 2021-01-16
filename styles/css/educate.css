@@ -781,6 +781,18 @@
     margin-bottom: 15px;
   }
 }
+.Educate-information-wrap .content .title-section {
+  padding-left: unset !important;
+}
+.Educate-information-wrap .content.list {
+  max-height: 370px;
+  overflow-y: auto;
+  padding-right: 40px;
+}
+.Educate-information-wrap .content ul {
+  margin-top: 20px;
+  margin-right: 40px;
+}
 .Educate-information-wrap .content ul li {
   padding: 10px;
   background: var(--white);
@@ -835,6 +847,11 @@
     height: 300px;
     width: 100%;
   }
+}
+.Educate-information-wrap.img-left {
+  background: var(--url-background-information-wrap);
+  background-size: 50% 100%;
+  background-origin: right;
 }
 .Educate-information-wrap.img-left .content,
 .Educate-information-wrap.img-left .title-section {
