@@ -274,6 +274,9 @@
              prevEl: ".slider-setup-info .button-navigation-slider.prev",
          },
          breakpoints: {
+             500: {
+                 slidesPerView: 1,
+             },
              768: {
                  slidesPerView: 2,
              },
@@ -290,6 +293,11 @@
              prevEl: ".educate-teacher-more .button-navigation-slider.prev",
          },
          breakpoints: {
+             500: {
+
+                 slidesPerView: 1,
+
+             },
              768: {
                  slidesPerView: 2,
              },
@@ -308,6 +316,12 @@
              prevEl: ".slider-setup-project .button-navigation-slider.prev",
          },
          breakpoints: {
+             500: {
+
+                 slidesPerView: 1,
+
+             },
+
              768: {
                  slidesPerView: 2,
              },
@@ -326,6 +340,11 @@
              prevEl: ".slider-setup-feedback .button-navigation-slider.prev",
          },
          breakpoints: {
+             500: {
+
+                 slidesPerView: 1,
+
+             },
              768: {
                  slidesPerView: 2,
              },
@@ -342,6 +361,11 @@
              prevEl: ".slider-educate-feedback .button-navigation-slider.prev",
          },
          breakpoints: {
+             500: {
+
+                 slidesPerView: 1,
+
+             },
              768: {
                  slidesPerView: 2,
              },

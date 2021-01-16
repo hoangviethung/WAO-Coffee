@@ -10,6 +10,10 @@
             -ms-flex: 0 0 100%;
             flex: 0 0 100%;
             max-width: 100%;
+            &:first-child {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
         }
     }
     .container,
@@ -61,6 +65,18 @@
         }
     }
     &.img-left {
+        @media (max-width: 1024.98px) {
+            [class*="col-"] {
+                &:first-child {
+                    padding-top: unset;
+                    padding-bottom: unset;
+                }
+                &:last-child {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
         .content,
         .title-section {
             padding-right: 0;
@@ -90,7 +106,7 @@
 .About-business-areas {
     padding-top: 80px;
     @media (max-width: 1024.98px) {
-        padding-top: 40px;
+        padding-top: 30px;
     }
     @media (max-width: 575.98px) {
         padding-top: 20px;
@@ -98,6 +114,17 @@
     .img {
         position: relative;
         margin-bottom: 24px;
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            content: "";
+            background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+            background-blend-mode: multiply;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
     }
     [class*="col-"] {
         @media (max-width: 1024.98px) {
@@ -127,6 +154,11 @@
         @media (max-width: 1439.98px) {
             font-size: 1.5rem;
         }
+        @media (max-width: 1024.98px) {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+        }
         @media (max-width: 575.98px) {
             font-size: 1.8rem;
         }
@@ -137,13 +169,13 @@
 }
 
 .About-history {
-	padding: 80px 0;
-	@media (max-width: 1024.98px) {
-		padding-top: 40px;
-	}
-	@media (max-width: 575.98px) {
-		padding-top: 20px;
-	}
+    padding: 80px 0;
+    @media (max-width: 1024.98px) {
+        padding-top: 40px;
+    }
+    @media (max-width: 575.98px) {
+        padding-top: 20px;
+    }
 }
 
 .slider-about-history {
@@ -262,74 +294,74 @@
 }
 
 .About-vistion-misstion {
-	padding: 80px 0;
-	@media (max-width: 1024.98px) {
-		padding: 40px 0;
-	}
-	@media (max-width: 575.98px) {
-		padding: 20px 0;
-	}
-	.col-lg-4 {
-		margin-top: 50px;
-		@media (max-width: 1024.98px) {
-			margin-top: 30px;
-		}
-		@media (max-width: 575.98px) {
-			padding: 20px;
-			margin-top: unset;
-		}
-		h3 {
-			font-size: 4.5rem;
-			font-family: "SFU TradeGothic";
-			color: var(--primary);
-			padding-left: 17px;
-			position: relative;
-			line-height: 1;
-			&::before {
-				position: absolute;
-				width: 4px;
-				height: 80%;
-				left: 0;
-				bottom: 0;
-				background: var(--secondary);
-				content: "";
-			}
-			@media (max-width: 1024.98px) {
-				font-size: 3.5rem;
-			}
-			@media (max-width: 575.98px) {
-				font-size: 2.5rem;
-			}
-		}
-		ul {
-			margin-top: 35px;
-			@media (max-width: 1024.98px) {
-				margin-top: 25px;
-			}
-			@media (max-width: 768.98px) {
-				margin-top: 15px;
-			}
-		}
-		li {
-			margin-bottom: 35px;
-			font-size: 1.6rem;
-			line-height: 22px;
-			@media (max-width: 1024.98px) {
-				margin-bottom: 25px;
-			}
-			@media (max-width: 768.98px) {
-				margin-bottom: 15px;
-			}
-			&:last-child {
-				margin-bottom: 0;
-			}
-			span {
-				color: var(--secondary);
-				font-weight: bold;
-			}
-			b {
-				color: var(--primary);
-			}
-		}
-	}
+    padding: 80px 0;
+    @media (max-width: 1024.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 20px 0;
+    }
+    .col-lg-4 {
+        margin-top: 50px;
+        @media (max-width: 1024.98px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 575.98px) {
+            padding: 20px;
+            margin-top: unset;
+        }
+        h3 {
+            font-size: 4.5rem;
+            font-family: "SFU TradeGothic";
+            color: var(--primary);
+            padding-left: 17px;
+            position: relative;
+            line-height: 1;
+            &::before {
+                position: absolute;
+                width: 4px;
+                height: 80%;
+                left: 0;
+                bottom: 0;
+                background: var(--secondary);
+                content: "";
+            }
+            @media (max-width: 1024.98px) {
+                font-size: 3.5rem;
+            }
+            @media (max-width: 575.98px) {
+                font-size: 2.5rem;
+            }
+        }
+        ul {
+            margin-top: 35px;
+            @media (max-width: 1024.98px) {
+                margin-top: 25px;
+            }
+            @media (max-width: 768.98px) {
+                margin-top: 15px;
+            }
+        }
+        li {
+            margin-bottom: 35px;
+            font-size: 1.6rem;
+            line-height: 22px;
+            @media (max-width: 1024.98px) {
+                margin-bottom: 25px;
+            }
+            @media (max-width: 768.98px) {
+                margin-bottom: 15px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                color: var(--secondary);
+                font-weight: bold;
+            }
+            b {
+                color: var(--primary);
+            }
+        }
+    }
 }
