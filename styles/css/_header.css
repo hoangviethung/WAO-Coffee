@@ -227,6 +227,10 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
 }
+nav ul li.has-sub {
+  cursor: pointer;
+  position: relative;
+}
 nav ul li.has-sub > a {
   position: relative;
   padding-right: 24px;
@@ -239,11 +243,15 @@ nav ul li.has-sub > a:after {
   transform: translateY(-50%);
   right: 0;
   color: var(--white);
+  pointer-events: none;
+}
+@media (max-width: 1299.98px) {
+  nav ul li.has-sub > a:after {
+    right: -15%;
+  }
 }
 nav ul > li {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 nav ul > li a {
   display: block;
@@ -256,6 +264,9 @@ nav ul > li a {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--primary);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 85%;
   }
 }
 nav ul > li + li {
@@ -264,8 +275,6 @@ nav ul > li + li {
 @media (max-width: 1299.98px) {
   nav ul > li + li {
     margin-left: 0;
-    margin-top: 16px;
-    padding-top: 16px;
     border-top: 1px solid var(--neutral-gray);
   }
 }
@@ -278,6 +287,10 @@ nav ul > li > ul {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s all ease-in-out;
+  background-image: linear-gradient(#ebebeb 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 0px 0px;
+  background-repeat: repeat-y;
 }
 nav ul > li > ul > li {
   padding: 0 24px;
@@ -287,21 +300,27 @@ nav ul > li > ul > li ul {
   left: calc(100%);
   top: 0;
   /*Vertical*/
-  background-image: linear-gradient(#ebebeb 33%, rgba(255, 255, 255, 0) 0%);
-  background-position: left;
   background-size: 2px 16px;
-  background-repeat: repeat-y;
 }
 nav ul > li > ul > li ul li a::after {
   content: none;
+}
+@media (max-width: 1299.98px) {
+  nav ul > li > ul > li ul {
+    left: unset;
+  }
 }
 nav ul > li > ul > li.has-sub a:after {
   transform: translateY(-50%) rotate(-90deg);
   color: var(--primary);
 }
+@media (max-width: 1299.98px) {
+  nav ul > li > ul > li.has-sub a:after {
+    transform: translateY(-50%);
+  }
+}
 nav ul > li > ul > li a {
   position: relative;
-  font-size: 1.6rem;
   padding: 16px 24px;
   color: var(--primary);
   text-transform: unset;
@@ -312,13 +331,45 @@ nav ul > li > ul > li + li {
 nav ul > li > ul > li + li a {
   border-top: 1px solid #ebebeb;
 }
+@media (max-width: 1299.98px) {
+  nav ul > li > ul > li + li a {
+    border-top: 0;
+  }
+}
+nav ul > li > ul > li:before {
+  top: 0 !important;
+}
 nav ul > li > ul > li:after {
   content: none;
 }
 @media (min-width: 1025px) {
   nav ul > li > ul > li:hover a:after {
-    transform: translateY(-50%) rotate(-90deg);
     color: var(--secondary);
+  }
+}
+@media (max-width: 1299.98px) {
+  nav ul > li > ul > li {
+    padding: 0;
+  }
+}
+@media (max-width: 1299.98px) {
+  nav ul > li > ul {
+    position: relative;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    padding-left: 24px;
+    margin-top: 24px;
+    background-size: 2px 16px;
+    height: 0;
+    margin-top: 0;
+  }
+  nav ul > li > ul.show {
+    height: unset;
+    margin-top: 16px;
+    opacity: 1;
+    visibility: visible;
   }
 }
 nav ul > li:after {
@@ -332,6 +383,10 @@ nav ul > li:after {
   height: 5px;
 }
 @media (min-width: 1300px) {
+  nav ul > li {
+    display: flex;
+    align-items: center;
+  }
   nav ul > li > a,
 nav ul > li a:after, nav ul > li:after {
     transition: 0.3s all ease-in-out;
@@ -379,6 +434,7 @@ nav .button-close-wrapper .close-menu-mobile {
     padding: 24px;
     max-width: 375px;
     width: 100%;
+    overflow-y: auto;
   }
   nav ul {
     display: block;
