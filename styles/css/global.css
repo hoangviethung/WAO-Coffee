@@ -493,13 +493,16 @@ main {
 .Section-Image-Content-Global [class*=col-] {
   align-self: center;
 }
+.Section-Image-Content-Global [class*=col-]:first-child {
+  display: none;
+}
 @media (max-width: 1024.98px) {
   .Section-Image-Content-Global [class*=col-] {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .Section-Image-Content-Global [class*=col-]:first-child {
+  .Section-Image-Content-Global [class*=col-]:last-child {
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -622,15 +625,8 @@ main {
     width: 100%;
   }
 }
-@media (max-width: 1024.98px) {
-  .Section-Image-Content-Global.img-left [class*=col-]:first-child {
-    padding-top: unset;
-    padding-bottom: unset;
-  }
-  .Section-Image-Content-Global.img-left [class*=col-]:last-child {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+.Section-Image-Content-Global.img-left:first-child {
+  display: block;
 }
 .Section-Image-Content-Global.img-left .content,
 .Section-Image-Content-Global.img-left .title-section {

@@ -501,11 +501,14 @@ main {
 	height: 550px;
 	[class*="col-"] {
 		align-self: center;
+		&:first-child {
+			display: none;
+		}
 		@media (max-width: 1024.98px) {
 			-ms-flex: 0 0 100%;
 			flex: 0 0 100%;
 			max-width: 100%;
-			&:first-child {
+			&:last-child {
 				padding-top: 20px;
 				padding-bottom: 20px;
 			}
@@ -613,17 +616,8 @@ main {
 		}
 	}
 	&.img-left {
-		@media (max-width: 1024.98px) {
-			[class*="col-"] {
-				&:first-child {
-					padding-top: unset;
-					padding-bottom: unset;
-				}
-				&:last-child {
-					padding-top: 20px;
-					padding-bottom: 20px;
-				}
-			}
+		&:first-child {
+			display: block;
 		}
 		.content,
 		.title-section {
