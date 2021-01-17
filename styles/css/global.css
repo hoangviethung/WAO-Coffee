@@ -625,7 +625,7 @@ main {
     width: 100%;
   }
 }
-.Section-Image-Content-Global.img-left:first-child {
+.Section-Image-Content-Global.img-left [class*=col-]:first-child {
   display: block;
 }
 .Section-Image-Content-Global.img-left .content,

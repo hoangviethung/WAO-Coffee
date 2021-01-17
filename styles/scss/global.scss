@@ -616,8 +616,10 @@ main {
 		}
 	}
 	&.img-left {
-		&:first-child {
-			display: block;
+		[class*="col-"] {
+			&:first-child {
+				display: block;
+			}
 		}
 		.content,
 		.title-section {
