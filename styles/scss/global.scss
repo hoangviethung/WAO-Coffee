@@ -736,3 +736,164 @@ main {
         z-index: -1;
     }
 }
+
+.block-product {
+    position: relative;
+    min-height: 505px;
+    border: 1px solid #d3d3d3;
+    padding: 24px;
+    .img {
+        position: relative;
+        display: block;
+        width: auto;
+        min-height: 260px;
+        max-height: 260px;
+        overflow: hidden;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        .item-hover {
+            position: absolute;
+            bottom: 0;
+            left: 60%;
+            transform: translateX(-60%);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+    }
+    .description {
+        margin-top: 44px;
+        @media (max-width: 767.98px) {
+            margin-top: 16px;
+        }
+        @media (max-width: 575.98px) {
+            text-align: center;
+        }
+    }
+    .group-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 26px;
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            margin-top: 8px;
+        }
+    }
+    h3 {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 8px;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            left: 0;
+            bottom: 0;
+        }
+    }
+    h3,
+    h4 {
+        text-transform: uppercase;
+        color: var(--primary);
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+    h4 {
+        @media (max-width: 767.98px) {
+            margin-bottom: 8px;
+        }
+    }
+    p {
+        color: var(--primary);
+    }
+    &-fixed {
+        position: relative;
+        min-height: 505px;
+        img {
+            position: absolute;
+        }
+        .logo {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        p {
+            font-style: italic;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            color: var(--white);
+            text-align: center;
+            &:after,
+            &:before {
+                font-size: 24px;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 700;
+                position: absolute;
+                color: var(--secondary);
+            }
+            &:before {
+                content: "\f10d";
+                top: -8px;
+                right: 103%;
+            }
+            &:after {
+                content: "\f10e";
+                bottom: -8px;
+                left: 100%;
+            }
+        }
+        .cta-button {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 575.98px) {
+            display: none;
+        }
+    }
+    @media (min-width: 1025px) {
+        .img {
+            .item-hover {
+                transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+            }
+            &:hover {
+                .item-hover {
+                    opacity: 1;
+                    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        h3 {
+            transition: 0.3s all ease-in-out;
+            &:after {
+                transition: 0.5s all ease-in-out;
+            }
+            &:hover {
+                color: var(--secondary);
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+        .btn {
+            &:hover {
+                background: var(--secondary);
+                color: var(--primary);
+            }
+        }
+    }
+    @media (max-width: 575.98px) {
+        min-height: auto;
+    }
+}

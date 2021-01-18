@@ -106,6 +106,8 @@ dt {
 dd {
   margin-bottom: 0;
   margin-left: 0;
+  font-size: 1.6rem;
+  color: var(--primary);
 }
 
 blockquote {
