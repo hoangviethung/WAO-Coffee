@@ -155,6 +155,11 @@
   padding: 0 30px;
   margin-top: 30px;
 }
+@media (max-width: 575.98px) {
+  .Educate-images .slider-educate-images {
+    padding: 0 15px;
+  }
+}
 @media (max-width: 767.98px) {
   .Educate-images .slider-educate-images {
     margin-top: 20px;
@@ -444,10 +449,16 @@
   flex: 0 0 calc(20% - 15px);
   margin: 0 7.5px;
   margin-bottom: 15px;
-  position: relative;
-  cursor: pointer;
 }
-.Educate-gallery-view .list-img ul li::before {
+.Educate-gallery-view .list-img ul li a {
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.Educate-gallery-view .list-img ul li a::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -455,14 +466,15 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.564);
   z-index: 1;
-  content: none;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
-.Educate-gallery-view .list-img ul li::after {
+.Educate-gallery-view .list-img ul li a::after {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  content: none;
   display: flex;
   align-items: center;
   justify-self: center;
@@ -470,9 +482,12 @@
   color: var(--white);
   font-size: 4rem;
   z-index: 2;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 767.98px) {
-  .Educate-gallery-view .list-img ul li::after {
+  .Educate-gallery-view .list-img ul li a::after {
     font-size: 2rem;
   }
 }
@@ -492,19 +507,21 @@
   }
 }
 @media (min-width: 1025px) {
-  .Educate-gallery-view .list-img ul li:hover::before {
-    content: "";
+  .Educate-gallery-view .list-img ul li:hover a::before {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
   }
-  .Educate-gallery-view .list-img ul li:hover:after {
-    content: "";
+  .Educate-gallery-view .list-img ul li:hover a:after {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
   }
 }
 @media (max-width: 1024.98px) {
-  .Educate-gallery-view .list-img ul li::before {
-    content: "";
+  .Educate-gallery-view .list-img ul li a::before {
+    opacity: 1;
   }
-  .Educate-gallery-view .list-img ul li:after {
-    content: "";
+  .Educate-gallery-view .list-img ul li a:after {
+    opacity: 1;
   }
 }
 .Educate-gallery-view .load-more {
@@ -790,6 +807,12 @@
 }
 .Educate-teacher-view-more .educate-teacher-more {
   position: relative;
+  margin: 50px 0;
+}
+@media (max-width: 1439.98px) {
+  .Educate-teacher-view-more .educate-teacher-more {
+    margin: 20px 0;
+  }
 }
 .Educate-teacher-view-more .educate-teacher-more .description {
   position: relative;

@@ -15,6 +15,16 @@
   position: relative;
   margin-bottom: 24px;
 }
+@media (max-width: 1439.98px) {
+  .About-business-areas .img {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .About-business-areas .img {
+    margin-bottom: 10px;
+  }
+}
 .About-business-areas .img::before {
   position: absolute;
   width: 100%;
@@ -124,6 +134,11 @@
 }
 .slider-about-history p {
   margin-top: 30px;
+}
+@media (max-width: 1439.98px) {
+  .slider-about-history p {
+    margin-top: 20px;
+  }
 }
 .slider-about-history .img {
   display: flex;

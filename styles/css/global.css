@@ -549,17 +549,15 @@ main {
   .Section-Image-Content-Global .content ul li:hover {
     background: var(--primary);
   }
-  .Section-Image-Content-Global .content ul li:hover a {
+  .Section-Image-Content-Global .content ul li:hover p {
     color: var(--white);
   }
 }
-.Section-Image-Content-Global .content ul li a {
-  display: block;
+.Section-Image-Content-Global .content ul li p {
   color: var(--primary);
   font-weight: bold;
-  font-size: 1.6rem;
 }
-.Section-Image-Content-Global .content ul li a i {
+.Section-Image-Content-Global .content ul li p i {
   padding-right: 10px;
 }
 .Section-Image-Content-Global .content.color-white p {
@@ -679,4 +677,19 @@ main {
   .Section-Image-Content-Global {
     height: 100%;
   }
+}
+
+.tab-container .list-tab .item {
+  cursor: pointer;
+}
+.tab-container .list-tab .item.active {
+  color: transparent;
+}
+.tab-container .tab-content .content {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
+}
+.tab-container .tab-content .content.show {
+  opacity: 1;
 }

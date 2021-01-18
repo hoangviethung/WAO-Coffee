@@ -364,6 +364,16 @@
   position: relative;
   padding: 0 60px;
 }
+@media (max-width: 1439.98px) {
+  .Setup-project .container-fluid {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .Setup-project .container-fluid {
+    padding: 0 15px;
+  }
+}
 .Setup-project .container-fluid .item {
   display: block;
   position: relative;
@@ -397,9 +407,8 @@
 }
 @media (max-width: 1024.98px) {
   .Setup-project .container-fluid .item::before {
-    opacity: 1;
-    bottom: unset;
-    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    content: none;
   }
   .Setup-project .container-fluid .item .description {
     opacity: 1;
