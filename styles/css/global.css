@@ -544,21 +544,33 @@ main {
   padding: 10px;
   background: var(--white);
   margin-bottom: 10px;
+  cursor: pointer;
+}
+.Section-Image-Content-Global .content ul li div {
+  display: none;
+  margin-top: 10px;
 }
 @media (min-width: 1025px) {
   .Section-Image-Content-Global .content ul li:hover {
     background: var(--primary);
   }
+  .Section-Image-Content-Global .content ul li:hover b {
+    color: var(--white);
+  }
   .Section-Image-Content-Global .content ul li:hover p {
     color: var(--white);
   }
 }
-.Section-Image-Content-Global .content ul li p {
+.Section-Image-Content-Global .content ul li b {
+  display: block;
   color: var(--primary);
   font-weight: bold;
 }
-.Section-Image-Content-Global .content ul li p i {
+.Section-Image-Content-Global .content ul li b i {
   padding-right: 10px;
+}
+.Section-Image-Content-Global .content ul li p {
+  color: var(--primary);
 }
 .Section-Image-Content-Global .content.color-white p {
   color: white;
@@ -692,4 +704,47 @@ main {
 }
 .tab-container .tab-content .content.show {
   opacity: 1;
+}
+
+.desc-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.desc-shadow.with-col {
+  padding-left: 35px;
+}
+.desc-shadow.with-col::before {
+  left: 50%;
+  width: calc(100% - 30px);
+  transform: translateX(-50%);
+}
+.desc-shadow h4 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--white);
+}
+@media (max-width: 1439.98px) {
+  .desc-shadow h4 {
+    font-size: 1.8rem;
+  }
+}
+.desc-shadow p {
+  color: var(--white);
+  margin-top: 10px;
+}
+.desc-shadow::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.131));
+  background-blend-mode: multiply;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }

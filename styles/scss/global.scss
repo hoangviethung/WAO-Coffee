@@ -538,23 +538,35 @@ main {
                 margin-right: 20px;
             }
             li {
+                div {
+                    display: none;
+                    margin-top: 10px;
+                }
                 padding: 10px;
                 background: var(--white);
                 margin-bottom: 10px;
+                cursor: pointer;
                 @media (min-width: 1025px) {
                     &:hover {
                         background: var(--primary);
+                        b {
+                            color: var(--white);
+                        }
                         p {
                             color: var(--white);
                         }
                     }
                 }
-                p {
+                b {
+                    display: block;
                     color: var(--primary);
                     font-weight: bold;
                     i {
                         padding-right: 10px;
                     }
+                }
+                p {
+                    color: var(--primary);
                 }
             }
         }
@@ -681,5 +693,46 @@ main {
                 opacity: 1;
             }
         }
+    }
+}
+
+.desc-shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    &.with-col {
+        padding-left: 35px;
+        &::before {
+            left: 50%;
+            width: calc(100% - 30px);
+            transform: translateX(-50%);
+        }
+    }
+    h4 {
+        font-size: 2.5rem;
+        font-weight: normal;
+        color: var(--white);
+        @media (max-width: 1439.98px) {
+            font-size: 1.8rem;
+        }
+    }
+    p {
+        color: var(--white);
+        margin-top: 10px;
+    }
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    &::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.131));
+        background-blend-mode: multiply;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
     }
 }

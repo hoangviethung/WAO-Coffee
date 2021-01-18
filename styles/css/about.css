@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .About-business-areas {
   padding-top: 80px;
 }
@@ -209,6 +210,7 @@
   margin-top: 30px;
 }
 .About-image-galleries .images {
+  position: relative;
   margin-top: 44px;
 }
 @media (max-width: 1000.98px) {
@@ -228,6 +230,31 @@
     max-width: 25%;
     padding: 0 5px;
   }
+}
+@media (min-width: 1025px) {
+  .About-image-galleries .images .item:hover::after {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+}
+.About-image-galleries .images .item::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.268);
+  width: calc(100% - 30px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
 .About-image-galleries .container {
   position: relative;

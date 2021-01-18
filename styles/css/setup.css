@@ -178,9 +178,19 @@
     margin-bottom: 20px;
   }
 }
+.Setup-option .tab-content section {
+  position: relative;
+}
+@media (max-width: 575.98px) {
+  .Setup-option .tab-content section {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
 .Setup-option .tab-content table {
   width: 100%;
   position: relative;
+  white-space: nowrap;
 }
 .Setup-option .tab-content table thead {
   position: relative;
@@ -190,7 +200,7 @@
   padding: 27px;
   color: var(--white);
   font-family: "SFU TradeGothic";
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 .Setup-option .tab-content table thead th:first-child {
   text-align: center;
@@ -198,6 +208,11 @@
 }
 .Setup-option .tab-content table thead th:last-child {
   border-left: 1px solid #7f899c;
+}
+@media (max-width: 1439.98px) {
+  .Setup-option .tab-content table thead th {
+    font-size: 1.5rem;
+  }
 }
 .Setup-option .tab-content table tr:nth-child(odd) td {
   background: #f8f8f8;
@@ -212,8 +227,18 @@
 }
 .Setup-option .tab-content table td:first-child {
   vertical-align: top;
-  font-size: 25px;
+  font-size: 2.5rem;
   text-transform: uppercase;
+}
+@media (max-width: 1439.98px) {
+  .Setup-option .tab-content table td:first-child {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .Setup-option .tab-content table td:first-child {
+    font-size: 1.8rem;
+  }
 }
 .Setup-option .tab-content table td:last-child {
   border-left: 1px solid #f5f5f5;
