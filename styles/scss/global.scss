@@ -208,7 +208,6 @@ main {
 .title-section {
 	h2,
 	p {
-		display: inline-block;
 		font-family: "SFU TradeGothic";
 		color: var(--primary);
 		user-select: none;
@@ -227,6 +226,9 @@ main {
 			bottom: 0;
 			left: 0;
 			background: var(--secondary);
+		}
+		@media (max-width: 767.98px) {
+			font-size: 3.2rem;
 		}
 		@media (min-width: 1025px) {
 			transition: 0.3s all ease-in-out;
@@ -255,9 +257,6 @@ main {
 			width: 32px;
 			background: var(--primary);
 		}
-	}
-	&.center {
-		text-align: center;
 	}
 	&.color-white {
 		h2,
@@ -294,7 +293,7 @@ main {
 }
 
 .mt-title {
-	margin-top: 24px;
+	margin-top: 16px;
 	@media (min-width: 768px) {
 		margin-top: 24px;
 	}
@@ -304,9 +303,9 @@ main {
 }
 
 .mb-title {
-	margin-bottom: 30px;
+	margin-bottom: 16px;
 	@media (min-width: 768px) {
-		margin-bottom: 35px;
+		margin-bottom: 24px;
 	}
 	@media (min-width: 1200px) {
 		margin-bottom: 50px;
@@ -487,7 +486,7 @@ main {
 			justify-content: center;
 		}
 	}
-}			
+}
 
 .customers-clients {
 	padding: 80px 0;
@@ -674,25 +673,34 @@ main {
 				height: 300px;
 			}
 		}
-		&.has-background {
+	}
+	&.has-background {
+		&.img-left {
 			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
 				right: 0;
-				width: 50%;
-				height: 100%;
-				background: var(--bg-before);
-				background-size: cover;
-				z-index: -1;
-				@media (max-width: 1024.98px) {
-					width: 100%;
-				}
+				left: unset;
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+			height: 100%;
+			background: var(--bg-before);
+			background-size: cover;
+			z-index: -1;
+			@media (max-width: 1024.98px) {
+				width: 100%;
 			}
 		}
 	}
 	@media (max-width: 1024.98px) {
 		height: 100%;
+	}
+	.cta-button {
+		margin-top: 16px;
 	}
 }
 
@@ -714,48 +722,6 @@ main {
 				opacity: 1;
 			}
 		}
-	}
-}
-
-.desc-shadow {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	padding: 20px;
-	z-index: 1;
-	transition: all 0.3s ease-in-out;
-	&.with-col {
-		padding-left: 35px;
-		&::before {
-			left: 50%;
-			width: calc(100% - 30px);
-			transform: translateX(-50%);
-		}
-	}
-	h4 {
-		font-size: 2.5rem;
-		font-weight: normal;
-		color: var(--white);
-		@media (max-width: 1439.98px) {
-			font-size: 1.8rem;
-		}
-	}
-	p {
-		color: var(--white);
-		margin-top: 10px;
-	}
-
-	&::before {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		content: "";
-		background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.131));
-		background-blend-mode: multiply;
-		bottom: 0;
-		left: 0;
-		z-index: -1;
 	}
 }
 
@@ -918,5 +884,150 @@ main {
 	}
 	@media (max-width: 575.98px) {
 		min-height: auto;
+	}
+}
+
+.desc-shadow {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	z-index: 1;
+	transition: all 0.3s ease-in-out;
+	h4 {
+		font-size: 2.5rem;
+		color: var(--white);
+		@media (max-width: 1439.98px) {
+			font-size: 1.8rem;
+		}
+		@media (min-width: 1025px) {
+			transition: 0.3s all ease-in-out;
+			&:hover {
+				color: var(--secondary);
+			}
+		}
+	}
+	p {
+		color: var(--white);
+		margin-top: 10px;
+		@media (min-width: 1025px) {
+			transition: 0.3s all ease-in-out;
+			&:hover {
+				color: var(--secondary);
+			}
+		}
+	}
+	&::before {
+		position: absolute;
+		width: 100%;
+		height: 200%;
+		content: "";
+		background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+		background-blend-mode: multiply;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+.Index-news {
+	background-image: var(--url-background-index-news);
+	background-size: 100% 100%;
+}
+
+.slider-index-news {
+	position: relative;
+	margin-top: 38px;
+	.header-description {
+		display: flex;
+	}
+	.description {
+		background: var(--white);
+		padding: 30px;
+		span {
+			text-transform: uppercase;
+			font-size: 1.3rem;
+			&:first-child {
+				color: var(--secondary);
+				font-weight: 900;
+			}
+			&:last-child {
+				margin-left: auto;
+				color: var(--primary);
+				font-weight: 500;
+			}
+		}
+		h3,
+		p {
+			color: var(--primary);
+		}
+		h3 {
+			display: inline-block;
+			position: relative;
+			font-size: 2.2rem;
+			font-weight: 400;
+			margin-top: 16px;
+		}
+		p {
+			margin-top: 8px;
+		}
+		@media (max-width: 767.98px) {
+			padding: 16px;
+		}
+	}
+	.img {
+		position: relative;
+		height: 300px;
+		width: auto;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba($color: #000000, $alpha: 0.5);
+			pointer-events: none;
+			opacity: 0;
+		}
+		@media (max-width: 575.98px) {
+			height: 250px;
+		}
+	}
+	.cta-button {
+		margin-top: 20px;
+	}
+	.item {
+		@media (min-width: 1025px) {
+			.img {
+				img {
+					transition: 0.3s all ease-in-out;
+				}
+				&:after {
+					transition: 0.3s all ease-in-out;
+				}
+				&:hover {
+					img {
+						transform: scale(1.1);
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+			.description {
+				h3 {
+					transition: 0.3s all ease-in-out;
+					&:hover {
+						text-decoration: underline;
+						color: var(--secondary);
+						&:after {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
 	}
 }

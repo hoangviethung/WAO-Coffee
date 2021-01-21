@@ -1,153 +1,145 @@
 .Product-list {
-    position: relative;
-    margin-top: 50px;
-    @media (max-width: 1439.98px) {
-        margin-top: 40px;
-        margin-bottom: 30px;
-    }
-    &.pd {
-        margin-top: unset;
-        padding: 40px 0;
-        @media (max-width: 1024.98px) {
-            padding: 20px 0;
-        }
-    }
-    dd {
-        text-align: center;
-        max-width: 50%;
-        margin: 0 auto;
-        margin-top: 30px;
-        @media (max-width: 1024.98px) {
-            max-width: 70%;
-        }
-        @media (max-width: 767.98px) {
-            max-width: 90%;
-            margin-top: 15px;
-        }
-        @media (max-width: 575.98px) {
-            max-width: unset;
-            margin-top: 10px;
-        }
-    }
-    .container {
-        position: relative;
-        >.btn {
-            position: absolute;
-            top: 0;
-            right: 15px;
-            @media (max-width: 575.98px) {
-                position: relative;
-                top: unset;
-                right: unset;
-                margin-top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-        h2 {
-            line-height: 1;
-        }
-        h3 {
-            a {
-                font-size: 2rem;
-            }
-        }
-        [class*="col-"] {
-            @media (max-width: 1260.98px) {
-                -ms-flex: 0 0 calc((100% / 3));
-                flex: 0 0 calc((100% / 3));
-                max-width: calc((100% / 3));
-            }
-            @media (max-width: 1024.98px) {
-                padding: 0 0;
-                flex: 0 0 calc((100% / 2) - 16px);
-                max-width: calc((100% / 2) - 16px);
-                margin: 0 8px;
-            }
-            @media (max-width: 575.98px) {
-                padding: 0 15px;
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-        }
-    }
-    .row {
-        margin-top: 40px;
-        @media (max-width: 1439.98px) {
-            margin-top: 20px;
-        }
-        .block-product {
-            margin-bottom: 30px;
-            @media (max-width: 1024.98px) {
-                margin-bottom: 16px;
-            }
-            @media (max-width: 575.98px) {
-                margin-bottom: 15px;
-            }
-        }
-    }
+	position: relative;
+	dd {
+		text-align: center;
+		max-width: 50%;
+		margin: 0 auto;
+		margin-top: 30px;
+		@media (max-width: 1024.98px) {
+			max-width: 70%;
+		}
+		@media (max-width: 767.98px) {
+			max-width: 90%;
+			margin-top: 15px;
+		}
+		@media (max-width: 575.98px) {
+			max-width: unset;
+			margin-top: 10px;
+		}
+	}
+	.container {
+		position: relative;
+		> .btn {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			@media (max-width: 575.98px) {
+				position: relative;
+				top: unset;
+				right: unset;
+				margin-top: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		h2 {
+			line-height: 1;
+		}
+		h3 {
+			a {
+				font-size: 2rem;
+			}
+		}
+		[class*="col-"] {
+			@media (max-width: 1260.98px) {
+				-ms-flex: 0 0 calc((100% / 3));
+				flex: 0 0 calc((100% / 3));
+				max-width: calc((100% / 3));
+			}
+			@media (max-width: 1024.98px) {
+				padding: 0 0;
+				flex: 0 0 calc((100% / 2) - 16px);
+				max-width: calc((100% / 2) - 16px);
+				margin: 0 8px;
+			}
+			@media (max-width: 575.98px) {
+				padding: 0 15px;
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	.row {
+		margin-top: 40px;
+		@media (max-width: 1439.98px) {
+			margin-top: 20px;
+		}
+		.block-product {
+			margin-bottom: 30px;
+			@media (max-width: 1024.98px) {
+				margin-bottom: 16px;
+			}
+			@media (max-width: 575.98px) {
+				margin-bottom: 15px;
+			}
+		}
+	}
 }
 
 .Product-group-video {
-    padding: 100px 0;
-    position: relative;
-    background: var(--bg-section);
-    .video {
-        width: 50%;
-        margin: 0 auto;
-    }
-    .img {
-        position: relative;
-        height: 560px;
-        width: auto;
-        &:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            background: rgb(2, 0, 36);
-            background: linear-gradient( 180deg, rgba(2, 0, 36, 0) 50%, rgba(0, 0, 0, 0.8) 90%);
-        }
-    }
-    .description {
-        position: absolute;
-        left: 30px;
-        bottom: 30px;
-        right: 30px;
-        h3 {
-            color: var(--white);
-            font-size: 2.2rem;
-            text-align: center;
-        }
-    }
-    .item {
-        position: relative;
-        @media (min-width: 1025px) {
-            .description {
-                h3 {
-                    transition: 0.3s all ease-in-out;
-                }
-            }
-            .img {
-                img {
-                    transition: 0.3s all ease-in-out;
-                }
-            }
-            &:hover {
-                .img {
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
-                .description {
-                    h3 {
-                        color: var(--secondary);
-                    }
-                }
-            }
-        }
-    }
+	padding: 100px 0;
+	position: relative;
+	background: var(--bg-section);
+	.video {
+		width: 50%;
+		margin: 0 auto;
+	}
+	.img {
+		position: relative;
+		height: 560px;
+		width: auto;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			background: rgb(2, 0, 36);
+			background: linear-gradient(
+				180deg,
+				rgba(2, 0, 36, 0) 50%,
+				rgba(0, 0, 0, 0.8) 90%
+			);
+		}
+	}
+	.description {
+		position: absolute;
+		left: 30px;
+		bottom: 30px;
+		right: 30px;
+		h3 {
+			color: var(--white);
+			font-size: 2.2rem;
+			text-align: center;
+		}
+	}
+	.item {
+		position: relative;
+		@media (min-width: 1025px) {
+			.description {
+				h3 {
+					transition: 0.3s all ease-in-out;
+				}
+			}
+			.img {
+				img {
+					transition: 0.3s all ease-in-out;
+				}
+			}
+			&:hover {
+				.img {
+					img {
+						transform: scale(1.1);
+					}
+				}
+				.description {
+					h3 {
+						color: var(--secondary);
+					}
+				}
+			}
+		}
+	}
 }
