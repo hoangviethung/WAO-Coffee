@@ -1,5 +1,4 @@
 .Index-service {
-	padding: 100px 0;
 	overflow: hidden;
 	.wrapper {
 		position: relative;
@@ -92,11 +91,7 @@
 			}
 		}
 	}
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
 	@media (max-width: 575.98px) {
-		padding: 35px 0;
 		[class*="col-"] {
 			&:last-child {
 				margin-top: 15px;
@@ -112,7 +107,6 @@
 .Index-about {
 	position: relative;
 	width: 100%;
-	padding-top: 85px;
 	background-image: var(--url-background-index-about);
 	background-size: 100% 100%;
 	overflow: hidden;
@@ -153,28 +147,6 @@
 	}
 	.cta-button {
 		margin-top: 30px;
-	}
-	@media (max-width: 1024.98px) {
-		padding-top: 50px;
-	}
-	@media (max-width: 575.98px) {
-		padding-top: 35px;
-	}
-}
-
-.Index-best-seller {
-	padding: 80px 0;
-	.title-section {
-		margin-bottom: 30px;
-		@media (max-width: 1024.98px) {
-			margin-bottom: 16px;
-		}
-	}
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
-	@media (max-width: 575.98px) {
-		padding: 35px 0;
 	}
 }
 
@@ -352,7 +324,6 @@
 .Index-educate {
 	background-image: var(--url-background-index-edicate);
 	background-size: 100% 100%;
-	padding: 80px 0;
 	.content {
 		margin-top: 30px;
 		p {
@@ -380,22 +351,16 @@
 			margin-top: 24px;
 		}
 	}
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
-	@media (max-width: 575.98px) {
-		padding: 35px 0;
+	[class*="col-"] {
+		&:first-child {
+			@media (min-width: 1439.98px) {
+				padding-right: 70px;
+			}
+		}
 	}
 }
 
 .Index-setup {
-	padding: 100px 0;
-	.title-section {
-		margin-bottom: 35px;
-		@media (max-width: 1024.98px) {
-			margin-bottom: 16px;
-		}
-	}
 	.description {
 		h3,
 		p {
@@ -566,17 +531,10 @@
 			align-items: flex-start;
 		}
 	}
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
-	@media (max-width: 575.98px) {
-		padding: 35px 0;
-	}
 }
 
 .Index-recipe {
 	position: relative;
-	padding: 80px 0;
 	background-image: var(--url-background-index-recipe);
 	background-size: cover;
 	.header-recipe {
@@ -619,12 +577,6 @@
 		@media (max-width: 1199.98px) {
 			margin-top: 24px;
 		}
-	}
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
-	@media (max-width: 575.98px) {
-		padding: 35px 0;
 	}
 }
 
@@ -691,15 +643,8 @@
 }
 
 .Index-news {
-	padding: 80px 0;
 	background-image: var(--url-background-index-news);
 	background-size: 100% 100%;
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
-	@media (max-width: 575.98px) {
-		padding: 35px 0;
-	}
 }
 
 .slider-index-news {

@@ -2,14 +2,49 @@
 .About-business-areas {
   padding-top: 80px;
 }
+.About-business-areas h3 {
+  font-size: 2rem;
+  color: var(--white);
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+@media (max-width: 1439.98px) {
+  .About-business-areas h3 {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 1024.98px) {
-  .About-business-areas {
-    padding-top: 30px;
+  .About-business-areas h3 {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
   }
 }
 @media (max-width: 575.98px) {
-  .About-business-areas {
-    padding-top: 20px;
+  .About-business-areas h3 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 1024.98px) {
+  .About-business-areas [class*=col-] {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+  .About-business-areas [class*=col-]:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .About-business-areas [class*=col-] {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 .About-business-areas .img {
@@ -38,52 +73,14 @@
   z-index: 0;
 }
 @media (max-width: 1024.98px) {
-  .About-business-areas [class*=col-] {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin-bottom: 30px;
-  }
-  .About-business-areas [class*=col-]:last-child {
-    margin-bottom: 0;
+  .About-business-areas {
+    padding-top: 30px;
   }
 }
 @media (max-width: 575.98px) {
-  .About-business-areas [class*=col-] {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
+  .About-business-areas {
+    padding-top: 20px;
   }
-}
-.About-business-areas h3 {
-  font-size: 2rem;
-  color: var(--white);
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
-  text-align: center;
-  font-weight: 600;
-}
-@media (max-width: 1439.98px) {
-  .About-business-areas h3 {
-    font-size: 1.5rem;
-  }
-}
-@media (max-width: 1024.98px) {
-  .About-business-areas h3 {
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-  }
-}
-@media (max-width: 575.98px) {
-  .About-business-areas h3 {
-    font-size: 1.8rem;
-  }
-}
-.About-business-areas p {
-  color: var(--primary);
 }
 
 .About-history {
@@ -116,7 +113,6 @@
 .slider-about-history h4,
 .slider-about-history p {
   text-align: right;
-  color: var(--primary);
 }
 @media (max-width: 1024.98px) {
   .slider-about-history h3,
@@ -202,9 +198,6 @@
 }
 .About-image-galleries .content {
   margin-top: 32px;
-}
-.About-image-galleries .content p {
-  color: var(--primary);
 }
 .About-image-galleries .content p + p {
   margin-top: 30px;
@@ -298,7 +291,6 @@
 .About-vistion-misstion .col-lg-4 h3 {
   font-size: 4.5rem;
   font-family: "SFU TradeGothic";
-  color: var(--primary);
   padding-left: 17px;
   position: relative;
   line-height: 1;

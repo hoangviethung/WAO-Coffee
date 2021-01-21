@@ -45,6 +45,34 @@ main {
   transform: translate(-50%, -50%);
 }
 
+.pt-section, .pd-section {
+  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .pt-section, .pd-section {
+    padding-top: 55px;
+  }
+}
+@media (min-width: 1200px) {
+  .pt-section, .pd-section {
+    padding-top: 90px;
+  }
+}
+
+.pb-section, .pd-section {
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .pb-section, .pd-section {
+    padding-bottom: 55px;
+  }
+}
+@media (min-width: 1200px) {
+  .pb-section, .pd-section {
+    padding-bottom: 90px;
+  }
+}
+
 .btn {
   user-select: none;
   display: inline-flex;
@@ -192,6 +220,7 @@ main {
 }
 .title-section h2,
 .title-section p {
+  display: inline-block;
   font-family: "SFU TradeGothic";
   color: var(--primary);
   user-select: none;
@@ -199,7 +228,7 @@ main {
 .title-section h2 {
   display: inline-block;
   position: relative;
-  font-size: 4rem;
+  font-size: 5.5rem;
   text-transform: uppercase;
 }
 .title-section h2:after {
@@ -211,6 +240,20 @@ main {
   bottom: 0;
   left: 0;
   background: var(--secondary);
+}
+@media (min-width: 1025px) {
+  .title-section h2 {
+    transition: 0.3s all ease-in-out;
+  }
+  .title-section h2:after {
+    transition: 0.3s all ease-in-out;
+  }
+  .title-section h2:hover {
+    color: var(--secondary);
+  }
+  .title-section h2:hover:after {
+    width: 100%;
+  }
 }
 .title-section p {
   font-style: italic;
@@ -237,52 +280,49 @@ main {
 .title-section.color-white p:after {
   background: var(--white);
 }
-.title-section.color-secondary h2,
-.title-section.color-secondary p {
-  user-select: all;
-}
-.title-section.color-secondary h2 {
-  color: var(--primary);
-}
 .title-section.color-secondary p {
   color: var(--secondary);
-  font-style: normal;
 }
 .title-section.color-secondary p:after {
   background: var(--secondary);
 }
-@media (min-width: 1025px) {
-  .title-section.color-secondary h2,
-.title-section.color-secondary p {
-    transition: 0.3s all ease-in-out;
-  }
-  .title-section.color-secondary h2:after {
-    transition: 0.3s all ease-in-out;
-  }
-  .title-section.color-secondary:hover h2:after {
-    width: 100%;
-  }
-  .title-section.color-secondary:hover h2 {
-    color: var(--secondary);
-  }
-  .title-section.color-secondary:hover p {
-    color: var(--primary);
-  }
+.title-section.color-secondary h2 {
+  color: var(--primary);
 }
 @media (min-width: 1025px) {
-  .title-section h2,
-.title-section p {
-    transition: 0.3s all ease-in-out;
+  .title-section.color-secondary h2:hover {
+    color: var(--secondary);
   }
-  .title-section h2:after {
-    transition: 0.3s all ease-in-out;
-  }
-  .title-section:hover h2:after {
+  .title-section.color-secondary h2:hover:after {
     width: 100%;
   }
-  .title-section:hover h2,
-.title-section:hover p {
-    color: var(--secondary);
+}
+
+.mt-title, .mg-title {
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .mt-title, .mg-title {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .mt-title, .mg-title {
+    margin-top: 50px;
+  }
+}
+
+.mb-title, .mg-title {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .mb-title, .mg-title {
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .mb-title, .mg-title {
+    margin-bottom: 50px;
   }
 }
 
