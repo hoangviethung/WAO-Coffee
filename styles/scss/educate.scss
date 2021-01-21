@@ -141,51 +141,6 @@
 	}
 }
 
-.Educate-feedback {
-	background: var(--primary);
-	background-image: var(--url-background-educate-news);
-	position: relative;
-	.slider-educate-feedback {
-		position: relative;
-	}
-	h2 {
-		font-size: 5.5rem;
-		font-family: "SFU TradeGothic";
-		color: var(--white);
-		text-align: center;
-		margin-bottom: 40px;
-		text-transform: uppercase;
-	}
-	.item {
-		display: block;
-		position: relative;
-		.img {
-			position: relative;
-			border-radius: 16px;
-			padding: 16px;
-			background: var(--white);
-			&:after {
-				content: "";
-				position: absolute;
-				top: 100%;
-				left: 50%;
-				transform: translateX(-50%);
-				border: 30px solid transparent;
-				border-top-color: var(--white);
-			}
-		}
-		h5 {
-			position: relative;
-			text-align: center;
-			font-size: 2.2rem;
-			letter-spacing: -0.01em;
-			color: var(--white);
-			font-weight: 400;
-			margin-top: 30px;
-		}
-	}
-}
-
 .Educate-gallery {
 	position: relative;
 	[class*="col-"] {
@@ -245,6 +200,7 @@
 				padding: 0 7.5px;
 				margin-bottom: 15px;
 				a {
+					overflow: hidden;
 					position: relative;
 					transition: all 0.3s ease;
 					cursor: pointer;
@@ -273,7 +229,7 @@
 						justify-self: center;
 						font-family: "Font Awesome 5 Pro";
 						color: var(--white);
-						font-size: 4rem;
+						font-size: 2rem;
 						z-index: 2;
 						content: "\f002";
 						opacity: 0;
@@ -284,7 +240,13 @@
 					}
 				}
 				@media (min-width: 1025px) {
+					img {
+						transition: 0.3s all ease-in-out;
+					}
 					&:hover {
+						img {
+							transform: scale(1.1);
+						}
 						a {
 							&::before {
 								opacity: 1;
@@ -454,6 +416,16 @@
 				color: var(--white);
 				font-size: 2rem;
 				padding: 10px;
+			}
+		}
+		@media (min-width: 1025px) {
+			img {
+				transition: 0.3s all ease-in-out;
+			}
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
 			}
 		}
 	}

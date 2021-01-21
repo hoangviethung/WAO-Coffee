@@ -52,7 +52,7 @@
 	.content {
 		position: absolute;
 		left: 0;
-		top: 50%;
+		top: 35%;
 		transform: translateY(-50%);
 		width: 100%;
 		h2 {
@@ -86,7 +86,7 @@
 				display: none;
 			}
 		}
-		@media (max-width: 1699.98px) {
+		@media (max-width: 575.98px) {
 			top: 50%;
 		}
 	}

@@ -27,6 +27,8 @@
   }
 }
 .Setup-option .tab-menu li {
+  font-family: "SFU TradeGothic";
+  font-size: 2.5rem;
   width: calc(100% / 3);
   background: #f5f5f5;
   padding: 30px 0;
@@ -51,19 +53,23 @@
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 767.98px) {
+  .Setup-option .tab-menu li {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1024.98px) {
+  .Setup-option .tab-menu li {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 1439.98px) {
   .Setup-option .tab-menu li {
     padding: 20px 5px;
   }
 }
-@media (max-width: 767.98px) {
-  .Setup-option .tab-menu li {
-    font-size: 10px;
-  }
-}
 @media (max-width: 575.98px) {
   .Setup-option .tab-menu li {
-    font-size: 12px;
     width: calc(100%);
   }
   .Setup-option .tab-menu li.active::before {
@@ -207,7 +213,6 @@
   position: relative;
 }
 .Setup-experts .slider-setup-info .description {
-  padding-left: 105px;
   position: relative;
   margin-top: 20px;
   text-align: center;
@@ -403,41 +408,6 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-}
-
-.Setup-feedback {
-  position: relative;
-  background: var(--primary);
-  padding: 80px 0;
-}
-@media (max-width: 1024.98px) {
-  .Setup-feedback {
-    padding: 40px 0;
-  }
-}
-@media (max-width: 575.98px) {
-  .Setup-feedback {
-    padding: 30px 0;
-  }
-}
-.Setup-feedback .slider-setup-feedback {
-  position: relative;
-}
-.Setup-feedback h2 {
-  margin-bottom: 40px;
-}
-.Setup-feedback .item {
-  display: block;
-  position: relative;
-}
-.Setup-feedback .item h5 {
-  position: relative;
-  text-align: center;
-  font-size: 2.2rem;
-  letter-spacing: -0.01em;
-  color: var(--white);
-  font-weight: 400;
-  margin-top: 30px;
 }
 
 .Setup-form {

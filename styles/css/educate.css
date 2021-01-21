@@ -148,51 +148,6 @@
   }
 }
 
-.Educate-feedback {
-  background: var(--primary);
-  background-image: var(--url-background-educate-news);
-  position: relative;
-}
-.Educate-feedback .slider-educate-feedback {
-  position: relative;
-}
-.Educate-feedback h2 {
-  font-size: 5.5rem;
-  font-family: "SFU TradeGothic";
-  color: var(--white);
-  text-align: center;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-.Educate-feedback .item {
-  display: block;
-  position: relative;
-}
-.Educate-feedback .item .img {
-  position: relative;
-  border-radius: 16px;
-  padding: 16px;
-  background: var(--white);
-}
-.Educate-feedback .item .img:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 30px solid transparent;
-  border-top-color: var(--white);
-}
-.Educate-feedback .item h5 {
-  position: relative;
-  text-align: center;
-  font-size: 2.2rem;
-  letter-spacing: -0.01em;
-  color: var(--white);
-  font-weight: 400;
-  margin-top: 30px;
-}
-
 .Educate-gallery {
   position: relative;
 }
@@ -260,6 +215,7 @@
   margin-bottom: 15px;
 }
 .Educate-gallery-view .list-img ul li a {
+  overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -289,7 +245,7 @@
   justify-self: center;
   font-family: "Font Awesome 5 Pro";
   color: var(--white);
-  font-size: 4rem;
+  font-size: 2rem;
   z-index: 2;
   content: "";
   opacity: 0;
@@ -301,6 +257,12 @@
   }
 }
 @media (min-width: 1025px) {
+  .Educate-gallery-view .list-img ul li img {
+    transition: 0.3s all ease-in-out;
+  }
+  .Educate-gallery-view .list-img ul li:hover img {
+    transform: scale(1.1);
+  }
   .Educate-gallery-view .list-img ul li:hover a::before {
     opacity: 1;
     transition: all 0.3s ease-in-out;
@@ -476,6 +438,14 @@
   color: var(--white);
   font-size: 2rem;
   padding: 10px;
+}
+@media (min-width: 1025px) {
+  .Educate-teacher .img img {
+    transition: 0.3s all ease-in-out;
+  }
+  .Educate-teacher .img:hover img {
+    transform: scale(1.1);
+  }
 }
 
 .Educate-teacher-view {
