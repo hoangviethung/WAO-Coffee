@@ -1,0 +1,105 @@
+.News-list {
+    padding: 80px 0;
+    @media (max-width: 1439.98px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 20px 0;
+    }
+    [class*="col-"] {
+        margin-bottom: 30px;
+        @media (max-width: 1024.98px) {
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        @media (max-width: 575.98px) {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.News-menu {
+    padding: 40px 0;
+    @media (max-width: 1439.98px) {
+        padding: 20px 0;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        font-family: "SFU TradeGothic";
+        margin-right: 30px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: var(--primary);
+        transition: all .3s ease;
+        @media (max-width: 1439.98px) {
+            margin-right: 20px;
+        }
+        @media (max-width: 767.98px) {
+            margin-right: 10px;
+        }
+        &.active {
+            color: var(--secondary);
+        }
+        @media (min-width: 1025px) {
+            &:hover {
+                color: var(--secondary);
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+
+.News-view {
+    padding-top: 90px;
+    @media (max-width: 1439.98px) {
+        padding-top: 40px;
+    }
+    @media (max-width: 575.98px) {
+        padding-top: 20px;
+    }
+    .title-section {
+        margin-bottom: 25px;
+        @media (max-width: 1024.98px) {
+            margin-bottom: 15px;
+        }
+    }
+    p,
+    h3 {
+        &.desc {
+            width: 100%;
+            margin-bottom: 3rem;
+            font-weight: 600;
+            @media (max-width: 575.98px) {
+                margin-bottom: 20px;
+            }
+        }
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom:2rem;
+        @media (max-width: 1024.98px) {
+            width: 100%;
+        }
+        @media (max-width: 575.98px) {
+            margin-bottom: 15px;
+        }
+    }
+    h3 {
+        font-size: 2.2rem;
+        @media (max-width: 575.98px) {
+            font-size: 1.8rem;
+        }
+    }
+    img {
+        margin-bottom: 1.5rem;
+        @media (max-width: 575.98px) {
+            margin-bottom: 15px;
+        }
+    }
+}

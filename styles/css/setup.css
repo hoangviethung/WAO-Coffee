@@ -478,6 +478,11 @@
     padding-left: 30px;
   }
 }
+@media (max-width: 1024.98px) {
+  .Setup-form [class*=col-] {
+    padding-left: 15px;
+  }
+}
 .Setup-form [class*=col-] .img {
   position: relative;
   height: 400px;
