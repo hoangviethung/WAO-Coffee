@@ -1042,8 +1042,7 @@ main {
 }
 .slider-index-news .img {
   position: relative;
-  height: 300px;
-  width: auto;
+  padding-bottom: calc(400 / 600 * 100%);
 }
 .slider-index-news .img:after {
   content: "";

@@ -106,6 +106,12 @@
   height: 100%;
 }
 
+.object-resize {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .object-cover {
   object-fit: cover;
 }
@@ -116,6 +122,9 @@
 
 .object-contain {
   object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .padding-left-0, .padding-x-0 {
