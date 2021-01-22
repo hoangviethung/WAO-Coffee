@@ -381,6 +381,7 @@
   position: relative;
 }
 .Index-setup .big-item .img {
+  position: relative;
   height: 600px;
   width: auto;
 }
@@ -595,8 +596,8 @@
 }
 .slider-index-recipe .img {
   position: relative;
-  height: 300px;
-  width: auto;
+  display: block;
+  padding-bottom: calc(400 / 600 * 100%);
 }
 .slider-index-recipe .img:after {
   content: "";
