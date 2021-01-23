@@ -8,7 +8,6 @@
   right: 30px;
   text-align: center;
   font-weight: 600;
-  z-index: 2;
 }
 @media (max-width: 1439.98px) {
   .About-business-areas h3 {
@@ -48,7 +47,6 @@
 .About-business-areas .img {
   position: relative;
   margin-bottom: 24px;
-  padding-bottom: calc(400 / 600 * 100%);
 }
 @media (max-width: 1439.98px) {
   .About-business-areas .img {
@@ -69,7 +67,7 @@
   background-blend-mode: multiply;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 .slider-about-history {
