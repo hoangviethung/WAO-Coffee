@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .Product-list {
   position: relative;
+  background: #f5f5f5;
 }
 .Product-list dd {
   text-align: center;

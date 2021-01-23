@@ -49,11 +49,10 @@
 .Contact-information .item-info ul.socials a {
   display: inline-flex;
   align-items: center;
-  font-size: 1.8rem;
   font-weight: 600;
 }
 .Contact-information .item-info ul.socials i {
-  margin-right: 4px;
+  margin-right: 8px;
 }
 .Contact-information .item-info ul li {
   display: flex;
