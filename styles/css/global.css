@@ -556,7 +556,8 @@ main {
 
 .Section-Image-Content-Global {
   position: relative;
-  height: 550px;
+  padding: 100px 0;
+  min-height: 550px;
 }
 .Section-Image-Content-Global [class*=col-] {
   align-self: center;
@@ -759,7 +760,7 @@ main {
 }
 @media (max-width: 1024.98px) {
   .Section-Image-Content-Global {
-    height: 100%;
+    padding: 0;
   }
 }
 .Section-Image-Content-Global .cta-button {
