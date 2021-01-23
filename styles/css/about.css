@@ -8,6 +8,7 @@
   right: 30px;
   text-align: center;
   font-weight: 600;
+  z-index: 5;
 }
 @media (max-width: 1439.98px) {
   .About-business-areas h3 {
@@ -47,6 +48,7 @@
 .About-business-areas .img {
   position: relative;
   margin-bottom: 24px;
+  padding-bottom: calc(360 / 430 * 100%);
 }
 @media (max-width: 1439.98px) {
   .About-business-areas .img {
@@ -67,7 +69,7 @@
   background-blend-mode: multiply;
   bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: 2;
 }
 
 .slider-about-history {
@@ -178,10 +180,14 @@
   max-width: 25%;
   padding: 0 10px;
   cursor: pointer;
-  position: relative;
-  height: 240px;
 }
-.About-image-galleries .images .item::after {
+.About-image-galleries .images .item .image {
+  display: block;
+  position: relative;
+  padding-bottom: calc(250 / 250 * 100%);
+  overflow: hidden;
+}
+.About-image-galleries .images .item .image::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -191,7 +197,7 @@
   font-size: 3rem;
   color: var(--white);
   background-color: rgba(0, 0, 0, 0.6);
-  width: calc(100% - 20px);
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -202,9 +208,21 @@
   z-index: 5;
 }
 @media (max-width: 1024.98px) {
-  .About-image-galleries .images .item::after {
+  .About-image-galleries .images .item .image::after {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+@media (min-width: 1025px) {
+  .About-image-galleries .images .item .image img {
+    transition: 0.3s all ease-in-out;
+  }
+  .About-image-galleries .images .item .image:hover img {
+    transform: scale(1.1);
+  }
+  .About-image-galleries .images .item .image:hover::after {
+    opacity: 1;
+    transition: all 0.3s ease;
   }
 }
 .About-image-galleries .images .item p {
@@ -217,12 +235,6 @@
   bottom: 5%;
   width: 90%;
   z-index: 10;
-}
-@media (min-width: 1025px) {
-  .About-image-galleries .images .item:hover::after {
-    opacity: 1;
-    transition: all 0.3s ease;
-  }
 }
 @media (max-width: 1024.98px) {
   .About-image-galleries .images .item {
@@ -242,11 +254,6 @@
   }
   .About-image-galleries .images .item:nth-last-child(2) {
     margin-top: 20px;
-  }
-}
-@media (max-width: 575.98px) {
-  .About-image-galleries .images .item {
-    height: 150px;
   }
 }
 .About-image-galleries .container {

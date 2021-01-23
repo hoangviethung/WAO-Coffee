@@ -233,7 +233,11 @@ main {
   font-size: 5.5rem;
   text-transform: uppercase;
 }
-.title-section h2:after {
+.title-section h2 > a {
+  display: inline-block;
+  position: relative;
+}
+.title-section h2 > a:after {
   content: "";
   position: absolute;
   width: 0;
@@ -249,16 +253,16 @@ main {
   }
 }
 @media (min-width: 1025px) {
-  .title-section h2 {
+  .title-section h2 > a {
     transition: 0.3s all ease-in-out;
   }
-  .title-section h2:after {
+  .title-section h2 > a:after {
     transition: 0.3s all ease-in-out;
   }
-  .title-section h2:hover {
+  .title-section h2 > a:hover {
     color: var(--secondary);
   }
-  .title-section h2:hover:after {
+  .title-section h2 > a:hover:after {
     width: 100%;
   }
 }
@@ -610,21 +614,24 @@ main {
   }
 }
 .Section-Image-Content-Global .content ul li {
+  cursor: pointer;
   padding: 10px;
   background: var(--white);
   margin-bottom: 10px;
-  cursor: pointer;
 }
 .Section-Image-Content-Global .content ul li div {
   display: none;
   margin-top: 10px;
 }
 @media (min-width: 1025px) {
+  .Section-Image-Content-Global .content ul li {
+    transition: 0.3s all ease-in-out;
+  }
   .Section-Image-Content-Global .content ul li:hover {
     background: var(--primary);
   }
   .Section-Image-Content-Global .content ul li:hover b {
-    color: var(--white);
+    color: var(--secondary);
   }
   .Section-Image-Content-Global .content ul li:hover p {
     color: var(--white);
