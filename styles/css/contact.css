@@ -71,24 +71,68 @@
     color: var(--secondary) !important;
   }
 }
-@media (min-width: 1025px) {
-  .Contact-information .item-info {
-    transition: 0.3s all ease-in-out;
+.Contact-information .item-info.active {
+  position: relative;
+}
+.Contact-information .item-info.active h2::after {
+  right: calc(100% + 5px);
+  width: 30px;
+}
+.Contact-information .item-info.active h2,
+.Contact-information .item-info.active li,
+.Contact-information .item-info.active a,
+.Contact-information .item-info.active p {
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 767.98px) {
+  .Contact-information .item-info.active h2,
+.Contact-information .item-info.active li,
+.Contact-information .item-info.active a,
+.Contact-information .item-info.active p {
+    color: var(--primary);
   }
-  .Contact-information .item-info:hover {
-    background: var(--primary);
+}
+.Contact-information .item-info.active::before {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border-radius: 100%;
+  background: var(--primary);
+  content: "";
+  z-index: 0;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1200.98px) {
+  .Contact-information .item-info.active::before {
+    width: 330px;
+    height: 330px;
   }
-  .Contact-information .item-info:hover h2,
-.Contact-information .item-info:hover li,
-.Contact-information .item-info:hover a,
-.Contact-information .item-info:hover p {
-    color: var(--white);
+}
+@media (max-width: 1024.98px) {
+  .Contact-information .item-info.active::before {
+    width: 350px;
+    height: 350px;
+    left: 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  .Contact-information .item-info.active::before {
+    content: none;
   }
 }
 @media (max-width: 1024.98px) {
   .Contact-information .item-info {
     padding: 0 0 0 50px;
     margin-top: 30px;
+  }
+}
+@media (max-width: 1024.98px) {
+  .Contact-information .item-info {
+    padding: 0 25px 0 50px;
   }
 }
 @media (max-width: 1024.98px) {
