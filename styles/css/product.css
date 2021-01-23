@@ -146,6 +146,16 @@
   }
 }
 
+.Products-view .thumbs {
+  height: 620px;
+}
+.Products-view .thumbs .item {
+  height: 115px;
+}
+.Products-view [class*=col-] {
+  position: relative;
+  height: 100%;
+}
 @media (max-width: 1024.98px) {
   .Products-view [class*=col-] {
     -ms-flex: 0 0 100%;

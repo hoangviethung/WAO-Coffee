@@ -457,6 +457,44 @@ const showContentQA = () => {
         });
     }
 };
+const initProductView = () => {
+    let initProductView = new Swiper(".slider-product-view-more .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".slider-product-view-more .button-navigation-slider.next",
+            prevEl: ".slider-product-view-more .button-navigation-slider.prev",
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 2,
+            },
+            1200: {
+                spaceBetween: 20,
+                slidesPerView: 4,
+            },
+
+        },
+    });
+    let initProductViewThumbs = new Swiper(".thumbs .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        direction: "vertical",
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 2,
+            },
+            1200: {
+                spaceBetween: 20,
+                slidesPerView: 4,
+            },
+
+        },
+    });
+
+}
 document.addEventListener("DOMContentLoaded", () => {
     fixedHeaderWhenScroll();
     showMenuMobile();
@@ -475,6 +513,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initEducateInfo();
     showContentQA();
     initProductMore();
+    initProductView();
     changeValueInput();
     libraryFancyApp();
     moveNavOutHeader(1300);
