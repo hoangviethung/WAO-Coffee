@@ -1287,6 +1287,76 @@ main {
     flex: 0 0 100%;
   }
 }
+.list-share.only-social ul {
+  justify-content: flex-end;
+}
+.list-share.only-social ul li:last-child {
+  margin-left: unset;
+}
+@media (max-width: 575.98px) {
+  .list-share.only-social ul {
+    flex-wrap: wrap;
+  }
+  .list-share.only-social ul li:last-child {
+    flex: unset;
+  }
+}
+
+.block-recipe {
+  position: relative;
+}
+.block-recipe .img {
+  position: relative;
+  padding-bottom: calc(360 / 430 * 100%);
+}
+@media (min-width: 1025px) {
+  .block-recipe .img img {
+    transition: 0.3s all ease-in-out;
+  }
+  .block-recipe:hover .img img {
+    transform: scale(1.1);
+  }
+}
+
+.Tag-menu {
+  padding: 40px 0;
+}
+@media (max-width: 1439.98px) {
+  .Tag-menu {
+    padding: 20px 0;
+  }
+}
+.Tag-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Tag-menu li {
+  font-family: "SFU TradeGothic";
+  margin-right: 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+@media (max-width: 1439.98px) {
+  .Tag-menu li {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .Tag-menu li {
+    margin-right: 10px;
+  }
+}
+.Tag-menu li.active {
+  color: var(--secondary);
+}
+@media (min-width: 1025px) {
+  .Tag-menu li:hover {
+    color: var(--secondary);
+    transition: all 0.3s ease;
+  }
+}
 
 .pc {
   display: block;
