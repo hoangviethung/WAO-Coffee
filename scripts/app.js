@@ -458,41 +458,36 @@ const showContentQA = () => {
     }
 };
 const initProductView = () => {
-    let initProductView = new Swiper(".slider-product-view-more .swiper-container", {
+    let initProductViewThumbs = new Swiper(".thumbs .swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        direction: "horizontal",
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 5,
+                direction: "horizontal",
+
+            },
+            1025: {
+                spaceBetween: 20,
+                slidesPerView: 5,
+                direction: "vertical",
+            },
+        },
+    });
+    let initProductView = new Swiper(".images .swiper-container", {
         slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
-            nextEl: ".slider-product-view-more .button-navigation-slider.next",
-            prevEl: ".slider-product-view-more .button-navigation-slider.prev",
+            nextEl: ".images .button-navigation-slider.next",
+            prevEl: ".images .button-navigation-slider.prev",
         },
-        breakpoints: {
-            768: {
-                spaceBetween: 30,
-                slidesPerView: 2,
-            },
-            1200: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-            },
-
+        thumbs: {
+            swiper: initProductViewThumbs
         },
     });
-    let initProductViewThumbs = new Swiper(".thumbs .swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        direction: "vertical",
-        breakpoints: {
-            768: {
-                spaceBetween: 30,
-                slidesPerView: 2,
-            },
-            1200: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-            },
 
-        },
-    });
 
 }
 document.addEventListener("DOMContentLoaded", () => {

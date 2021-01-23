@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .Product-list {
   position: relative;
 }
@@ -146,11 +147,114 @@
   }
 }
 
-.Products-view .thumbs {
+.Products-view .thumbs .swiper-container {
   height: 620px;
 }
+@media (max-width: 1024.98px) {
+  .Products-view .thumbs .swiper-container {
+    height: 150px;
+  }
+}
+.Products-view .thumbs .swiper-slide-thumb-active .item {
+  position: relative;
+}
+.Products-view .thumbs .swiper-slide-thumb-active .item::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  z-index: 1;
+  opacity: 1;
+}
+.Products-view .thumbs .swiper-slide-thumb-active .item::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-family: "Font Awesome 5 Pro";
+  color: var(--white);
+  font-size: 2rem;
+  z-index: 2;
+  content: "";
+  opacity: 2;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767.98px) {
+  .Products-view .thumbs .swiper-slide-thumb-active .item::after {
+    font-size: 2rem;
+  }
+}
 .Products-view .thumbs .item {
-  height: 115px;
+  height: 100%;
+  position: relative;
+}
+.Products-view .thumbs .item::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  z-index: 1;
+  opacity: 0;
+}
+.Products-view .thumbs .item::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-family: "Font Awesome 5 Pro";
+  color: var(--white);
+  font-size: 2rem;
+  z-index: 2;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767.98px) {
+  .Products-view .thumbs .item::after {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1025px) {
+  .Products-view .thumbs .item:hover::before, .Products-view .thumbs .item:hover::after {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+  }
+}
+.Products-view .images {
+  position: relative;
+  height: 620px;
+}
+@media (max-width: 1024.98px) {
+  .Products-view .images {
+    height: 100%;
+  }
+}
+.Products-view .images .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.Products-view .images .item {
+  height: 100%;
+}
+@media (max-width: 1024.98px) {
+  .Products-view .product-view-img {
+    margin-bottom: 20px;
+    order: 1;
+  }
+  .Products-view .product-view-thumb {
+    order: 2;
+  }
+  .Products-view .product-view-cnt {
+    order: 3;
+  }
 }
 .Products-view [class*=col-] {
   position: relative;

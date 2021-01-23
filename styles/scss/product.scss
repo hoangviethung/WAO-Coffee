@@ -143,12 +143,114 @@
 .Products-view {
     //col-1
     .thumbs {
-        height: 620px;
+        .swiper-container {
+            height: 620px;
+            @media (max-width: 1024.98px) {
+                height: 150px;
+            }
+        }
+        .swiper-slide-thumb-active {
+            .item {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba($color: #000000, $alpha: 0.5);
+                    content: '';
+                    z-index: 1;
+                    opacity: 1;
+                }
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    align-items: center;
+                    justify-self: center;
+                    font-family: "Font Awesome 5 Pro";
+                    color: var(--white);
+                    font-size: 2rem;
+                    z-index: 2;
+                    content: "\f002";
+                    opacity: 2;
+                    transition: all 0.3s ease-in-out;
+                    @media (max-width: 767.98px) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
         .item {
-            height: 115px;
+            height: 100%;
+            position: relative;
+            &::before {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: rgba($color: #000000, $alpha: 0.5);
+                content: '';
+                z-index: 1;
+                opacity: 0;
+            }
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                justify-self: center;
+                font-family: "Font Awesome 5 Pro";
+                color: var(--white);
+                font-size: 2rem;
+                z-index: 2;
+                content: "\f002";
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+                @media (max-width: 767.98px) {
+                    font-size: 2rem;
+                }
+            }
+            @media (min-width: 1025px) {
+                &:hover {
+                    &::before,
+                    &::after {
+                        transition: all 0.3s ease-in-out;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .images {
+        position: relative;
+        height: 620px;
+        @media (max-width: 1024.98px) {
+            height: 100%;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .item {
+            height: 100%;
         }
     }
     //col-1
+    @media (max-width: 1024.98px) {
+        .product-view-img {
+            margin-bottom: 20px;
+            order: 1;
+        }
+        .product-view-thumb {
+            order: 2;
+        }
+        .product-view-cnt {
+            order: 3;
+        }
+    }
     [class*='col-'] {
         position: relative;
         height: 100%;
