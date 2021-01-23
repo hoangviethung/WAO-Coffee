@@ -178,52 +178,53 @@
 			display: flex;
 			flex-wrap: wrap;
 			margin: 0 -7.5px;
+			a {
+				overflow: hidden;
+				position: relative;
+				transition: all 0.3s ease;
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				display: block;
+				padding-bottom: calc(260 / 260 * 100%);
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: rgba(0, 0, 0, 0.564);
+					z-index: 1;
+					content: "";
+					opacity: 0;
+					transition: all 0.3s ease-in-out;
+				}
+				&::after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					display: flex;
+					align-items: center;
+					justify-self: center;
+					font-family: "Font Awesome 5 Pro";
+					color: var(--white);
+					font-size: 2rem;
+					z-index: 2;
+					content: "\f002";
+					opacity: 0;
+					transition: all 0.3s ease-in-out;
+					@media (max-width: 767.98px) {
+						font-size: 2rem;
+					}
+				}
+			}
 			li {
 				-ms-flex: 0 0 20%;
 				flex: 0 0 20%;
 				max-width: 20%;
 				padding: 0 7.5px;
 				margin-bottom: 15px;
-				a {
-					overflow: hidden;
-					position: relative;
-					transition: all 0.3s ease;
-					cursor: pointer;
-					width: 100%;
-					height: 100%;
-					display: block;
-					&::before {
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						background: rgba(0, 0, 0, 0.564);
-						z-index: 1;
-						content: "";
-						opacity: 0;
-						transition: all 0.3s ease-in-out;
-					}
-					&::after {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						transform: translate(-50%, -50%);
-						display: flex;
-						align-items: center;
-						justify-self: center;
-						font-family: "Font Awesome 5 Pro";
-						color: var(--white);
-						font-size: 2rem;
-						z-index: 2;
-						content: "\f002";
-						opacity: 0;
-						transition: all 0.3s ease-in-out;
-						@media (max-width: 767.98px) {
-							font-size: 2rem;
-						}
-					}
-				}
 				@media (min-width: 1025px) {
 					img {
 						transition: 0.3s all ease-in-out;
