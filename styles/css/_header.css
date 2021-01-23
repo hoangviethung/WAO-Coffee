@@ -93,6 +93,12 @@ header.fixed .top-header {
     margin-left: 24px;
   }
 }
+@media (max-width: 425.98px) {
+  .seach-header,
+.cart-header {
+    margin-left: 15px;
+  }
+}
 
 .seach-header .icon {
   color: var(--white);
@@ -182,6 +188,13 @@ header.fixed .top-header {
   border-radius: 5px;
   margin-left: 24px;
 }
+@media (max-width: 425.98px) {
+  .toggle-menu-mobile {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+  }
+}
 .toggle-menu-mobile:before, .toggle-menu-mobile:after {
   position: absolute;
   left: 11px;
@@ -191,11 +204,26 @@ header.fixed .top-header {
   content: "";
   transition: 0.3s all linear;
 }
+@media (max-width: 425.98px) {
+  .toggle-menu-mobile:before, .toggle-menu-mobile:after {
+    left: 5px;
+  }
+}
 .toggle-menu-mobile:before {
   top: 23px;
 }
+@media (max-width: 425.98px) {
+  .toggle-menu-mobile:before {
+    top: 19px;
+  }
+}
 .toggle-menu-mobile:after {
   top: 15px;
+}
+@media (max-width: 425.98px) {
+  .toggle-menu-mobile:after {
+    top: 11px;
+  }
 }
 .toggle-menu-mobile.active:before, .toggle-menu-mobile.active:after {
   top: 50%;

@@ -457,6 +457,39 @@ const showContentQA = () => {
         });
     }
 };
+const initProductView = () => {
+    let initProductViewThumbs = new Swiper(".thumbs .swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        direction: "horizontal",
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                slidesPerView: 5,
+                direction: "horizontal",
+
+            },
+            1025: {
+                spaceBetween: 20,
+                slidesPerView: 5,
+                direction: "vertical",
+            },
+        },
+    });
+    let initProductView = new Swiper(".images .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".images .button-navigation-slider.next",
+            prevEl: ".images .button-navigation-slider.prev",
+        },
+        thumbs: {
+            swiper: initProductViewThumbs
+        },
+    });
+
+
+}
 document.addEventListener("DOMContentLoaded", () => {
     fixedHeaderWhenScroll();
     showMenuMobile();
@@ -475,6 +508,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initEducateInfo();
     showContentQA();
     initProductMore();
+    initProductView();
     changeValueInput();
     libraryFancyApp();
     moveNavOutHeader(1300);
