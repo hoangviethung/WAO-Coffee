@@ -166,6 +166,15 @@ main {
 			width: 80px;
 			height: 80px;
 		}
+
+		@media (max-width: 575.98px) {
+			width: 70px;
+			height: 70px;
+			&:after {
+				width: 50px;
+				height: 50px;
+			}
+		}
 	}
 	&.bg-white {
 		font-size: 2rem;
@@ -971,11 +980,15 @@ main {
 	padding: 20px;
 	z-index: 5;
 	transition: all 0.3s ease-in-out;
+
 	h4 {
 		position: relative;
 		font-size: 2.5rem;
 		z-index: 10;
 		color: var(--white);
+		&.fz-22px {
+			font-size: 2.2rem;
+		}
 		@media (max-width: 1439.98px) {
 			font-size: 1.8rem;
 		}
@@ -1112,13 +1125,13 @@ main {
 }
 
 .block-news {
-	position: relative;
 	.header-description {
 		display: flex;
 	}
 	.description {
 		background: var(--white);
 		padding: 30px;
+		border: 1px solid #dedede;
 		span {
 			text-transform: uppercase;
 			font-size: 1.3rem;
@@ -1164,8 +1177,7 @@ main {
 	}
 	.img {
 		position: relative;
-		height: 300px;
-		width: auto;
+		padding-bottom: calc(300 / 430 * 100%);
 		&:after {
 			content: "";
 			position: absolute;
@@ -1176,9 +1188,6 @@ main {
 			background: rgba($color: #000000, $alpha: 0.5);
 			pointer-events: none;
 			opacity: 0;
-		}
-		@media (max-width: 575.98px) {
-			height: 250px;
 		}
 	}
 	.cta-button {
@@ -1331,7 +1340,18 @@ main {
 	position: relative;
 	.img {
 		position: relative;
-		padding-bottom: calc(360 / 430 * 100%);
+		padding-bottom: calc(300 / 430 * 100%);
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: var(--black);
+			opacity: 0;
+			transition: 0.3s all ease-in-out;
+		}
 	}
 	@media (min-width: 1025px) {
 		.img {
@@ -1341,6 +1361,9 @@ main {
 		}
 		&:hover {
 			.img {
+				&:after {
+					opacity: 0.5;
+				}
 				img {
 					transform: scale(1.1);
 				}
