@@ -1422,8 +1422,7 @@ main {
 
 .socials-fixed {
 	position: fixed;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 90%;
 	right: 24px;
 	z-index: 100;
 	.button-hover {
@@ -1517,7 +1516,7 @@ main {
 	height: 60px;
 	background: var(--secondary);
 	position: fixed;
-	top: 60%;
+	top: 50%;
 	transform: translateY(-50%);
 	right: 24px;
 	z-index: 100;
