@@ -11,7 +11,6 @@ class Tab {
 			this.init();
 		}
 	}
-
 	changeTabWhenClicked() {
 		this.navigationItems.forEach((element, index) => {
 			element.addEventListener("click", (e) => {
@@ -58,6 +57,24 @@ class Tab {
 		this.activeFirstTab();
 	}
 }
+
+// SHOW BACK TO TOP
+const showBackToTop = () => {
+	$(window).on("scroll", function () {
+		if ($(this).scrollTop() > $("header").height()) {
+			$(".back-to-top").addClass("show");
+		} else {
+			$(".back-to-top").removeClass("show");
+		}
+	});
+	$(".back-to-top").on("click", function (e) {
+		e.preventDefault();
+		$("html,body").animate({
+			scrollTop: 0,
+		});
+	});
+};
+
 const fixedHeaderWhenScroll = () => {
 	const header = document.querySelector("header");
 	if (window.pageYOffset > header.offsetHeight) {
@@ -511,6 +528,7 @@ const initProductView = () => {
 	});
 };
 document.addEventListener("DOMContentLoaded", () => {
+	showBackToTop();
 	fixedHeaderWhenScroll();
 	showMenuMobile();
 	initializeSubMenu();
