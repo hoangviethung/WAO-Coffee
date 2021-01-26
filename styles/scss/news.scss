@@ -37,7 +37,7 @@
         font-size: 1.6rem;
         cursor: pointer;
         color: var(--primary);
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         @media (max-width: 1439.98px) {
             margin-right: 20px;
         }
@@ -50,7 +50,7 @@
         @media (min-width: 1025px) {
             &:hover {
                 color: var(--secondary);
-                transition: all .3s ease;
+                transition: all 0.3s ease;
             }
         }
     }
@@ -82,7 +82,7 @@
         }
         width: 70%;
         margin: 0 auto;
-        margin-bottom:2rem;
+        margin-bottom: 2rem;
         @media (max-width: 1024.98px) {
             width: 100%;
         }

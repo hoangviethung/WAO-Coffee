@@ -153,6 +153,7 @@ main {
     width: 150px;
     height: 150px;
     background: rgba($color: #ffffff, $alpha: 0.5);
+    z-index: 12;
     i,
     svg {
         position: relative;
@@ -164,6 +165,14 @@ main {
         &:after {
             width: 80px;
             height: 80px;
+        }
+        @media (max-width: 575.98px) {
+            width: 70px;
+            height: 70px;
+            &:after {
+                width: 50px;
+                height: 50px;
+            }
         }
     }
     &.bg-white {
@@ -1056,7 +1065,7 @@ main {
     }
     .img {
         position: relative;
-        // padding-bottom: calc(400 / 600 * 100%);
+        padding-bottom: calc(400 / 600 * 100%);
         &:after {
             content: "";
             position: absolute;
@@ -1110,13 +1119,13 @@ main {
 }
 
 .block-news {
-    position: relative;
     .header-description {
         display: flex;
     }
     .description {
         background: var(--white);
         padding: 30px;
+        border: 1px solid #dedede;
         span {
             text-transform: uppercase;
             font-size: 1.3rem;
@@ -1162,8 +1171,7 @@ main {
     }
     .img {
         position: relative;
-        height: 300px;
-        width: auto;
+        padding-bottom: calc(300 / 430 * 100%);
         &:after {
             content: "";
             position: absolute;
@@ -1174,9 +1182,6 @@ main {
             background: rgba($color: #000000, $alpha: 0.5);
             pointer-events: none;
             opacity: 0;
-        }
-        @media (max-width: 575.98px) {
-            height: 250px;
         }
     }
     .cta-button {
@@ -1329,7 +1334,18 @@ main {
     position: relative;
     .img {
         position: relative;
-        padding-bottom: calc(360 / 430 * 100%);
+        padding-bottom: calc(300 / 430 * 100%);
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: var(--black);
+            opacity: 0;
+            transition: 0.3s all ease-in-out;
+        }
     }
     @media (min-width: 1025px) {
         .img {
@@ -1339,6 +1355,9 @@ main {
         }
         &:hover {
             .img {
+                &:after {
+                    opacity: 0.5;
+                }
                 img {
                     transform: scale(1.1);
                 }
@@ -1392,6 +1411,216 @@ main {
     display: none;
     @media (max-width: 1300.98px) {
         display: block;
+    }
+}
+
+.socials-fixed {
+    position: fixed;
+    top: 80%;
+    right: 24px;
+    z-index: 100;
+    .button-hover {
+        cursor: pointer;
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--secondary);
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        &:after,
+        &:before {
+            font-family: "Font Awesome 5 Pro";
+            color: var(--primary);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.4rem;
+            transition: 0.3s all ease-in-out;
+        }
+        &:after {
+            content: "";
+            background-image: url(../../resources/images/icon-fixed.png);
+            background-size: 100% 100%;
+            width: 40px;
+            height: 40px;
+        }
+        &:before {
+            content: "\f00d";
+            opacity: 0;
+        }
+    }
+    .list-social {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100%;
+        background: var(--white);
+        padding: 20px 10px;
+        margin-bottom: 24px;
+        border-radius: 16px;
+        width: 100%;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s all ease-in-out;
+        li {
+            text-align: center;
+            +li {
+                margin-top: 12px;
+                padding-top: 12px;
+                border-top: 1px solid #dedede;
+            }
+        }
+        i {
+            font-size: 24px;
+        }
+        img {
+            width: 24px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 24px;
+        }
+    }
+    @media (min-width: 1025px) {
+        &:hover {
+            .button-hover {
+                &:after {
+                    opacity: 0;
+                }
+                &:before {
+                    opacity: 1;
+                }
+            }
+            .list-social {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    @media (max-width: 575.98px) {
+        top: 70%;
+        right: 15px;
+    }
+}
+
+.phone-fixed {
+    @keyframes coccoc-alo-circle-anim {
+        0% {
+            transform: translate(-50%, -50%) rotate(0) scale(0.5) skew(1deg);
+            opacity: 0.1;
+        }
+        30% {
+            transform: translate(-50%, -50%) rotate(0) scale(0.7) skew(1deg);
+            opacity: 0.5;
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg);
+            opacity: 0.1;
+        }
+    }
+    @keyframes coccoc-alo-circle-img-anim {
+        0% {
+            transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg);
+        }
+        10% {
+            transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+        }
+        20% {
+            transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+        }
+        30% {
+            transform: translate(-50%, -50%) rotate(-25deg) scale(1) skew(1deg);
+        }
+        40% {
+            transform: translate(-50%, -50%) rotate(25deg) scale(1) skew(1deg);
+        }
+        50% {
+            transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(0) scale(1) skew(1deg);
+        }
+    }
+    width: 60px;
+    height: 60px;
+    background: var(--secondary);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    z-index: 100;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 35px;
+        height: 35px;
+        transform: translate(-50%, -50%);
+        background-image: url(../../resources/images/phone-fixed.png);
+        background-size: 100% 100%;
+        animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 150%;
+        height: 150%;
+        background: var(--secondary);
+        animation: coccoc-alo-circle-anim 1.2s infinite ease-in-out;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+    @media (max-width: 575.98px) {
+        right: 15px;
+    }
+}
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    top: 90%;
+    right: 24px;
+    background: var(--primary);
+    width: 50px;
+    height: 70px;
+    z-index: 100;
+    font-size: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    @media (min-width: 1025px) {
+        &:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    @media (max-width: 575.98px) {
+        top: 85%;
+        right: 15px;
     }
 }
 

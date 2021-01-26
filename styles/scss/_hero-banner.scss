@@ -77,8 +77,11 @@
 			}
 		}
 		p {
-			max-width: 40%;
+			max-width: 375px;
 			margin-top: 24px;
+			@media (max-width: 1199.98px) {
+				max-width: 240px;
+			}
 			@media (max-width: 1024.98px) {
 				max-width: 50%;
 			}

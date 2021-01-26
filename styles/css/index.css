@@ -419,6 +419,19 @@
   background: #020024;
   background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0.8) 90%);
 }
+.Index-setup .big-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: 0.3s all ease-in-out;
+}
 @media (min-width: 1025px) {
   .Index-setup .big-item .description h3 {
     transition: 0.3s all ease-in-out;
@@ -432,6 +445,9 @@
   }
   .Index-setup .big-item .img img:hover {
     transform: scale(1.1);
+  }
+  .Index-setup .big-item:hover:before {
+    opacity: 0.5;
   }
 }
 @media (min-width: 1336px) {
@@ -610,11 +626,25 @@
   background: #020024;
   background: linear-gradient(180deg, rgba(2, 0, 36, 0) 50%, rgba(0, 0, 0, 0.8) 90%);
 }
+.slider-index-recipe .img::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all ease-in-out;
+}
 .slider-index-recipe .description {
   position: absolute;
   left: 30px;
   bottom: 30px;
   right: 30px;
+  z-index: 5;
 }
 .slider-index-recipe .description h3 {
   color: var(--white);
@@ -632,6 +662,9 @@
   }
   .slider-index-recipe .item:hover .img img {
     transform: scale(1.1);
+  }
+  .slider-index-recipe .item:hover .img::before {
+    opacity: 0.5;
   }
   .slider-index-recipe .item:hover .description h3 {
     color: var(--secondary);

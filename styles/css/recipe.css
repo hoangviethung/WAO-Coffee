@@ -383,15 +383,29 @@
 
 .slider-educate-info {
   position: relative;
-  margin-top: 20px;
 }
 .slider-educate-info .item .img {
   position: relative;
-  padding-bottom: calc(360 / 430 * 100%);
+  padding-bottom: calc(300 / 430 * 100%);
+}
+.slider-educate-info .item .img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  pointer-events: none;
 }
 @media (min-width: 1025px) {
   .slider-educate-info .item .img img {
     transition: 0.3s all ease-in-out;
+  }
+  .slider-educate-info .item:hover .img:after {
+    opacity: 0.5;
   }
   .slider-educate-info .item:hover .img img {
     transform: scale(1.1);
