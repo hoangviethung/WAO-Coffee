@@ -375,6 +375,7 @@ const initSetupFeedback = () => {
 		{
 			slidesPerView: 1,
 			spaceBetween: 35,
+			loop: true,
 			navigation: {
 				nextEl:
 					".slider-educate-feedback .button-navigation-slider.next",
