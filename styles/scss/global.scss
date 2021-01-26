@@ -1382,11 +1382,9 @@ main {
 		flex-wrap: wrap;
 	}
 	li {
-		font-family: "SFU TradeGothic";
+		font-weight: 700;
 		margin-right: 30px;
-		font-size: 1.6rem;
 		cursor: pointer;
-		color: var(--primary);
 		transition: all 0.3s ease;
 		@media (max-width: 1439.98px) {
 			margin-right: 20px;

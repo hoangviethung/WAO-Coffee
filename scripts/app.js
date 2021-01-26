@@ -307,6 +307,7 @@ const initSetupInfo = () => {
 		{
 			slidesPerView: 1,
 			spaceBetween: 35,
+			loop: true,
 			navigation: {
 				nextEl: ".educate-teacher-more .button-navigation-slider.next",
 				prevEl: ".educate-teacher-more .button-navigation-slider.prev",
