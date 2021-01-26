@@ -1,14 +1,14 @@
 .News-list {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 @media (max-width: 1439.98px) {
   .News-list {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 }
 @media (max-width: 767.98px) {
   .News-list {
-    padding: 20px 0;
+    padding: 10px 0;
   }
 }
 .News-list [class*=col-] {

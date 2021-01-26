@@ -22,6 +22,12 @@
 .Contact-information .item-info {
   padding: 24px 24px 24px 50px;
   border-radius: 8px;
+  width: 80%;
+}
+@media (max-width: 1024.98px) {
+  .Contact-information .item-info {
+    width: 100%;
+  }
 }
 .Contact-information .item-info h2 {
   position: relative;
@@ -50,9 +56,11 @@
   display: inline-flex;
   align-items: center;
   font-weight: 600;
+  font-size: 1.4rem;
 }
 .Contact-information .item-info ul.socials i {
   margin-right: 8px;
+  font-size: 1.4rem;
 }
 .Contact-information .item-info ul li {
   display: flex;
@@ -84,6 +92,9 @@
   color: var(--white);
   position: relative;
   z-index: 1;
+}
+.Contact-information .item-info.active a {
+  font-style: italic;
 }
 @media (max-width: 767.98px) {
   .Contact-information .item-info.active h2,

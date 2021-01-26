@@ -999,6 +999,7 @@ main {
   font-size: 2.5rem;
   z-index: 10;
   color: var(--white);
+  font-weight: normal;
 }
 @media (max-width: 1439.98px) {
   .desc-shadow h4 {
@@ -1089,7 +1090,6 @@ main {
 }
 .slider-index-news .img {
   position: relative;
-  padding-bottom: calc(400 / 600 * 100%);
 }
 .slider-index-news .img:after {
   content: "";
@@ -1376,7 +1376,7 @@ main {
 .Tag-menu li {
   font-family: "SFU TradeGothic";
   margin-right: 30px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   cursor: pointer;
   color: var(--primary);
   transition: all 0.3s ease;
@@ -1416,5 +1416,19 @@ main {
 @media (max-width: 1300.98px) {
   .sp {
     display: block;
+  }
+}
+
+.section-pb {
+  padding-bottom: 80px;
+}
+@media (max-width: 1439.98px) {
+  .section-pb {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 1024.98px) {
+  .section-pb {
+    padding-bottom: 20px;
   }
 }

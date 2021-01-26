@@ -166,6 +166,22 @@
 .Educate-gallery-view {
   position: relative;
 }
+.Educate-gallery-view .title-section {
+  margin-bottom: 20px;
+}
+@media (max-width: 1024.98px) {
+  .Educate-gallery-view .title-section {
+    margin-bottom: 10px;
+  }
+}
+.Educate-gallery-view .desc {
+  width: 85%;
+}
+@media (max-width: 1024.98px) {
+  .Educate-gallery-view .desc {
+    width: 100%;
+  }
+}
 .Educate-gallery-view .list-img {
   position: relative;
   margin-top: 40px;

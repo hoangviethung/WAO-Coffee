@@ -1,16 +1,16 @@
 @charset "UTF-8";
 .Recipe-list {
   position: relative;
-  padding-bottom: 90px;
+  padding: 40px 0;
 }
 @media (max-width: 1439.98px) {
   .Recipe-list {
-    padding-bottom: 40px;
+    padding: 20px 0;
   }
 }
-@media (max-width: 1024.98px) {
+@media (max-width: 767.98px) {
   .Recipe-list {
-    padding-bottom: 20px;
+    padding: 10px 0;
   }
 }
 .Recipe-list [class*=col-] {
@@ -131,6 +131,28 @@
 }
 .Recipe-view .recipe-view-thumb {
   padding-right: 0;
+}
+.Recipe-view .recipe-view-img {
+  padding-right: 25px;
+}
+@media (max-width: 1439.98px) {
+  .Recipe-view .recipe-view-img {
+    padding-right: 15px;
+  }
+}
+.Recipe-view .recipe-view-img .button-navigation-slider.center-50px.next {
+  right: 15px;
+}
+.Recipe-view .recipe-view-img .button-navigation-slider.center-50px.prev {
+  left: 15px;
+}
+.Recipe-view .recipe-view-cnt {
+  padding-left: 25px;
+}
+@media (max-width: 1439.98px) {
+  .Recipe-view .recipe-view-cnt {
+    padding-left: 15px;
+  }
 }
 @media (max-width: 1024.98px) {
   .Recipe-view .recipe-view-img {
@@ -276,6 +298,20 @@
   position: relative;
   padding: 40px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.Recipe-description [class*=col-]:first-child {
+  padding-right: 25px;
+}
+.Recipe-description [class*=col-]:last-child {
+  padding-left: 25px;
+}
+@media (max-width: 1439.98px) {
+  .Recipe-description [class*=col-]:first-child {
+    padding-right: 15px;
+  }
+  .Recipe-description [class*=col-]:last-child {
+    padding-left: 15px;
+  }
 }
 @media (max-width: 1024.98px) {
   .Recipe-description {

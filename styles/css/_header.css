@@ -352,6 +352,7 @@ nav ul > li > ul > li a {
   padding: 16px 24px;
   color: var(--primary);
   text-transform: unset;
+  padding-left: 0;
 }
 nav ul > li > ul > li + li {
   margin-left: 0;
