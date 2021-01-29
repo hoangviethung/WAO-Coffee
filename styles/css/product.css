@@ -99,13 +99,32 @@
   position: relative;
   background: var(--bg-section);
 }
+@media (max-width: 1439.98px) {
+  .Product-group-video {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 1024.98px) {
+  .Product-group-video {
+    padding: 20px 0;
+  }
+}
 .Product-group-video .video {
-  width: 50%;
-  margin: 0 auto;
+  margin: 0 200px;
+}
+@media (max-width: 1439.98px) {
+  .Product-group-video .video {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 1024.98px) {
+  .Product-group-video .video {
+    margin: unset;
+  }
 }
 .Product-group-video .img {
   position: relative;
-  height: 560px;
+  padding-bottom: calc((560/960)*100%);
   width: auto;
 }
 .Product-group-video .img:after {
