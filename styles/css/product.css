@@ -167,11 +167,6 @@
   }
 }
 
-.img-pg {
-  position: relative;
-  padding-bottom: calc((560/960)*100%);
-}
-
 .Products-view .thumbs .swiper-container {
   height: 620px;
 }
