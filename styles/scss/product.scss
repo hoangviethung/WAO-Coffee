@@ -81,13 +81,24 @@
     padding: 100px 0;
     position: relative;
     background: var(--bg-section);
+    @media (max-width: 1439.98px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 1024.98px) {
+        padding: 20px 0;
+    }
     .video {
-        width: 50%;
-        margin: 0 auto;
+        margin: 0 200px;
+        @media (max-width: 1439.98px) {
+            margin: 0 100px;
+        }
+        @media (max-width: 1024.98px) {
+            margin: unset;
+        }
     }
     .img {
         position: relative;
-        height: 560px;
+        padding-bottom: calc((560/960)*100%);
         width: auto;
         &:after {
             content: "";
