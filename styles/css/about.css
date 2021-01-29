@@ -77,11 +77,11 @@
   margin-top: 44px;
 }
 .slider-about-history .swiper-container {
-  padding: 0 30px;
+  margin: 0 30px;
 }
 @media (max-width: 1024.98px) {
   .slider-about-history .swiper-container {
-    padding: unset;
+    margin: unset;
   }
 }
 .slider-about-history h3,
