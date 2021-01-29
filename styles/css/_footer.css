@@ -126,16 +126,6 @@ footer .copy-right {
   position: relative;
   padding-top: 10px;
 }
-footer .copy-right::before {
-  position: absolute;
-  content: "";
-  width: 100vw;
-  height: 1px;
-  background: var(--white);
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
 footer .copy-right p i,
 footer .copy-right p svg {
   color: var(--secondary);
