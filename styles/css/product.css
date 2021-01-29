@@ -460,6 +460,17 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 40px;
 }
+@media (max-width: 1439.98px) {
+  .Products-description .row {
+    margin: 0 1px;
+    padding: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .Products-description .row {
+    padding: 10px;
+  }
+}
 .Products-description [class*=col-]:first-child {
   padding-right: 25px;
 }
