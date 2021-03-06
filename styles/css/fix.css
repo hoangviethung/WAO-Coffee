@@ -1,0 +1,130 @@
+.Educate-value .icon {
+  background: transparent;
+}
+
+@media (max-width: 1599.98px) {
+  .hero-banner .button-navigation-slider {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .back-to-top {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .phone-fixed {
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    transform: unset;
+    top: unset;
+    bottom: 25%;
+  }
+  .phone-fixed:after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .socials-fixed {
+    right: 8px;
+    top: unset;
+    bottom: 24px;
+  }
+  .socials-fixed .button-hover {
+    display: none;
+  }
+  .socials-fixed .list-social {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 0;
+    border-radius: 4px;
+    padding: 8px;
+    transform: unset;
+    left: unset;
+  }
+  .socials-fixed .list-social:after {
+    content: none;
+  }
+  .socials-fixed .list-social i {
+    font-size: 16px;
+  }
+  .socials-fixed .list-social img {
+    width: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .slider-index-best-seller .swiper-container {
+    border: 0;
+  }
+  .slider-index-best-seller .item {
+    border: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .Index-service [class*=col-]:last-child .item {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024.98px) {
+  .page-banner .group-infomation {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+  .page-banner .group-infomation h1 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 0;
+    margin-top: 8;
+  }
+  .page-banner .group-infomation h1::before {
+    content: none;
+  }
+  .page-banner .group-infomation .breadcrumb {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .breadcrumb li + li a {
+    padding-left: 12px;
+    margin-left: 12px;
+  }
+  .breadcrumb a {
+    font-size: 1.2rem;
+  }
+}
+
+.Products-view .information {
+  border-top: 1px solid #e6e6f0;
+  border-bottom: 1px solid #e6e6f0;
+}
+.Products-view h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e6e6f0;
+}
+.Products-view h4 span {
+  font-weight: 700;
+}
+
+footer .copy-right {
+  padding-top: 24px;
+  border-top: 1px solid var(--primary-light);
+}
