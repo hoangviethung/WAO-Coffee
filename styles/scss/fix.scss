@@ -114,6 +114,32 @@
 	}
 }
 
+.slider-index-best-seller {
+	.item {
+		h3 {
+			&:hover {
+				text-decoration: underline;
+			}
+			&:after {
+				content: none;
+			}
+		}
+	}
+}
+
+.block-product {
+	@media (min-width: 1025px) {
+		h3 {
+			&:hover {
+				text-decoration: underline;
+			}
+			&:after {
+				content: none;
+			}
+		}
+	}
+}
+
 .breadcrumb {
 	@media (max-width: 767.98px) {
 		li {
