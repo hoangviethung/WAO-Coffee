@@ -21,7 +21,7 @@
     height: 32px;
     transform: unset;
     top: unset;
-    bottom: 25%;
+    bottom: 35%;
   }
   .phone-fixed:after {
     width: 20px;
@@ -36,13 +36,21 @@
     bottom: 24px;
   }
   .socials-fixed .button-hover {
-    display: none;
+    width: 32px;
+    height: 32px;
+  }
+  .socials-fixed .button-hover:after {
+    width: 24px;
+    height: 24px;
+  }
+  .socials-fixed .button-hover.active:after {
+    opacity: 0;
+  }
+  .socials-fixed .button-hover.active:before {
+    opacity: 1;
   }
   .socials-fixed .list-social {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     border-radius: 4px;
     padding: 8px;
     transform: unset;
@@ -56,6 +64,10 @@
   }
   .socials-fixed .list-social img {
     width: 16px;
+  }
+  .socials-fixed .list-social.show {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
